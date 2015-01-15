@@ -100,7 +100,8 @@ p {
 a {
   color: #0072b9;
   text-decoration: none;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
 }
 a:hover {
   text-decoration: underline;
@@ -178,7 +179,8 @@ input[type="phone"] {
   box-sizing: border-box;
   background: #fff;
   border: 1px solid #c8d9eb;
-  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
 }
 input[type="text"]:hover,
 input[type="password"]:hover,
@@ -218,7 +220,8 @@ input[type="submit"] {
   width: auto;
   padding: 15px 30px;
   border: none;
-  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
 }
 input[type="submit"]:hover {
   background: #1aa257;
@@ -235,7 +238,8 @@ textarea {
   box-sizing: border-box;
   background: #fff;
   border: 1px solid #c8d9eb;
-  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
 }
 textarea:hover,
 textarea:focus {
@@ -635,7 +639,8 @@ body.page {
   border-width: 5px;
   margin-left: -5px;
   margin-top: -2px;
-  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
 }
 .header__menu .menu__item_drop:hover:after {
   border-top-color: #fff;
@@ -728,7 +733,8 @@ body.page {
 .header__banner .banner__text-line .close-link {
   display: block;
   float: right;
-  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
 }
 .header__banner .banner__text-line .close-link:hover {
   -webkit-transform: scale(1.2);
@@ -914,7 +920,8 @@ body.page {
   font-size: 12px;
   text-align: center;
   background: #f5f5f3;
-  transition: none;
+  -webkit-transition: none;
+          transition: none;
 }
 .page-search {
   padding-bottom: 20px;
@@ -1276,7 +1283,8 @@ body.page {
   padding-right: 10px;
   background: #f4fff9 url("../img/i/check-status__write.png") 35px 35px no-repeat;
   border: 1px solid #cceddf;
-  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
 }
 .check-status__write:hover {
   opacity: 0.8;
@@ -1292,7 +1300,8 @@ body.page {
   padding-left: 10px;
   background: #f4f8ff url("../img/i/check-status__check.png") 35px 35px no-repeat;
   border: 1px solid #ccd8ed;
-  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
 }
 .check-status__check:hover {
   opacity: 0.8;
@@ -1334,12 +1343,6 @@ body.page {
   padding: 29px 0 0 17px;
   box-sizing: border-box;
   background: url("../img/file.png") no-repeat;
-}
-.item-date-link .file_doc {
-  background: url("../img/file-doc.png") no-repeat;
-}
-.item-date-link .file_pdf {
-  background: url("../img/file-pdf.png") no-repeat;
 }
 .item-date-link .pic {
   padding-bottom: 10px;
@@ -1591,7 +1594,8 @@ body.page {
   width: 19px;
   height: 10px;
   background: url("../img/arrow-quest.png") right bottom no-repeat;
-  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
 }
 .faq__quest a:hover {
   text-decoration: none;
@@ -1773,7 +1777,8 @@ body.page {
 .slider-inform .lSGallery li {
   display: inline-block;
   opacity: 0.5;
-  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
 }
 .slider-inform .lSGallery li:hover {
   opacity: 0.8;
@@ -2009,7 +2014,8 @@ body.page {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
 }
 .filter-item__name-ch.is-open:after {
   -webkit-transform: rotate(0deg);
@@ -2071,7 +2077,8 @@ body.page {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
 }
 .select-wrap .select.is-open:after {
   -webkit-transform: rotate(0deg);
