@@ -13,16 +13,17 @@ block append content
 			mixin item-date-link(file)
 				.item-date-link
 					.pic-left
-						.file(class="file_#{file}")
+						.file
+							| #{file}
 					.content-right
 						.link: a(href="#") Перечень лечебно-профилактических учреждений, определенных для медицинского освидетельствования подозреваемых или обвиняемых в совершении преступлений
 						.date Приказ №350 от 19 апреля 2011 г..pdf
 			
-			+item-date-link("pdf")
-			+item-date-link("doc")
-			+item-date-link("pdf")
-			+item-date-link("doc")
-			+item-date-link("pdf")
-			+item-date-link("doc")
+			+item-date-link("PDF")
+			+item-date-link("DOC")
+			+item-date-link("PDF")
+			+item-date-link("DOC")
+			+item-date-link("PDF")
+			+item-date-link("DOC")
 
 			+pager

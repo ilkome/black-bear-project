@@ -100,8 +100,7 @@ p {
 a {
   color: #0072b9;
   text-decoration: none;
-  -webkit-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 a:hover {
   text-decoration: underline;
@@ -179,8 +178,7 @@ input[type="phone"] {
   box-sizing: border-box;
   background: #fff;
   border: 1px solid #c8d9eb;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 input[type="text"]:hover,
 input[type="password"]:hover,
@@ -220,8 +218,7 @@ input[type="submit"] {
   width: auto;
   padding: 15px 30px;
   border: none;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 input[type="submit"]:hover {
   background: #1aa257;
@@ -238,8 +235,7 @@ textarea {
   box-sizing: border-box;
   background: #fff;
   border: 1px solid #c8d9eb;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 textarea:hover,
 textarea:focus {
@@ -639,8 +635,7 @@ body.page {
   border-width: 5px;
   margin-left: -5px;
   margin-top: -2px;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .header__menu .menu__item_drop:hover:after {
   border-top-color: #fff;
@@ -733,8 +728,7 @@ body.page {
 .header__banner .banner__text-line .close-link {
   display: block;
   float: right;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .header__banner .banner__text-line .close-link:hover {
   -webkit-transform: scale(1.2);
@@ -920,8 +914,7 @@ body.page {
   font-size: 12px;
   text-align: center;
   background: #f5f5f3;
-  -webkit-transition: none;
-          transition: none;
+  transition: none;
 }
 .page-search {
   padding-bottom: 20px;
@@ -1283,8 +1276,7 @@ body.page {
   padding-right: 10px;
   background: #f4fff9 url("../img/i/check-status__write.png") 35px 35px no-repeat;
   border: 1px solid #cceddf;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .check-status__write:hover {
   opacity: 0.8;
@@ -1300,8 +1292,7 @@ body.page {
   padding-left: 10px;
   background: #f4f8ff url("../img/i/check-status__check.png") 35px 35px no-repeat;
   border: 1px solid #ccd8ed;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .check-status__check:hover {
   opacity: 0.8;
@@ -1337,6 +1328,12 @@ body.page {
   width: 40px;
   height: 42px;
   position: relative;
+  color: #fff;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 29px 0 0 17px;
+  box-sizing: border-box;
+  background: url("../img/file.png") no-repeat;
 }
 .item-date-link .file_doc {
   background: url("../img/file-doc.png") no-repeat;
@@ -1594,8 +1591,7 @@ body.page {
   width: 19px;
   height: 10px;
   background: url("../img/arrow-quest.png") right bottom no-repeat;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .faq__quest a:hover {
   text-decoration: none;
@@ -1777,8 +1773,7 @@ body.page {
 .slider-inform .lSGallery li {
   display: inline-block;
   opacity: 0.5;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .slider-inform .lSGallery li:hover {
   opacity: 0.8;
@@ -2014,8 +2009,7 @@ body.page {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .filter-item__name-ch.is-open:after {
   -webkit-transform: rotate(0deg);
@@ -2077,8 +2071,7 @@ body.page {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .select-wrap .select.is-open:after {
   -webkit-transform: rotate(0deg);
