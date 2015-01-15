@@ -1,0 +1,76 @@
+extends _layout
+
+block append content
+	+pathway
+
+	.l-main
+		+left-menu
+		
+		.l-content
+			h1.page-name Лекарства и аптеки
+			.filter-items.center.has-padding-bottom
+				.filter-item.fl-left
+					.filter-item__search
+						input(type="text", placeholder="Поиск препаратов").inp-search.inp_dark
+						input(id="filter-item-search-1" type="checkbox")
+						label(for="filter-item-search-1") Только в наличии
+				.filter-item.fl-right
+					.filter-item__name Сортировка
+					.select-wrap
+						input(type="hidden" name="" value="").select-value
+						.select
+							.title По алфавиту
+						ul.option-list
+							li(data-value="1") По алфавиту
+							li(data-value="2") По дате поставки
+							li(data-value="3") По наличию
+				.filter-item.inline
+					.filter-item__name Выбор по категориям
+					.select-wrap
+						input(type="hidden" name="" value="").select-value
+						.select
+							.title Выберите категорию
+						ul.option-list
+							.scroller-box
+								li(data-value="3") Амбулатории
+								li(data-value="3") Больницы гинекологические
+								li(data-value="3") Больницы городские
+								li(data-value="3") Больницы детские городсие
+								li(data-value="3") Больницы инфекционные
+								li(data-value="3") Больницы психиатрические и наркологические
+								li(data-value="4") Больницы специализированные
+								li(data-value="4") Больницы туберкулезные
+								li(data-value="4") Госпитали
+								li(data-value="4") Диспансеры врачебно-физкультурные
+								li(data-value="4") Диспансеры другие
+								li(data-value="4") Диспансеры онкологические
+								li(data-value="4") Диспансеры наркологические
+
+			h1.page-name.has-bottom-line Аллергия
+
+			mixin item(pic, count)
+				.item-table
+					.td.pic: img(src="img/c/#{pic}.png", alt="")
+					.td.desc
+						.line.big Кромогексал капли гл. 2% 10мл
+						.line.normal.has-padding-bottom Производитель Asta Medica
+						.line.normal.grey Спрей назальный дозированный в виде прозрачного, бесцветного или почти бесцветного раствора
+					.td.count
+						if count == "many"
+							.avaliable(class="#{count}") В наличии
+						if count == "little"
+							.avaliable(class="#{count}") В наличии
+						if count == "no"
+							.avaliable.not Нет в наличии
+					.td.place
+						.km 2,3 км
+						.address: a(href="#") Ближайшая аптека
+
+			+item("medicine-1", "many")
+			+item("medicine-2", "little")
+			+item("medicine-1", "no")
+			+item("medicine-1", "many")
+			+item("medicine-2", "little")
+			+item("medicine-1", "no")
+
+			+pager

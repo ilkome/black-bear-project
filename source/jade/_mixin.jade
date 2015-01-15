@@ -1,0 +1,177 @@
+
+//- #mixin
+
+mixin header-banner-reforma
+	.header__banner
+		.banner__text-line.js-banner-text
+			| Круглый Стол 19-23 декабря 2014 —  
+			a(href="#") Оставить заявку
+			a(href="#").close-link.js-close-banner-text
+				.icon.icon-close
+		.banner__pic: img(src="img/c/banner.jpg", alt="")
+mixin header-banner
+	.header__banner
+		.banner__text-prev
+			| «Жизнь — это шанс, который мы не ценим, пока не потеряем, а здоровье — корона на голове здоровых, которую способны увидеть только больные»
+			.action.center: a(href="#").btn.btn_white Записаться ко врачу
+		.banner__pic: img(src="img/c/banner-2.jpg", alt="")
+mixin pathway
+	.pathway
+		ul
+			li: a(href="#").home
+			li: a(href="#") Гражданам
+			li: a(href="#") Нормативно-правовые акты
+mixin left-menu
+	.l-left
+		.left-menu
+			ul
+				li: a(href="#") Справочная информация
+				li: a(href="#") Видео, фотографии, стенограммы и интервью
+				li: a(href="#") Газета "Формула жизни"
+				li: a(href="#") Проекты нормативно-правовых актов
+				li.is-active: a(href="#") Контрольно-надзирательные мероприятия
+				li: a(href="#") Противодействие коррупции
+				li: a(href="#") Календарь событий
+mixin page-search(type)
+	.page-search
+		.page-search-form
+			.inp.fl-left
+				input(type="text", placeholder="Поиск в мероприятиях").inp-search.inp_dark
+			if type == "list"
+				.list.fl-left
+					select.select.select_dark
+						option(value="0") Тип документа
+						option(value="1") Обычный
+						option(value="2") Класический
+						option(value="3") Разнообразный
+			else 
+				.dates.fl-left
+					input(type="text", placeholder="01.11.2014").inp-search_sm.inp_dark
+					span.sep
+					input(type="text", placeholder="03.11.2014").inp-search_sm.inp_dark
+			
+			.action
+				input(type="submit", value="Найти").btn.btn_blue_wide
+		.page-search-found
+			.count Найдено мероприятий: 2465
+			.pages 
+				.pages__name Выводить по: 
+				ul.pages__list
+					li: a(href="#") 10
+					li.is-active: a(href="#") 25
+					li: a(href="#") 50
+mixin page-search-found 
+	.page-search-found
+		.count Найдено мероприятий: 2465
+		.pages 
+			.pages__name Выводить по: 
+			ul.pages__list
+				li: a(href="#") 10
+				li.is-active: a(href="#") 25
+				li: a(href="#") 50
+mixin pager(center, red)
+	ul.pager(
+			class=typeof 
+			center === "undefined" ? undefined : "pager_center"
+			class=typeof 
+			red === "undefined" ? undefined : "pager_red"
+				
+		)
+		li.prev.is-disable: a(href="#") назад
+		li.is-active: a(href="#") 1
+		li: a(href="#") 1
+		li: a(href="#") 2
+		li: a(href="#") 3
+		li: a(href="#") 4
+		li: a(href="#") 5
+		li: a(href="#") 6
+		li: a(href="#") 7
+		li: span.sep ...
+		li: a(href="#") 27
+		li.next: a(href="#") Вперед
+mixin comments
+	.cooments__name
+		.block__name
+			h3.inline Комментарии
+			.comments-count
+				a(href="#").btn_trans_comments 155
+	.comments-write
+		.pic: img(src="img/user-ava.png", alt="")
+		.content
+			.user-name 
+				a(href="#") Анонимный пользователь
+			.user-text: textarea.full_100.margin_no
+			.action
+				input(type="submit", value="Отправить").btn.btn_blue_wide
+	.comments-list
+		mixin comment (name, content)
+			.comment
+				.comment__prev
+					a(href="#") 
+						img(src="img/c/user-1.jpg", alt="")
+				.comment__content
+					.meta
+						.name: a(href="#")= name
+						.date 
+							.time 18:35
+							.date_tag.has-bg-grey 23 ноября
+					.content= content
+					a(href="#").btn_trans_answer Ответить
+			
+		+comment("Андрей Денисов", "«Московские предприятия снизили выбросы до 40%. На сегодняшний день мы не связываем загрязнение воздуха с их выбросами. Причина - это воздействие автотранспорта и сжигание порубочных остатков», - сказал он")
+		+comment("Анастисия Джмухаидзе", "По данным Департамента здравоохранения города Москвы с 19 ноября, когда ухудшилось состояние атмосферного воздуха, не было обращений в «скорую помощь», связанных с состоянием воздуха.")
+		+comment("Андрей Денисов", "«Московские предприятия снизили выбросы до 40%. На сегодняшний день мы не связываем загрязнение воздуха с их выбросами. Причина - это воздействие автотранспорта и сжигание порубочных остатков», - сказал он")
+		+comment("Анастисия Джмухаидзе", "По данным Департамента здравоохранения города Москвы с 19 ноября, когда ухудшилось состояние атмосферного воздуха, не было обращений в «скорую помощь», связанных с состоянием воздуха.")
+
+		+pager("center")
+mixin filter-item-left
+	.filter-item.fl-left.js-dropmenu
+		.filter-item__name Выбор по организации
+		.filter-item__name-ch.js-dropmenu-link Выберите организацию
+		.filter-item__content.js-dropmenu-content
+			.line
+				input(id="filter-item-left-1" type="checkbox").checkbox-right
+				label(for="filter-item-left-1") Все
+			.line
+				input(id="filter-item-left-2" type="checkbox").checkbox-right
+				label(for="filter-item-left-2") Детские больницы
+			.line
+				input(id="filter-item-left-3" type="checkbox").checkbox-right
+				label(for="filter-item-left-3") Взрослые больницы
+			.line
+				input(id="filter-item-left-4" type="checkbox").checkbox-right
+				label(for="filter-item-left-4") Специализированные больницы
+mixin filter-item-center
+	.filter-item.inline.js-dropmenu
+		.filter-item__name Выбор по округу
+		.filter-item__name-ch.js-dropmenu-link Выберите округ
+		.filter-item__content.js-dropmenu-content
+			.line
+				input(id="filter-item-center-1" type="checkbox").checkbox-right
+				label(for="filter-item-center-1") Все
+			.line
+				input(id="filter-item-center-2" type="checkbox").checkbox-right
+				label(for="filter-item-center-2") Детские больницы
+			.line
+				input(id="filter-item-center-3" type="checkbox").checkbox-right
+				label(for="filter-item-center-3") Взрослые больницы
+			.line
+				input(id="filter-item-center-4" type="checkbox").checkbox-right
+				label(for="filter-item-center-4") Специализированные больницы
+mixin filter-item-right
+	.filter-item.fl-right.js-dropmenu
+		.filter-item__name Выбор по метро
+		.filter-item__name-ch.js-dropmenu-link Выберите метро
+		.filter-item__content.js-dropmenu-content
+			.line
+				input(id="filter-item-right-1" type="checkbox").checkbox-right
+				label(for="filter-item-right-1") Все
+			.line
+				input(id="filter-item-right-2" type="checkbox").checkbox-right
+				label(for="filter-item-right-2") Детские больницы
+			.line
+				input(id="filter-item-right-3" type="checkbox").checkbox-right
+				label(for="filter-item-right-3") Взрослые больницы
+			.line
+				input(id="filter-item-right-4" type="checkbox").checkbox-right
+				label(for="filter-item-right-4") Специализированные больницы

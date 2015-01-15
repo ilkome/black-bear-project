@@ -1,0 +1,26 @@
+extends _layout
+
+block append content
+	+pathway
+
+	.l-main
+		+left-menu
+		
+		.l-content
+			h1.page-name Мероприятия
+			+page-search
+			
+			mixin item-date-link
+				.item-date-link
+					.meta
+						.date.date_bg-blue-dark 25 Ноября
+						.map.inline Москва, конгресс-центр "Космос", проспект Мира, д.150
+					.link: a(href="#") XV Ежегодная специализированная конференция и выставка "Информационные технологии в медицине 2014"
+			
+			+item-date-link
+			+item-date-link
+			+item-date-link
+			+item-date-link
+			+item-date-link
+
+			+pager

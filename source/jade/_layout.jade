@@ -1,0 +1,105 @@
+//- #mixin
+include _mixin
+
+
+doctype html
+//	proscom.ru
+//	Simple Communication
+html
+	include _head
+	
+
+	body.page
+		.style-nes
+
+			.header
+				a(href="/").header__logo
+				.header__phone (495) 251-83-00
+				ul.header__contacts
+					li.contacts__item
+						i.icon.icon-map
+						| Москва, Оружейный переулок, дом 43
+					li.contacts__item
+						i.icon.icon-email
+						a(href="#").contacts__link info@mosgorzdrav.ru
+				a(href="#").header__lklink
+					.icon.icon-user
+					| Личный кабинет
+				.clear
+
+
+				.header__in
+					mixin header__menu__item(name, action)
+						if action == "dropmenu"
+							li.menu__item.menu__item_drop.js-menu-drop-item
+								a(href="#").menu__link= name
+								ul.menu-drop
+									li
+										a(href="#") Личный кабинет
+									li
+										a(href="#") Записатья ко врачу
+									li
+										a(href="#") Найти поликлиннику
+									li
+										a(href="#") В помощь пациенту
+									li
+										a(href="#") Лекарства и аптеки
+									li
+										a(href="#") Частые вопросы
+						else if action == "hightlight"
+							li.menu__item.menu__item_hl
+								a(href="#").menu__link= name
+						else 
+							li.menu__item
+								a(href="#").menu__link= name
+					
+					ul.header__menu.js-menu-drop
+						+header__menu__item ("Гражданам", "dropmenu")
+						+header__menu__item ("Специалистам", "dropmenu")
+						+header__menu__item ("Департамент")
+						+header__menu__item ("Пресс-центр")
+						+header__menu__item ("Специальные проекты")
+						+header__menu__item ("Реформа 2015", "hightlight")
+					
+					.search-form.header__search
+						input(type="text", placeholder="Поиск по сайту").search__field.inp_dark
+						input(type="submit", value="").search__submit
+			
+
+			block content
+
+
+		.footer__menu
+			.l-wrap
+				.footer__in
+					ul
+						li.title Информация
+						li: a(href="#") О департаменте
+						li: a(href="#") Для СМИ
+						li: a(href="#") Парнерам
+						li: a(href="#") Вакансии
+						li: a(href="#") Новости
+					ul
+						li.title Услуги
+						li: a(href="#") Способы записи
+						li: a(href="#") Найти поликлиннику
+						li: a(href="#") Прикрепиться к поликлиннике
+						li: a(href="#") Получить полис
+						li: a(href="#") Доступные врачи
+					ul
+						li.title Сервис
+						li: a(href="#") Обращения
+						li: a(href="#") Контакты
+						li: a(href="#") Соглашения
+						li: a(href="#")  FAQ
+		.footer__info
+			.l-wrap
+				.footer__in
+					.footer__pics
+						.pic
+							img(src="img/logo-dz-sm.png", alt="")
+						.pic
+							img(src="img/logo-pm-sm.png", alt="")
+						.pic
+							img(src="img/logo-emiac.png", alt="")
+					.footer__copy © Департамент здравоохранения города Москвы, 2004-2014

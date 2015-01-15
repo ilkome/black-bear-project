@@ -1,0 +1,178 @@
+extends _layout
+
+block append content
+	+header-banner-reforma
+	//-----
+	.l-main
+		.row.no-padding
+			//----- ----- ----- 
+			.col50
+				.block.padding-bot-20
+					.block__name_no-border: h3 Дашборд реформы
+					.block__content.block__content_bg-grey.min-height-200
+						img(src="img/c/infograph-4.png", alt="")
+			//----- ----- ----- 
+			.col50
+				.block.padding-bot-20
+					.block__name_no-border
+						h3.inline Твоя реформа
+						a(href="#").btn.btn_red.btn_red_sm.fl-right Оставить предложение
+					.block__content.block__content_bg-grey.min-height-200
+						.row.no-padding
+							.col40
+								p Благодаря проводимым реформам у москвичей скоро появится уникальная возможность воспользоваться услугами федеральных.
+								ul.no-margin-left
+									li Благодаря проводимым
+									li реформам у москвичей
+									li появится уникальная 
+							
+							.col60_padl
+								.news_red
+									mixin news-item
+										.news-item
+											.news-item__name
+												a(href="#") Благодаря проводимым реформам у москвичей скоро появится уникальная 
+											.news-item__meta
+												.comments-count
+													a(href="#").btn_trans_comments_red 155
+												.user.inline
+													a(href="#") Андрей Денисов
+											.news-item__rating 9.0
+									+news-item
+									+news-item
+									+news-item
+		//----- -----
+		+pathway
+
+		.l-left
+			.left-menu_red
+				ul
+					li: a(href="#") Справочная информация
+					li: a(href="#") Видео, фотографии, стенограммы и интервью
+					li: a(href="#") Газета "Формула жизни"
+					li: a(href="#") Проекты нормативно-правовых актов
+					li.is-active: a(href="#") Контрольно-надзирательные мероприятия
+					li: a(href="#") Противодействие коррупции
+					li: a(href="#") Календарь событий
+			.block.block_reforminfo
+				.block__name: h3 Информация о реформе
+				.block__content
+					ul
+						li: a(href="#") Информация о реформе
+						li: a(href="#") Дашборд реформы
+						li: a(href="#") Твоя реформа
+		//----- -----
+		.l-content
+			.timeline-item
+				.timeline-item__meta
+					.timeline-item__cat
+						a(href="#") Новость					
+					.timeline-item__data
+						.pos
+							.num 21
+							.month ноября
+							.sep
+						.time 
+							.inline 23:15
+							.comments-count
+								a(href="#").btn_trans_comments_red 155
+					.tags.fl-right
+						a(href="#").tags__item Городские новости
+						a(href="#").tags__item Еще один тег
+				.timeline-item__content
+					.timeline-item__pic
+						img(src="img/c/news-item-1.jpg", alt="" style=" display: block; width:130px") 
+					.timeline-item__text
+						a(href="#").name Сергей Собянин поручил оперативно реагировать на обращения жителей на портале «Наш город»
+						.text
+							p Заместитель Мэра Москвы в Правительстве Москвы, руководитель аппарата Мэра и Правительства Москвы Анастасия Ракова доложила о результатах работы портала «Наш город» за девять месяцев 2014 года на совещании по оперативным вопросам в Правительстве Москвы
+			
+			.timeline-item
+				.timeline-item__meta
+					.timeline-item__cat
+						a(href="#") Событие					
+					.timeline-item__data
+						.pos
+							.sep-top
+							.num 20
+							.month сентябрь
+							.sep
+						.time 
+							.inline 23:15
+							.comments-count
+								a(href="#").btn_trans_comments_red 1
+					.tags.fl-right
+						a(href="#").tags__item Еще один тег
+				.timeline-item__content
+					.timeline-item__text
+						a(href="#").name Сергей Собянин поручил оперативно реагировать на обращения жителей на портале «Наш город»
+						.text
+							p Заместитель Мэра Москвы в Правительстве Москвы, руководитель аппарата Мэра и Правительства Москвы Анастасия Ракова доложила о результатах работы портала «Наш город» за девять месяцев 2014 года на совещании по оперативным вопросам в Правительстве Москвы
+			
+			.timeline-item
+				.timeline-item__meta
+					.timeline-item__cat
+						a(href="#") Новость					
+					.timeline-item__data
+						.pos
+							.sep-top
+							.num 21
+							.month ноября
+							.sep
+						.time 
+							.inline 23:15
+							.comments-count
+								a(href="#").btn_trans_comments_red 155
+					.tags.fl-right
+						a(href="#").tags__item Городские новости
+						a(href="#").tags__item Еще один тег
+				.timeline-item__content
+					a(href="#").name Сергей Собянин поручил оперативно реагировать на обращения жителей на портале «Наш город»
+					.timeline-item__pic
+						img(src="img/c/youtube.jpg", alt="" style=" display: block;") 
+					.timeline-item__text
+						.text
+							p Заместитель Мэра Москвы в Правительстве Москвы, руководитель аппарата Мэра и Правительства Москвы Анастасия Ракова доложила о результатах работы портала «Наш город» за девять месяцев 2014 года на совещании по оперативным вопросам в Правительстве Москвы
+			
+			.timeline-item.timeline-item_no-date
+				.timeline-item__meta
+					.timeline-item__cat
+						a(href="#") Событие					
+					.timeline-item__data
+						.sep-no-date
+						.time 
+							.inline 23:15
+							.comments-count
+								a(href="#").btn_trans_comments_red 1
+					.tags.fl-right
+						a(href="#").tags__item Еще один тег
+				.timeline-item__content
+					.timeline-item__text
+						a(href="#").name Сергей Собянин поручил оперативно реагировать на обращения жителей на портале «Наш город»
+						.text
+							p Заместитель Мэра Москвы в Правительстве Москвы, руководитель аппарата Мэра и Правительства Москвы Анастасия Ракова доложила о результатах работы портала «Наш город» за девять месяцев 2014 года на совещании по оперативным вопросам в Правительстве Москвы
+			
+			.timeline-item.last
+				.timeline-item__meta
+					.timeline-item__cat
+						a(href="#") Событие					
+					.timeline-item__data
+						.pos
+							.sep-top
+							.num 20
+							.month сентябрь
+							.sep
+						.time 
+							.inline 23:15
+							.comments-count
+								a(href="#").btn_trans_comments_red 1
+					.tags.fl-right
+						a(href="#").tags__item Еще один тег
+				.timeline-item__content
+					.timeline-item__text
+						a(href="#").name Сергей Собянин поручил оперативно реагировать на обращения жителей на портале «Наш город»
+						.text
+							p Заместитель Мэра Москвы в Правительстве Москвы, руководитель аппарата Мэра и Правительства Москвы Анастасия Ракова доложила о результатах работы портала «Наш город» за девять месяцев 2014 года на совещании по оперативным вопросам в Правительстве Москвы
+				.timeline-item__last-bg
+			
+			+pager("center", "red")

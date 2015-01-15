@@ -1,0 +1,22 @@
+extends _layout
+
+block append content
+	+pathway
+
+	.l-main
+		+left-menu
+		
+		.l-content
+			h1.page-name.has-margin-bottom Обращения населения
+			.check-status
+				.check-status__write
+					a(href="#").link Написать сообщение
+				.check-status__check
+					a(href="#").link Проверить статус <br>обращения
+
+			ul.no-list-style
+				li: a(href="#") Часто задаваемые вопросы
+				li: a(href="#") Графики личного приема граждан
+				li: a(href="#") Телефоны "Горячих линий"
+				li: a(href="#") Прием обращений населения
+				li: a(href="#") Официальные сайты органов исполнительной власти г. Москвы и РФ

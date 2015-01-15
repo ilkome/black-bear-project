@@ -1,0 +1,33 @@
+extends _layout
+
+block append content
+	+pathway
+
+	.l-main
+		+left-menu
+		
+		.l-content
+			h1.page-name.has-margin-bottom Руководство
+			
+			.content-box.width-limit
+				mixin item-date-link
+					.item-date-link
+						.big-blue-grey Мухтасарова Татьяна Радиковна
+						.normal Первый заместитель руководителя Департамента здравоохранения города Москвы
+
+				.item-date-link
+					.pic-left: img(src="img/c/leader.png", alt="")
+					.content-right
+						.big-blue-grey Хрипун Алексей Иванович
+						.normal.has-margin-bottom 
+							p Руководитель Департамента здравоохранения города Москвы
+						.small-grey
+							p Доктор медицинских наук, профессор
+							p Окончил Второй Московский Ордена Ленина государственный медицинский институт имени Н.И. Пирогова в 1983 году.
+
+				+item-date-link
+				+item-date-link
+				+item-date-link
+				+item-date-link
+				+item-date-link
+				+item-date-link

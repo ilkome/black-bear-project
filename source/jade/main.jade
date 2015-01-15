@@ -1,0 +1,214 @@
+extends _layout
+
+block append content
+	+header-banner
+	//-----
+	.row
+		.phones
+			mixin item-phone(num, text)
+				.phone
+					.phone-num= num
+					.phone-text= text
+
+			+item-phone("(495) 620-42-33", "Дежурный врач скорой и неотложной помощи")
+			+item-phone("(495) 632-96-80", "Дежурный врач-педиатр")
+			+item-phone("(495) 445-02-63", "Прием устных обращений")
+			+item-phone("(495) 445-57-66", "Справка о госпитализации больных в течении суток")
+
+	.row
+		.col40
+			.block
+				.block__name: h3 Ситуация в столице
+				.block__content
+					.situation.situation_green В Москве заболеваемость ОРВИ и гриппом на <strong>19,5%</strong> ниже эпидемического порога. В городе продолжается иммунизация населения против гриппа.
+					.situation.situation_orange В Москве заболеваемость ОРВИ и гриппом на 19,5% ниже эпидемического порога. В городе продолжается иммунизация населения против гриппа.
+					.situation.situation_red В Москве заболеваемость ОРВИ и гриппом на <strong>22,5%</strong> ниже эпидемического порога. В городе продолжается иммунизация населения против гриппа.
+		//----- -----
+		.col60_padl
+			.slider-inform
+				.slider-wrap.js-slider-inform
+					.slide(data-thumb="img/c/slider-inform-3.jpg")
+						.pic: img(src="img/c/sob-1.jpg", alt="")
+						.text 
+							p «Здоровье граждан<br>— наше богатство»
+							i С. Собянин
+						.action
+							a(href="#").btn.btn_blue Сервисы для населения
+					.slide(data-thumb="img/c/slider-inform-3.jpg")
+						.pic: img(src="img/c/sob-1.jpg", alt="")
+						.text 
+							p «Здоровье граждан<br>— наше богатство»
+							i С. Собянин
+						.action
+							a(href="#").btn.btn_blue Сервисы для населения
+					.slide(data-thumb="img/c/slider-inform-3.jpg")
+						.pic: img(src="img/c/sob-1.jpg", alt="")
+						.text 
+							p «Здоровье граждан<br>— наше богатство»
+							i С. Собянин
+						.action
+							a(href="#").btn.btn_blue Сервисы для населения
+	//-----
+	.row
+		.col60_padr
+			.block
+				.block__name: h3.has-color-red Реформа 2015
+				.block__content
+					mixin item-reforma
+						.item-date-link
+							.meta
+								.date 14 ноября - 14:55
+							.link: a(href="#") Реформы московского здравоохранения будут продолжены
+					+item-reforma
+					+item-reforma
+					+item-reforma
+					+item-reforma
+		//----- -----
+		.col-40_right
+			.block
+				.block__name: h3 Опросы
+				.block__content.block__content_bg-blue
+					.vote
+						.vote__into Будете ли вы прививаться от гриппа в этом году?
+						.vote__content
+							.choice
+								input(name="vote", type="radio" id="vote-1")
+								label(for="vote-1") Да, обязательно буду
+							.choice
+								input(name="vote", type="radio" id="vote-2")
+								label(for="vote-2") Нет
+							.choice
+								input(name="vote", type="radio" id="vote-3")
+								label(for="vote-3") Я не заболею, у меня сильный иммунитет
+							.action: a(href="#").btn.btn_blue Проголосовать
+	//----- 
+	.row
+		.col60_padr
+			.block
+				.block__name: h3 Новости
+				.block__content
+					.col40
+						.item-date-link
+							.pic: img(src="img/c/news-1.jpg", alt="")
+							.meta 
+								.date
+									| 20 ноября 
+									.date__tag Цифры
+							.link: a(href="#") Реформы московского здравоохранения будут продолжены
+					.col60_padl
+						mixin item-news(date, tag, name, color)
+							.item-date-link
+								.meta
+									.date 
+										| #{date}
+										.date__tag(class=typeof color === "undefined" ? undefined : "date__tag_"+color)= tag 
+								.link: a(href="#")= name
+
+						+item-news("13 ноября - 16 ноября", "Новости", "Департамент здравоохранения Москвы изучает возможность увольнения 7 тыс. врачей пенсионного и предпенсионного возраста")
+						+item-news("11 ноября", "ЕМИАС", "Реформа здравоохранения Москвы не приведёт к недостатку больничных коек и массовому сокращению медперсонала. Об этом заявил заммэра по соцвопросам Леонид Печатников")
+						+item-news("13 ноября - 16 ноября", "Новости", "Департамент здравоохранения Москвы изучает возможность увольнения 7 тыс. врачей пенсионного и предпенсионного возраста", "green")
+		//----- -----
+		.col40
+			.block
+				.block__name: h3 Дежурные аптеки
+				.block__content.block__content_bg-blue
+					ul.item-lists
+						mixin link
+							li
+								a(href="#") Аптека № 1 ГБУЗ "ЦЛО и КК ДЗ г.Москвы"
+								.desc ул. Ладожская, д. 10 - метро Бауманская
+						+link
+						+link
+						+link
+						+link
+						+link
+						+link
+	//----- 
+	.row
+		.col60_padr
+			.block
+				.block__name: h3 Мероприятия
+				.block__content
+					.col40
+						.item-date-link
+							.pic: img(src="img/c/news-1.jpg", alt="")
+							.date.date_bg-blue-dark 20 ноября 
+							.link: a(href="#") Реформы московского здравоохранения будут продолжены
+					.col60_padl
+						mixin item-event(date, name)
+							.item-date-link
+								.meta
+									.date.date_bg-blue-dark= date
+								.link: a(href="#")= name
+						
+						+item-event("13 ноября - 16 ноября", "Департамент здравоохранения Москвы изучает возможность увольнения 7 тыс. врачей пенсионного и предпенсионного возраста")
+						+item-event("13 ноября - 16 ноября", "Департамент здравоохранения Москвы изучает возможность увольнения 7 тыс. врачей пенсионного и предпенсионного возраста")
+						+item-event("11 ноября", "Завершение программы модернизации лечебных учреждений и внедрение современных систем информатизации позволили вывести московскую медицину на новый уровень")
+						+item-event("9 ноября", "Реформа здравоохранения Москвы не приведёт к недостатку больничных коек и массовому сокращению медперсонала. Об этом заявил заммэра по соцвопросам Леонид Печатников")
+		//----- ----- 
+		.col40
+			.block
+				.block__name: h3 Вакансии
+				.block__content.block__content_bg-blue
+					ul.item-lists.item-lists_sm
+						li: a(href="#") Акушер-гинеколог
+						li: a(href="#") 
+							| Акушерка
+							span.count 2
+						li: a(href="#") Анестезиолог-реаниматолог
+						li: a(href="#") Врач клинической лабораторной диагностики
+						li: a(href="#") Врач ЛФК
+						li: a(href="#") Врач по лечебной физкультуре
+							| Акушерка
+							span.count 4
+						li: a(href="#") Врач приемного отделения
+						li: a(href="#") Врач функциональной диагностики
+						li: a(href="#") Гериатр
+						li: a(href="#") Диетолог
+						li: a(href="#") Инфекционист
+						li: a(href="#") Кардиолог
+						li: a(href="#") Лаборант
+						li: a(href="#") Медицинская сестра
+	//----- 
+	.row
+		.col40
+			.block
+				.block__name: h3 Отзывы
+				.block__content.block__content_bg-blue
+					.reviews
+						.reviews__in.js-slider-reviews
+							.review
+								.review__text Записаться через сайт департамента к врачу-педиатору оказалсь совсем нетрудно даже мне, не самому продвинутому пользователю. <br>До этого была целая проблема с двумя детьми на руках попасть на прием. <br>Приятно, что о нас заботятся.
+								.review__name Мария Плотникова, 32 года <br>домохозяйка
+							.review
+								.review__text Записаться через сайт департамента к врачу-педиатору оказалсь совсем нетрудно даже мне, не самому продвинутому пользователю. <br>До этого была целая проблема с двумя детьми на руках попасть на прием. <br>Приятно, что о нас заботятся.
+								.review__name Мария Плотникова, 32 года <br>домохозяйка
+						.review__nav
+							a(href="#").prev
+							a(href="#").next
+		//----- ----- 
+		.col60_padl
+			.block
+				.block__name: h3 Полезные ссылки
+				.block__content.block__content_padding_ins
+					.col50.padr10
+						.item-date-link
+							.link: a(href="#") Программа развития Москвы
+							.date pgu.mos.ru 
+						.item-date-link
+							.link: a(href="#") Государственная программа столичного здравоохранения
+							.date pgu.mos.ru 
+						.item-date-link
+							.link: a(href="#") Портал гос услуг
+							.date pgu.mos.ru 
+					.col50.padl10
+						.item-date-link
+							.link: a(href="#") Целевые программы департамента
+							.date pgu.mos.ru 
+						.item-date-link
+							.link: a(href="#") Государственная программа столичного здравоохранения
+							.date pgu.mos.ru 
+						.item-date-link
+							.link: a(href="#") ЕМИАС
+							.date pgu.mos.ru
+	//----- 

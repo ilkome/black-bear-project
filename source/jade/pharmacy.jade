@@ -1,0 +1,26 @@
+extends _layout
+
+block append content
+	+pathway
+
+	.l-main
+		+left-menu
+		
+		.l-content
+			h1.page-name.has-bottom-line Аптеки
+			.filter-items.center
+				+filter-item-right
+				+filter-item-left
+			+page-search-found
+
+			mixin item-date-link
+				.item-date-link
+					.normal Аптека № 1 ГБУЗ "ЦЛО и КК ДЗ г.Москвы"
+					.small-grey 107005, г. Москва, ул. Ладожская, д. 10; тел.: (495) 265-58-30, (495) 265-59-00
+					.small-grey: a(href="#") www.mosgorzdrav.ru/apteka480
+
+			+item-date-link
+			+item-date-link
+			+item-date-link
+
+			+pager
