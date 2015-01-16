@@ -1,0 +1,49 @@
+extends _layout
+
+block append content
+	+pathway
+
+	.l-main
+		+left-menu
+		
+		.l-content
+			h1.page-name.has-margin-bottom Государственное казенное учреждение дирекция по обеспечению деятельности государственных учреждений здравоохранения Западного административного округа
+			.content-box
+				.tabs
+					ul.tabs-navig
+						li: a(href='#tabs-1') Контакты
+						li: a(href='#tabs-2') Руководство
+						li: a(href='#tabs-3') Главные специалисты
+						li: a(href='#tabs-4') Справочная информация
+						li: a(href='#tabs-5') Учреждения
+					#tabs-1
+						img.fl-right(src="img/c/gerb.png", alt="")
+						.width-limit
+							ul.no-list-style
+								li 
+									strong Адрес: 
+									| 119620, Богданова ул., д. 50.
+
+								li 
+									strong Телефон «горячей линии»: <br> 
+									| с 9.00 до 18.00 ежедневно – 439-44-02,<br> 
+									| суббота, воскресение (круглосуточно) и нерабочие часы тел. 435-03-97.
+								li 
+									strong Адрес электронной почты: 
+									a(href="#") info@zao.mosgorzdrav.ru
+								li 
+									strong Официальный сайт: 
+									a(href="#") http://www.zaomed.ru
+								li
+									strong Проезд: м. 
+									| «Юго-Западная», далее авт. 752, 718 до ост. «Районная управа».
+						#map-box
+
+					#tabs-2
+						h3 Руководство
+					#tabs-3
+						h3 Главные специалисты
+					#tabs-4
+						h3 Справочная информация
+					#tabs-5
+						h3 Учреждения

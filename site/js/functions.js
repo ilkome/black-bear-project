@@ -112,6 +112,29 @@ $(document).ready(function() {
 		advanced:{
 			updateOnContentResize: true
 		}
-	})
+	});
+
+
+
+	//	#tabs
+	// ===============================================
+	$('.tabs').tabslet({
+		attribute: 'href',
+		animation: true
+	});
+
+
+	//map
+	ymaps.ready(function () {
+		var myMap = new ymaps.Map('map-box', {
+			center: [55.73773386, 37.72953624],
+			zoom: 17,
+			controls: []
+		});
+		myMap.behaviors.disable('scrollZoom');
+		var myPlacemark = new ymaps.Placemark(myMap.getCenter());
+	
+		myMap.geoObjects.add(myPlacemark);
+	});
 
 });

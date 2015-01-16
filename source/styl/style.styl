@@ -612,23 +612,9 @@ body.page
 	padding-bottom 30px
 	p
 		line-height 20px
-	ul
-		lino()
-	ul li
-		position relative
-		margin-bottom 20px
-		padding-left 20px
-		line-height 20px
-	ul li:before
-		content " "
-		position absolute 
-		left 0px 
-		top 6px
-		width 8px
-		height 8px
-		border-radius 10px
-		background color-blue-grey
-	
+#map-box
+	height 380px
+
 //	#block
 .block
 	padding-bottom 40px
@@ -637,7 +623,7 @@ body.page
 .block_reforminfo
 	.block__name
 		h3 
-			color #7E919B
+			color color-blue-grey
 			font-size 17px
 	.block__content
 		margin-top -15px
@@ -1099,7 +1085,34 @@ body.page
 		position absolute 
 		left 40px 
 		bottom 30px
-		
+
+//	#tabs
+.tabs
+	font-size 14px
+.tabs-navig
+	clearfix() 
+	lino()
+	margin-bottom 30px
+	border-bottom 1px solid #d6d6d4
+.tabs-navig li
+	float left
+	padding 10px 25px
+	border-top 1px solid transparent
+	border-bottom 1px solid #d6d6d4
+	margin-bottom -1px
+.tabs-navig li.active
+	padding 10px 24px
+	border 1px solid #d6d6d4
+	border-bottom-color #fff
+	background #fff
+	
+.tabs-navig li.active a
+	color color-blue-grey
+	&:hover
+		tdn() 
+		cursor default
+
+
 //	#tags
 .tags
 	padding-bottom 3px
