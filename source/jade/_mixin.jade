@@ -13,7 +13,7 @@ mixin header-banner
 	.header__banner
 		.banner__text-prev
 			| «Жизнь — это шанс, который мы не ценим, пока не потеряем, а здоровье — корона на голове здоровых, которую способны увидеть только больные»
-			.action.center: a(href="#").btn.btn_white Записаться ко врачу
+			.action.center: a(href="#").btn.btn_white Записаться к врачу
 		.banner__pic: img(src="img/c/banner-2.jpg", alt="")
 mixin pathway
 	.pathway
@@ -89,6 +89,16 @@ mixin pager(center, red)
 		li: span.sep ...
 		li: a(href="#") 27
 		li.next: a(href="#") Вперед
+mixin comment-red(name, content)
+	.comment.comment_red
+		.comment__content
+			.meta
+				.name: a(href="#")= name
+				.date 
+					.time 18:35
+					.date_tag.has-bg-grey 23 ноября
+			.content= content
+			a(href="#").btn_trans_comments_red_white Ответить
 mixin comments
 	.cooments__name
 		.block__name

@@ -16,6 +16,8 @@
     <!-- libs-->
     <script src="libs/jquery.lightSlider.min.js" type="text/javascript"></script>
     <link href="libs/lightSlider.css" rel="stylesheet">
+    <script src="js/libs/jquery.tabslet.min.js" type="text/javascript"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;load=package.full" type="text/javascript"></script>
     <script src="js/functions.js" type="text/javascript"></script>
   </head>
   <body class="page">
@@ -63,7 +65,7 @@
       </div>
       <div class="header__banner">
         <div class="banner__text-prev">«Жизнь — это шанс, который мы не ценим, пока не потеряем, а здоровье — корона на голове здоровых, которую способны увидеть только больные»
-          <div class="action center"><a href="#" class="btn btn_white">Записаться ко врачу</a></div>
+          <div class="action center"><a href="#" class="btn btn_white">Записаться к врачу</a></div>
         </div>
         <div class="banner__pic"><img src="img/c/banner-2.jpg" alt=""/></div>
       </div>
@@ -85,6 +87,7 @@
                       <div class="phone-num">(495) 445-57-66</div>
                       <div class="phone-text">Справка о госпитализации больных в течении суток</div>
                     </div>
+          <div class="more"><a href="#"></a></div>
         </div>
       </div>
       <div class="row">
@@ -94,9 +97,9 @@
               <h3>Ситуация в столице</h3>
             </div>
             <div class="block__content">
-              <div class="situation situation_green">В Москве заболеваемость ОРВИ и гриппом на <strong>19,5%</strong> ниже эпидемического порога. В городе продолжается иммунизация населения против гриппа.</div>
-              <div class="situation situation_orange">В Москве заболеваемость ОРВИ и гриппом на 19,5% ниже эпидемического порога. В городе продолжается иммунизация населения против гриппа.</div>
-              <div class="situation situation_red">В Москве заболеваемость ОРВИ и гриппом на <strong>22,5%</strong> ниже эпидемического порога. В городе продолжается иммунизация населения против гриппа.</div>
+              <div class="situation situation_green">В Москве заболеваемость ОРВИ и гриппом на <strong>19,5%</strong> ниже эпидемического порога. В городе продолжается иммунизация населения против.</div>
+              <div class="situation situation_orange">В Москве заболеваемость ОРВИ и гриппом на 19,5% ниже эпидемического порога. В городе продолжается иммунизация населения против.</div>
+              <div class="situation situation_red">В Москве заболеваемость ОРВИ и гриппом на <strong>22,5%</strong> ниже эпидемического порога. В городе продолжается иммунизация населения против.</div>
             </div>
           </div>
         </div>
@@ -106,7 +109,14 @@
               <div data-thumb="img/c/slider-inform-3.jpg" class="slide">
                 <div class="pic"><img src="img/c/sob-1.jpg" alt=""></div>
                 <div class="text"> 
-                  <p>«Здоровье граждан<br>— наше богатство»</p><i>С. Собянин</i>
+                  <ul>
+                    <li><a href="#">Документы</a></li>
+                    <li><a href="#">Важнейшие лекарственные средства</a></li>
+                    <li><a href="#">Обращения населения</a></li>
+                    <li><a href="#">Справочные телефоны</a></li>
+                    <li><a href="#">Неотложная помощь</a></li>
+                    <li><a href="#">Лекарства и аптеки</a></li>
+                  </ul>
                 </div>
                 <div class="action"><a href="#" class="btn btn_blue">Сервисы для населения</a></div>
               </div>
@@ -132,7 +142,7 @@
         <div class="col60_padr">
           <div class="block">
             <div class="block__name">
-              <h3 class="has-color-red">Реформа 2015</h3>
+              <h3 class="has-color-red">Развитие</h3>
             </div>
             <div class="block__content">
                             <div class="item-date-link">
@@ -274,79 +284,6 @@
         </div>
       </div>
       <div class="row">
-        <div class="col60_padr">
-          <div class="block">
-            <div class="block__name">
-              <h3>Мероприятия</h3>
-            </div>
-            <div class="block__content">
-              <div class="col40">
-                <div class="item-date-link">
-                  <div class="pic"><img src="img/c/news-1.jpg" alt=""></div>
-                  <div class="date date_bg-blue-dark">20 ноября </div>
-                  <div class="link"><a href="#">Реформы московского здравоохранения будут продолжены</a></div>
-                </div>
-              </div>
-              <div class="col60_padl">
-                                <div class="item-date-link">
-                                  <div class="meta">
-                                    <div class="date date_bg-blue-dark">13 ноября - 16 ноября</div>
-                                  </div>
-                                  <div class="link"><a href="#">Департамент здравоохранения Москвы изучает возможность увольнения 7 тыс. врачей пенсионного и предпенсионного возраста</a></div>
-                                </div>
-                                <div class="item-date-link">
-                                  <div class="meta">
-                                    <div class="date date_bg-blue-dark">13 ноября - 16 ноября</div>
-                                  </div>
-                                  <div class="link"><a href="#">Департамент здравоохранения Москвы изучает возможность увольнения 7 тыс. врачей пенсионного и предпенсионного возраста</a></div>
-                                </div>
-                                <div class="item-date-link">
-                                  <div class="meta">
-                                    <div class="date date_bg-blue-dark">11 ноября</div>
-                                  </div>
-                                  <div class="link"><a href="#">Завершение программы модернизации лечебных учреждений и внедрение современных систем информатизации позволили вывести московскую медицину на новый уровень</a></div>
-                                </div>
-                                <div class="item-date-link">
-                                  <div class="meta">
-                                    <div class="date date_bg-blue-dark">9 ноября</div>
-                                  </div>
-                                  <div class="link"><a href="#">Реформа здравоохранения Москвы не приведёт к недостатку больничных коек и массовому сокращению медперсонала. Об этом заявил заммэра по соцвопросам Леонид Печатников</a></div>
-                                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col40">
-          <div class="block">
-            <div class="block__name">
-              <h3>Вакансии</h3>
-            </div>
-            <div class="block__content block__content_bg-blue">
-              <ul class="item-lists item-lists_sm">
-                <li><a href="#">Акушер-гинеколог</a></li>
-                <li><a href="#">
-                     
-                    Акушерка<span class="count">2</span></a></li>
-                <li><a href="#">Анестезиолог-реаниматолог</a></li>
-                <li><a href="#">Врач клинической лабораторной диагностики</a></li>
-                <li><a href="#">Врач ЛФК</a></li>
-                <li><a href="#">
-                    Врач по лечебной физкультуре
-                    Акушерка<span class="count">4</span></a></li>
-                <li><a href="#">Врач приемного отделения</a></li>
-                <li><a href="#">Врач функциональной диагностики</a></li>
-                <li><a href="#">Гериатр</a></li>
-                <li><a href="#">Диетолог</a></li>
-                <li><a href="#">Инфекционист</a></li>
-                <li><a href="#">Кардиолог</a></li>
-                <li><a href="#">Лаборант</a></li>
-                <li><a href="#">Медицинская сестра</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
         <div class="col40">
           <div class="block">
             <div class="block__name">
@@ -412,7 +349,7 @@
       <div class="l-wrap">
         <div class="footer__in">
           <ul>
-            <li class="title">Информация</li>
+            <li class="title">Гражданам</li>
             <li><a href="#">О департаменте</a></li>
             <li><a href="#">Для СМИ</a></li>
             <li><a href="#">Парнерам</a></li>
@@ -420,7 +357,7 @@
             <li><a href="#">Новости</a></li>
           </ul>
           <ul>
-            <li class="title">Услуги</li>
+            <li class="title">Специалистам</li>
             <li><a href="#">Способы записи</a></li>
             <li><a href="#">Найти поликлиннику</a></li>
             <li><a href="#">Прикрепиться к поликлиннике</a></li>
@@ -428,11 +365,17 @@
             <li><a href="#">Доступные врачи</a></li>
           </ul>
           <ul>
-            <li class="title">Сервис</li>
+            <li class="title">Департамент</li>
             <li><a href="#">Обращения</a></li>
             <li><a href="#">Контакты</a></li>
             <li><a href="#">Соглашения</a></li>
             <li><a href="#"> FAQ</a></li>
+          </ul>
+          <ul>
+            <li class="title">Пресс-Центр</li>
+          </ul>
+          <ul>
+            <li class="title">Сервисы</li>
           </ul>
         </div>
       </div>

@@ -14,15 +14,17 @@ block append content
 			+item-phone("(495) 632-96-80", "Дежурный врач-педиатр")
 			+item-phone("(495) 445-02-63", "Прием устных обращений")
 			+item-phone("(495) 445-57-66", "Справка о госпитализации больных в течении суток")
+			.more
+				a(href="#")
 
 	.row
 		.col40
 			.block
 				.block__name: h3 Ситуация в столице
 				.block__content
-					.situation.situation_green В Москве заболеваемость ОРВИ и гриппом на <strong>19,5%</strong> ниже эпидемического порога. В городе продолжается иммунизация населения против гриппа.
-					.situation.situation_orange В Москве заболеваемость ОРВИ и гриппом на 19,5% ниже эпидемического порога. В городе продолжается иммунизация населения против гриппа.
-					.situation.situation_red В Москве заболеваемость ОРВИ и гриппом на <strong>22,5%</strong> ниже эпидемического порога. В городе продолжается иммунизация населения против гриппа.
+					.situation.situation_green В Москве заболеваемость ОРВИ и гриппом на <strong>19,5%</strong> ниже эпидемического порога. В городе продолжается иммунизация населения против.
+					.situation.situation_orange В Москве заболеваемость ОРВИ и гриппом на 19,5% ниже эпидемического порога. В городе продолжается иммунизация населения против.
+					.situation.situation_red В Москве заболеваемость ОРВИ и гриппом на <strong>22,5%</strong> ниже эпидемического порога. В городе продолжается иммунизация населения против.
 		//----- -----
 		.col60_padl
 			.slider-inform
@@ -30,8 +32,13 @@ block append content
 					.slide(data-thumb="img/c/slider-inform-3.jpg")
 						.pic: img(src="img/c/sob-1.jpg", alt="")
 						.text 
-							p «Здоровье граждан<br>— наше богатство»
-							i С. Собянин
+							ul
+								li: a(href="#") Документы
+								li: a(href="#") Важнейшие лекарственные средства
+								li: a(href="#") Обращения населения
+								li: a(href="#") Справочные телефоны
+								li: a(href="#") Неотложная помощь
+								li: a(href="#") Лекарства и аптеки
 						.action
 							a(href="#").btn.btn_blue Сервисы для населения
 					.slide(data-thumb="img/c/slider-inform-3.jpg")
@@ -52,7 +59,7 @@ block append content
 	.row
 		.col60_padr
 			.block
-				.block__name: h3.has-color-red Реформа 2015
+				.block__name: h3.has-color-red Развитие
 				.block__content
 					mixin item-reforma
 						.item-date-link
@@ -124,7 +131,7 @@ block append content
 						+link
 						+link
 	//----- 
-	.row
+	//-.row
 		.col60_padr
 			.block
 				.block__name: h3 Мероприятия

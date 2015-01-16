@@ -163,7 +163,9 @@ body.page
 	background color-grey
 .has-bottom-line
 	linebottom()
-
+.has-color-blue-grey
+	color color-blue-grey
+	
 //	#header
 .header
 	padding 30px 0 0 0
@@ -287,14 +289,14 @@ body.page
 		width 100%
 	.banner__text-prev
 		position absolute 
-		right 0px 
-		top 135px
-		width 435px
+		left 25px 
+		bottom 15px
+		width 410px
 		full() 
 		padding 40px 40px 30px 40px
 		color #FFF
-		font-size 16px
-		background-color color-blue
+		font-size 13px
+		background-color alpha(color-blue, .8)
 		.action
 			padding-top 20px
 	.banner__text-line
@@ -317,11 +319,13 @@ body.page
 	padding 40px 40px	
 .footer__menu
 	background-color color-grey
-	.l-wrap, .footer__in
+	.l-wrap 
+	.footer__in
 		background-color color-grey
 	ul
 		display table-cell 
-		padding-right 100px
+		width 200px
+		padding-right 20px
 		lino()
 	li
 		display block
@@ -584,6 +588,7 @@ body.page
 	&.has-margin-bottom
 		margin-bottom 40px
 .phones
+	position relative
 	padding 30px 40px 40px 40px
 	.phone
 		dtc()
@@ -591,23 +596,32 @@ body.page
 		padding 0 20px
 		full() 
 		text-align center
-		.phone-num
-			width 220px
-			linebottom()
-			font-link()
-			font-size 24px
-		.phone-text
-			width 220px
+	.phone-num
+		width 220px
+		linebottom()
+		font-link()
+		font-size 24px
+	.phone-text
+		width 220px
+	.more
+		position absolute 
+		right 0px 
+		top 57px
+	.more a
+		display block
+		width 26px
+		height 26px
+		background url("../img/i/more.png") no-repeat
 .situation
-	padding 10px 0 10px 20px
+	padding 10px 10px 10px 90px
+	min-height 50px
 	margin-bottom 20px
-	border-left 6px solid #fff
 	&_green
-		border-color #29a257
+		background url("../img/i/situation-good.png") no-repeat
 	&_orange
-		border-color #ffa836
+		background url("../img/i/situation-info.png") no-repeat
 	&_red
-		border-color #d8492d
+		background url("../img/i/situation-stop.png") no-repeat
 .content-box
 	padding-bottom 30px
 	p
@@ -992,7 +1006,9 @@ body.page
 	.content
 		padding-bottom 10px
 		line-height 20px
-	
+.comment_red .name a
+	color color-red
+
 //	#event
 .eventinfo
 	width 280px
@@ -1073,10 +1089,16 @@ body.page
 	.text
 		position absolute 
 		width 250px
-		left 60px 
+		left 0px 
 		top 40px
-		font-link()
-		font-size 22px
+		padding 20px 40px
+		background alpha(#fff, .7)
+		ul
+			lino()
+		li
+			padding-bottom 4px
+		a
+			color color-black			
 		p
 			margin-bottom 0
 		i
@@ -1105,13 +1127,11 @@ body.page
 	border 1px solid #d6d6d4
 	border-bottom-color #fff
 	background #fff
-	
 .tabs-navig li.active a
 	color color-blue-grey
 	&:hover
 		tdn() 
 		cursor default
-
 
 //	#tags
 .tags
@@ -1243,7 +1263,24 @@ body.page
 		height 13px
 		border-radius 13px
 		background-color color-red
-
+.timeline-item__comments
+	border-top 0
+	padding 0 15px
+	background #f9f9f9
+	border 2px solid color-grey
+.timeline-item__comments__name
+	margin 0 -15px
+	padding 10px 15px
+	color color-blue-grey
+	background color-grey
+	.hideshow
+		float right
+		display block
+		width 23px
+		height 19px
+		background url("../img/i/hideshow.png") no-repeat
+		&:hover
+			opacity .7
 //	#filter
 .filter-items
 	padding-bottom 10px
@@ -1389,7 +1426,11 @@ body.page
 	@extend .btn_trans_comments
 	&:hover
 		border-color color-red
-
+.btn_trans_comments_red_white
+	@extend .btn_trans_comments_red
+	background-color #ededef
+	border-color #fff
+	color color-red
 .btn_blue, input.btn_blue
 	color #fff
 	background color-blue

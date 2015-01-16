@@ -50,14 +50,20 @@ $(document).ready(function() {
 
 	// #hidden-text
 	// ===============================================
-	$(".js-hidden-text-open").on("click", function(e) {
-		var thisis = $(this);
-		var box = $(this).closest(".js-hidden-text-box");
-		var item = box.find(".js-hidden-text");
-
+	$(".js-hidden-link").on("click", function(e) {
 		e.preventDefault();
-		item.slideDown();
-		box.addClass("is-active");
+
+		var thisis = $(this);
+		var box = $(this).closest(".js-hidden-box");
+		var content = box.find(".js-hidden-content");
+
+		if(content.is(":visible")) {
+			box.removeClass("is-active");
+			content.stop().slideUp();
+		} else {
+			box.addClass("is-active");
+			content.stop().slideDown();
+		}
 	});
 
 
@@ -124,17 +130,20 @@ $(document).ready(function() {
 	});
 
 
-	//map
-	ymaps.ready(function () {
-		var myMap = new ymaps.Map('map-box', {
-			center: [55.73773386, 37.72953624],
-			zoom: 17,
-			controls: []
-		});
-		myMap.behaviors.disable('scrollZoom');
-		var myPlacemark = new ymaps.Placemark(myMap.getCenter());
-	
-		myMap.geoObjects.add(myPlacemark);
-	});
 
+	//	#map
+	// ===============================================
+	if($(".map-box").length) {
+		ymaps.ready(function () {
+			var myMap = new ymaps.Map('map-box', {
+				center: [55.73773386, 37.72953624],
+				zoom: 17,
+				controls: []
+			});
+			myMap.behaviors.disable('scrollZoom');
+			var myPlacemark = new ymaps.Placemark(myMap.getCenter());
+		
+			myMap.geoObjects.add(myPlacemark);
+		});
+	}
 });

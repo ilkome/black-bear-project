@@ -61,10 +61,10 @@ body {
   font-size: 14px;
 }
 ul {
-  margin: 0 0 15px 10px;
+  margin: 0 0 15px 0px;
 }
 ul li {
-  margin: 0 0 15px 15px;
+  margin: 0 0 20px 15px;
   list-style: disc outside;
 }
 ul li ul,
@@ -88,6 +88,30 @@ ol li ol {
 .no-list-style li {
   margin-left: 0;
   list-style-type: none;
+}
+.list-style-grey {
+  margin: 0;
+  list-style: none;
+}
+.list-style-grey li {
+  margin: 0;
+  list-style: none;
+}
+.list-style-grey li {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  line-height: 20px;
+}
+.list-style-grey li:before {
+  content: " ";
+  position: absolute;
+  left: 0px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  background: #7e919b;
 }
 .font-grey-small,
 .formline__desc {
@@ -539,6 +563,9 @@ body.page {
   padding-bottom: 9px;
   border-bottom: 6px solid #ccd8ed;
 }
+.has-color-blue-grey {
+  color: #7e919b;
+}
 .header {
   padding: 30px 0 0 0;
 }
@@ -707,14 +734,14 @@ body.page {
 }
 .header__banner .banner__text-prev {
   position: absolute;
-  right: 0px;
-  top: 135px;
-  width: 435px;
+  left: 25px;
+  bottom: 15px;
+  width: 410px;
   box-sizing: border-box;
   padding: 40px 40px 30px 40px;
   color: #fff;
-  font-size: 16px;
-  background-color: #0072b9;
+  font-size: 13px;
+  background-color: rgba(0,114,185,0.8);
 }
 .header__banner .banner__text-prev .action {
   padding-top: 20px;
@@ -753,7 +780,8 @@ body.page {
 }
 .footer__menu ul {
   display: table-cell;
-  padding-right: 100px;
+  width: 200px;
+  padding-right: 20px;
   margin: 0;
   list-style: none;
 }
@@ -1133,6 +1161,7 @@ body.page {
   margin-bottom: 40px;
 }
 .phones {
+  position: relative;
   padding: 30px 40px 40px 40px;
 }
 .phones .phone {
@@ -1143,7 +1172,7 @@ body.page {
   box-sizing: border-box;
   text-align: center;
 }
-.phones .phone .phone-num {
+.phones .phone-num {
   width: 220px;
   margin-bottom: 15px;
   padding-bottom: 9px;
@@ -1151,22 +1180,33 @@ body.page {
   color: #0072b9;
   font-size: 24px;
 }
-.phones .phone .phone-text {
+.phones .phone-text {
   width: 220px;
 }
+.phones .more {
+  position: absolute;
+  right: 0px;
+  top: 57px;
+}
+.phones .more a {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: url("../img/i/more.png") no-repeat;
+}
 .situation {
-  padding: 10px 0 10px 20px;
+  padding: 10px 10px 10px 90px;
+  min-height: 50px;
   margin-bottom: 20px;
-  border-left: 6px solid #fff;
 }
 .situation_green {
-  border-color: #29a257;
+  background: url("../img/i/situation-good.png") no-repeat;
 }
 .situation_orange {
-  border-color: #ffa836;
+  background: url("../img/i/situation-info.png") no-repeat;
 }
 .situation_red {
-  border-color: #d8492d;
+  background: url("../img/i/situation-stop.png") no-repeat;
 }
 .content-box {
   padding-bottom: 30px;
@@ -1174,29 +1214,8 @@ body.page {
 .content-box p {
   line-height: 20px;
 }
-.content-box ul {
-  margin: 0;
-  list-style: none;
-}
-.content-box ul li {
-  margin: 0;
-  list-style: none;
-}
-.content-box ul li {
-  position: relative;
-  margin-bottom: 20px;
-  padding-left: 20px;
-  line-height: 20px;
-}
-.content-box ul li:before {
-  content: " ";
-  position: absolute;
-  left: 0px;
-  top: 6px;
-  width: 8px;
-  height: 8px;
-  border-radius: 10px;
-  background: #7e919b;
+#map-box {
+  height: 380px;
 }
 .block {
   padding-bottom: 40px;
@@ -1692,6 +1711,9 @@ body.page {
   padding-bottom: 10px;
   line-height: 20px;
 }
+.comment_red .name a {
+  color: #a81d37;
+}
 .eventinfo {
   width: 280px;
   margin: 0 20px 20px 0;
@@ -1799,10 +1821,24 @@ body.page {
 .slider-inform .text {
   position: absolute;
   width: 250px;
-  left: 60px;
+  left: 0px;
   top: 40px;
-  color: #0072b9;
-  font-size: 22px;
+  padding: 20px 40px;
+  background: rgba(255,255,255,0.7);
+}
+.slider-inform .text ul {
+  margin: 0;
+  list-style: none;
+}
+.slider-inform .text ul li {
+  margin: 0;
+  list-style: none;
+}
+.slider-inform .text li {
+  padding-bottom: 4px;
+}
+.slider-inform .text a {
+  color: #54585a;
 }
 .slider-inform .text p {
   margin-bottom: 0;
@@ -1814,6 +1850,45 @@ body.page {
   position: absolute;
   left: 40px;
   bottom: 30px;
+}
+.tabs {
+  font-size: 14px;
+}
+.tabs-navig {
+  margin: 0;
+  list-style: none;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #d6d6d4;
+}
+.tabs-navig:before,
+.tabs-navig:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tabs-navig li {
+  margin: 0;
+  list-style: none;
+}
+.tabs-navig li {
+  float: left;
+  padding: 10px 25px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #d6d6d4;
+  margin-bottom: -1px;
+}
+.tabs-navig li.active {
+  padding: 10px 24px;
+  border: 1px solid #d6d6d4;
+  border-bottom-color: #fff;
+  background: #fff;
+}
+.tabs-navig li.active a {
+  color: #7e919b;
+}
+.tabs-navig li.active a:hover {
+  text-decoration: none;
+  cursor: default;
 }
 .tags {
   padding-bottom: 3px;
@@ -1972,6 +2047,28 @@ body.page {
   height: 13px;
   border-radius: 13px;
   background-color: #a81d37;
+}
+.timeline-item__comments {
+  border-top: 0;
+  padding: 0 15px;
+  background: #f9f9f9;
+  border: 2px solid #f5f5f3;
+}
+.timeline-item__comments__name {
+  margin: 0 -15px;
+  padding: 10px 15px;
+  color: #7e919b;
+  background: #f5f5f3;
+}
+.timeline-item__comments__name .hideshow {
+  float: right;
+  display: block;
+  width: 23px;
+  height: 19px;
+  background: url("../img/i/hideshow.png") no-repeat;
+}
+.timeline-item__comments__name .hideshow:hover {
+  opacity: 0.7;
 }
 .filter-items {
   padding-bottom: 10px;
@@ -2139,7 +2236,8 @@ body.page {
 .btn_trans_sm,
 .btn_trans_answer,
 .btn_trans_comments,
-.btn_trans_comments_red {
+.btn_trans_comments_red,
+.btn_trans_comments_red_white {
   display: inline-block;
   padding: 5px 10px 5px 25px;
   font-size: 12px;
@@ -2148,7 +2246,8 @@ body.page {
 .btn_trans_sm:hover,
 .btn_trans_answer:hover,
 .btn_trans_comments:hover,
-.btn_trans_comments_red:hover {
+.btn_trans_comments_red:hover,
+.btn_trans_comments_red_white:hover {
   border-color: #0072b9;
   text-decoration: none;
 }
@@ -2156,12 +2255,19 @@ body.page {
   background: url("../img/i/replay.png") 10px center no-repeat;
 }
 .btn_trans_comments,
-.btn_trans_comments_red {
+.btn_trans_comments_red,
+.btn_trans_comments_red_white {
   color: #7e919b;
   background: url("../img/i/comments-count.png") 10px center no-repeat;
 }
-.btn_trans_comments_red:hover {
+.btn_trans_comments_red:hover,
+.btn_trans_comments_red_white:hover {
   border-color: #a81d37;
+}
+.btn_trans_comments_red_white {
+  background-color: #ededef;
+  border-color: #fff;
+  color: #a81d37;
 }
 .btn_blue,
 input.btn_blue,
