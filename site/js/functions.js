@@ -94,7 +94,7 @@ $(document).ready(function() {
 			$(this).find(".js-dropmenu-content").stop().slideDown();
 		}, function() {
 			$(this).find(".js-dropmenu-link").removeClass("is-open");
-			$(this).find(".js-dropmenu-content").stop().fadeOut('fast');
+			$(this).find(".js-dropmenu-content").stop().slideUp('fast');
 		}
 	);
 
