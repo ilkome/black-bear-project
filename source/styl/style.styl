@@ -187,7 +187,7 @@ body.page
 	padding 13px 30px 12px 20px
 	color color-blue
 	font-size 14px
-	border 1px solid #ccd8ed
+	border 1px solid color-blue-light-bd
 	&:hover
 		tdn()
 		opacity .8
@@ -702,15 +702,114 @@ body.page
 	full() 
 	padding-left 10px
 	background #f4f8ff url("../img/i/check-status__check.png") 35px 35px no-repeat
-	border 1px solid #ccd8ed
+	border 1px solid color-blue-light-bd
 	anim()
 	&:hover
 		opacity .8
 	.link
 		padding-top 60px
 		padding-bottom 50px
-		color #ccd8ed
+		color color-blue-light-bd
 
+//	#departament
+.depart
+	width 680px
+	margin 0 auto
+.depart-boss
+	position relative
+	width 500px
+	margin 0 auto 20px auto
+	background color-blue-light
+	border 1px solid color-blue-light-bd
+	clearfix() 
+.depart-boss__pic
+	position relative
+	float left
+	img
+		display block
+.depart-boss__content
+	position relative
+	overflow hidden
+	padding 25px 20px
+	text-align center
+	h3
+		color color-blue
+		font-size 24px
+.depart-line
+	clearfix()
+	padding-bottom 20px
+.depart-header-blue
+	display inline-block
+	vertical-align top
+	width 310px
+	margin 0 10px
+	padding 20px 20px 20px 20px
+	height 120px
+	full() 
+	text-align center
+	background color-blue-light
+	border 1px solid color-blue-light-bd
+	h3
+		color color-blue-grey
+		font-size 20px
+		margin-bottom 10px
+	p
+		margin-bottom 0
+.depart-header-blue.inside-box
+	width 350px
+	height auto
+	padding 15px 20px
+	margin-bottom 20px
+.depart-sub-header
+	padding-bottom 20px
+	text-align center
+	.info
+		padding-bottom 10px
+		font-size 16px
+	.name-big
+		padding-bottom 5px
+		font-size 18px
+		color color-blue-grey
+	.prof
+		padding-bottom 5px
+		color color-grey-dark
+	.name-small
+		padding-bottom 5px
+		color color-blue-grey
+.depart-box-grey
+	padding 20px 20px 1px 20px 
+	margin-bottom 20px
+	background #f9f9f9
+.depart-box-grey.has-padding-bottom
+	padding-bottom 20px
+.depart-box-trans
+	padding 0px 20px 
+	margin-bottom 20px
+.depart-box-white
+	margin-bottom 20px
+	padding 20px 20px 10px 20px
+	background #fff
+	border 1px solid color-blue-light-bd
+.depart-worker
+	display inline-block
+	width 45%
+	margin 0 10px
+	padding 15px
+	full()
+	vertical-align top
+	border 1px solid color-grey-bd
+	background #fff
+	.info
+		font-size 14px
+	.name
+		padding-top 10px
+		padding-bottom 5px
+		font-size 14px
+		color color-blue-grey
+	.prof
+		padding-bottom 5px
+		color color-grey-dark
+		
 //	#formline
 .formline
 	padding-bottom 30px
@@ -929,7 +1028,7 @@ body.page
 	position relative
 	background url("../img/quest.png") 15px center no-repeat
 	background-color color-blue-light
-	border 1px solid #ccd8ed
+	border 1px solid color-blue-light-bd
 	&:after
 		position absolute 
 		right 20px 
@@ -1115,16 +1214,16 @@ body.page
 	clearfix() 
 	lino()
 	margin-bottom 30px
-	border-bottom 1px solid #d6d6d4
+	border-bottom 1px solid color-grey-bd
 .tabs-navig li
 	float left
 	padding 10px 25px
 	border-top 1px solid transparent
-	border-bottom 1px solid #d6d6d4
+	border-bottom 1px solid color-grey-bd
 	margin-bottom -1px
 .tabs-navig li.active
 	padding 10px 24px
-	border 1px solid #d6d6d4
+	border 1px solid color-grey-bd
 	border-bottom-color #fff
 	background #fff
 .tabs-navig li.active a
@@ -1281,6 +1380,7 @@ body.page
 		background url("../img/i/hideshow.png") no-repeat
 		&:hover
 			opacity .7
+
 //	#filter
 .filter-items
 	padding-bottom 10px

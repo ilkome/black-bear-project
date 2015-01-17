@@ -1,11 +1,13 @@
 //	#vars
 // ===============================================
 color-grey = #f5f5f3
+color-grey-bd = #d6d6d4
 color-grey-med = #e5e5e2
 color-grey-dark = #9A9A9A
 color-blue = #0072B9
 color-blue-grey = #7E919B
 color-blue-light = #f4f8ff
+color-blue-light-bd = #ccd8ed
 color-red = #a81d37
 color-red-grey = #f5f5f5
 color-black = #54585a
@@ -13,7 +15,7 @@ color-black = #54585a
 linebottom()
 	margin-bottom 15px
 	padding-bottom 9px
-	border-bottom 6px solid #ccd8ed
+	border-bottom 6px solid color-blue-light-bd
 font-main()
 	color color-black
 	font-size 14px
@@ -143,7 +145,7 @@ select
 .select_dark
 	color color-grey-dark
 	font-size 12px
-	border 1px solid #d6d6d4 
+	border 1px solid color-grey-bd 
 	option
 		color color-grey-dark
 .select_full
@@ -172,7 +174,7 @@ input.inp_dark
 	font-size 14px
 	color #777
 	padding 10px 10px
-	border 1px solid #d6d6d4 
+	border 1px solid color-grey-bd 
 	&:hover
 	&:focus
 		background #fff

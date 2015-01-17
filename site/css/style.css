@@ -1330,6 +1330,137 @@ body.page {
   padding-bottom: 50px;
   color: #ccd8ed;
 }
+.depart {
+  width: 680px;
+  margin: 0 auto;
+}
+.depart-boss {
+  position: relative;
+  width: 500px;
+  margin: 0 auto 20px auto;
+  background: #f4f8ff;
+  border: 1px solid #ccd8ed;
+}
+.depart-boss:before,
+.depart-boss:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.depart-boss__pic {
+  position: relative;
+  float: left;
+}
+.depart-boss__pic img {
+  display: block;
+}
+.depart-boss__content {
+  position: relative;
+  overflow: hidden;
+  padding: 25px 20px;
+  text-align: center;
+}
+.depart-boss__content h3 {
+  color: #0072b9;
+  font-size: 24px;
+}
+.depart-line {
+  padding-bottom: 20px;
+}
+.depart-line:before,
+.depart-line:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.depart-header-blue {
+  display: inline-block;
+  vertical-align: top;
+  width: 310px;
+  margin: 0 10px;
+  padding: 20px 20px 20px 20px;
+  height: 120px;
+  box-sizing: border-box;
+  text-align: center;
+  background: #f4f8ff;
+  border: 1px solid #ccd8ed;
+}
+.depart-header-blue h3 {
+  color: #7e919b;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.depart-header-blue p {
+  margin-bottom: 0;
+}
+.depart-header-blue.inside-box {
+  width: 350px;
+  height: auto;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+.depart-sub-header {
+  padding-bottom: 20px;
+  text-align: center;
+}
+.depart-sub-header .info {
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+.depart-sub-header .name-big {
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: #7e919b;
+}
+.depart-sub-header .prof {
+  padding-bottom: 5px;
+  color: #9a9a9a;
+}
+.depart-sub-header .name-small {
+  padding-bottom: 5px;
+  color: #7e919b;
+}
+.depart-box-grey {
+  padding: 20px 20px 1px 20px;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+}
+.depart-box-grey.has-padding-bottom {
+  padding-bottom: 20px;
+}
+.depart-box-trans {
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
+.depart-box-white {
+  margin-bottom: 20px;
+  padding: 20px 20px 10px 20px;
+  background: #fff;
+  border: 1px solid #ccd8ed;
+}
+.depart-worker {
+  display: inline-block;
+  width: 45%;
+  margin: 0 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  vertical-align: top;
+  border: 1px solid #d6d6d4;
+  background: #fff;
+}
+.depart-worker .info {
+  font-size: 14px;
+}
+.depart-worker .name {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  color: #7e919b;
+}
+.depart-worker .prof {
+  padding-bottom: 5px;
+  color: #9a9a9a;
+}
 .formline {
   padding-bottom: 30px;
 }
