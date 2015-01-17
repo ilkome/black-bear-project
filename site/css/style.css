@@ -113,6 +113,17 @@ ol li ol {
   border-radius: 10px;
   background: #7e919b;
 }
+.no-list-style-no-mr {
+  margin: 0;
+  list-style: none;
+}
+.no-list-style-no-mr li {
+  margin: 0;
+  list-style: none;
+}
+.no-list-style-no-mr li {
+  margin: 0;
+}
 .font-grey-small,
 .formline__desc {
   font-size: 12px;
@@ -1981,6 +1992,42 @@ body.page {
   position: absolute;
   left: 40px;
   bottom: 30px;
+}
+.strukure-line {
+  padding-bottom: 30px;
+}
+.strukure-line:before,
+.strukure-line:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.strukure-full {
+  position: relative;
+}
+.strukure-info {
+  font-size: 20px;
+  color: #7e919b;
+}
+.strukure-name {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+.strukure-prof {
+  padding-bottom: 5px;
+  color: #9a9a9a;
+}
+.strukure-left {
+  float: left;
+  width: 265px;
+  padding-right: 35px;
+}
+.strukure-right {
+  overflow: hidden;
+}
+.strukure-space {
+  height: 20px;
 }
 .tabs {
   font-size: 14px;
