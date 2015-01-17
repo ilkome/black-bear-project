@@ -68,6 +68,24 @@ $(document).ready(function() {
 
 
 
+	// #popup map
+	// ===============================================
+	$(".js-popupmap-link").on("click", function(e) {
+		e.preventDefault();
+
+		var thisis = $(this);
+		var popupId = thisis.data("mapitem-id")
+		var box = $(this).closest(".js-popupmap-box");
+		var content = box.find(".js-popupmap-content");
+		var items = content.find(".js-popupmap-item");
+		var currentItem = content.find('.js-popupmap-item[data-mapitem-id="'+popupId+'"]')
+
+		items.stop().fadeOut();
+		currentItem.stop().fadeIn();
+	});
+
+
+
 	//	#dropmenu
 	// ===============================================
 	$(".js-dropmenu").hover(
