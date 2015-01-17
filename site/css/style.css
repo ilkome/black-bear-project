@@ -1228,6 +1228,32 @@ body.page {
 #map-box {
   height: 380px;
 }
+.big-blue-link {
+  margin-bottom: 20px;
+}
+.big-blue-link a {
+  display: block;
+  padding: 60px 0;
+  padding-left: 160px;
+  font-size: 24px;
+  border: 1px solid #ccd8ed;
+}
+.big-blue-link a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+.big-blue-link.sience {
+  background: #f4f8ff url("../img/blue-sience.png") 35px center no-repeat;
+}
+.big-blue-link.educ {
+  background: #f4f8ff url("../img/blue-educ.png") 35px center no-repeat;
+}
+.big-blue-link.online {
+  background: #f4f8ff url("../img/blue-online.png") 35px center no-repeat;
+}
+.big-blue-link.contacts {
+  background: #f4f8ff url("../img/blue-contacts.png") 35px center no-repeat;
+}
 .block {
   padding-bottom: 40px;
 }
@@ -1374,6 +1400,16 @@ body.page {
 .depart-boss__content h3 {
   color: #0072b9;
   font-size: 24px;
+}
+.depart-boss__content p {
+  margin-bottom: 0;
+}
+.depart-boss_small {
+  width: auto;
+}
+.depart-boss_small .depart-boss__content {
+  text-align: left;
+  padding: 20px 20px;
 }
 .depart-line {
   padding-bottom: 20px;
