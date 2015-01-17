@@ -582,6 +582,32 @@ body.page
 	margin-bottom 40px
 
 //	#content
+.big-blue-link
+	margin-bottom 20px
+		
+	a
+		display block
+		padding 60px 0
+		padding-left 160px
+		font-size 24px
+		border 1px solid color-blue-light-bd
+		&:hover
+			opacity .8
+			tdn()
+.big-blue-link.sience
+	background color-blue-light url("../img/blue-sience.png") 35px center no-repeat
+.big-blue-link.educ
+	background color-blue-light url("../img/blue-educ.png") 35px center no-repeat
+.big-blue-link.online
+	background color-blue-light url("../img/blue-online.png") 35px center no-repeat
+.big-blue-link.contacts
+	background color-blue-light url("../img/blue-contacts.png") 35px center no-repeat
+.content-box
+	padding-bottom 30px
+	p
+		line-height 20px
+#map-box
+	height 380px
 .page-name
 	font-size 24px
 	margin-bottom 20px
@@ -622,32 +648,29 @@ body.page
 		background url("../img/i/situation-info.png") no-repeat
 	&_red
 		background url("../img/i/situation-stop.png") no-repeat
-.content-box
-	padding-bottom 30px
-	p
-		line-height 20px
-#map-box
-	height 380px
-.big-blue-link
-	margin-bottom 20px
-		
+.view-by
+	lino()
+	float right
+	li
+		float right
+		padding-left 20px
 	a
 		display block
-		padding 60px 0
-		padding-left 160px
-		font-size 24px
-		border 1px solid color-blue-light-bd
+		width 16px
+		height 16px
+		background url("../img/i/sort-by.png") no-repeat
 		&:hover
-			opacity .8
-			tdn()
-.big-blue-link.sience
-	background color-blue-light url("../img/blue-sience.png") 35px center no-repeat
-.big-blue-link.educ
-	background color-blue-light url("../img/blue-educ.png") 35px center no-repeat
-.big-blue-link.online
-	background color-blue-light url("../img/blue-online.png") 35px center no-repeat
-.big-blue-link.contacts
-	background color-blue-light url("../img/blue-contacts.png") 35px center no-repeat
+			opacity .7
+	li.list a
+		background-position -17px 0
+	li.list.is-active a
+		background-position -17px -16px
+		opacity 1
+	li.map a
+		background-position 0 0
+	li.map.is-active a
+		background-position 0 -17px
+		opacity 1
 
 
 //	#block
