@@ -1,0 +1,263 @@
+extends _layout
+
+block append content
+	.upperbar 
+		.fl-left
+			.close-popup: a(href="#")
+			.slider-nav
+				ul
+					li.prev: a(href="#")
+					li.sep
+					li.next: a(href="#")
+			.upperbar__name Придумать название магазина доставки сладкой продукции
+		.fl-right
+			.textline
+				.textline__info Бюджет
+				.textline__content
+					.price
+						| 12 500 000
+						.cur
+			a(href="#").btn-grey Учавствовать
+	
+	.upperbar.is-fixed 
+		.fl-left
+			.close-popup: a(href="#")
+			.slider-nav
+				ul
+					li.prev: a(href="#")
+					li.sep
+					li.next: a(href="#")
+			.upperbar__name Придумать название магазина доставки сладкой продукции
+		.fl-right
+			.task-status.publish Опубликованна
+			a(href="#").btn-grey-edit Редактировать
+	
+	.content-wrap
+		.content
+			.content__name
+				.textline__info Анализ данных
+				.id id 
+					strong 8067
+				.pic: img(src="img/content/task-1.png", alt="")
+				.name: h1 Придумать название нового бренда напитка BubbleTea и разработать партнерскую программу
+			.textline
+				.textline__info Опубликовал
+				.textline__content Департамент информационных технологий города Москвы
+			.content__meta
+				.col
+					.textline
+						.textline__info Просмотры
+						.textline__content
+							.icon-views 20
+				.col
+					.textline
+						.textline__info Комментарии
+						.textline__content
+							.icon-comments 162
+				.col
+					.textline
+						.textline__info Участники
+						.textline__content
+							.icon-membersblock 13
+				.col
+					.textline
+						.textline__info Решения
+						.textline__content
+							.icon-solutions 2
+				.col
+					.textline
+						.textline__info Бюджет
+						.textline__content
+							.price
+								| 12 500 000
+								.cur
+
+				a(href="#").fl-right.link-down Показать полностью
+				h2 Описание задачи
+				p Опросы общественного мнения, проведенные в 2010 году показали, что Москвичи меньше всего верят в то, что возможны позитивные изменения в двух сферах - транспортной ситуации города и системы здравоохранения Москвы.
+			
+		.greybox
+			.greybox__name: h3 Статус задачи
+			.greybox__content
+				.statustime__info
+					.start.fl-left
+						.color-red Старт
+						.dateblock
+							.day 20
+							.month Октября
+							.year 2014
+					.start.fl-right
+						.color-red Финиш
+						.dateblock
+							.day.fl-right 07
+							.month Сентября
+							.year 2014
+				.statustime__content
+					.month
+						.numbers
+							.line 1 
+							.line 2 
+							.line 3
+								.line__event Предоставить три варианта названия
+								.line__rating: a(href="#") Оценить решения
+							.line 4
+							.line 5
+							.line 6
+							.line 7
+							.line 8
+							.line 9
+							.line 10
+							.line 11
+							.line 12
+							.line 13
+							.line 14
+								.line__event Определиться с названием
+							.line 15
+							.line 16
+							.line 17
+							.line 18
+							.line.is-active 19
+							.line 20
+							.line 21
+							.line 22
+							.line 23
+							.line 24
+							.line 25
+							.line 26
+							.line 27
+							.line 28
+							.line 29
+							.line 30
+							.line 31
+						.name Август
+					.month.month_sep
+						.numbers
+							.line 1 
+							.line 2 
+							.line 3
+							.line 4
+							.line 5
+							.line 6
+							.line 7
+								.line__event_right Зарегистрировать название
+						.name Сентябрь
+
+		.content-wrap
+			h2 требования к решению
+			h3 Задача
+			p Задача заключается в том, чтобы используя любые программно-аппаратные средства и теоретические модели найти в массиве данных закономерности, которые позволили бы объяснить различия в эффективности работы амбулаторно-поликлинических учреждений Москвы и найти ответ на вопрос "что делать, чтобы повысить эффективность отдельных учреждений, или всех учреждений города". 
+			h3 На входе
+				ul
+					li Структура данных, хранящихся в системе с их описанием
+					li Первичная выгрузка ограниченного количества данных/агрегированных показателей
+			h3 Процесс
+			ol
+				li Каждый понедельник необходимо присылать промежуточные результаты
+				li Каждую пятницу начисляются баллы за промежуточные результаты
+				li Каждый понедельник принимаются запросы на выгрузку дополнительной информации
+			h3 Срок
+			p 3 месяца
+			h3 Приз
+			p Первое место 
+				span.color-red 150 000 руб
+			
+			.files.has-padding
+				.file
+					.file__ext.red pdf
+					.file__name: a(href="#") Требования к решению PDF
+					.file__download: a(href="#")
+
+			h2 Критерии оценки задачи
+			.ratings
+				mixin rating
+					.rating
+						.rating__name Анализ
+						.rating__counts 
+							ul
+								li.star
+								li.star
+								li.star
+								li.star
+								li.star
+								li
+								li
+								li
+								li
+								li
+						.rating__num 4
+				+rating
+				+rating
+				+rating
+				+rating
+		
+		.greybox
+			.fl-right
+				+pager-small
+			.greybox__name: h3 Таблица лидеров
+			.greybox__content
+				.leaders
+					.leader_ header
+						.leader__place: a(href="#").sort-desc.is-active
+						.leader__name: a(href="#")
+						.leader__changes: a(href="#")
+						.leader__dinamics: a(href="#")
+						.leader__scores: a(href="#")
+					
+					mixin leader(num, name, changes, persentage) 
+						.leader
+							.leader__place= num
+							.leader__name
+								a(href="#")
+									.pic: img(src="img/content/solutions-pic.png", alt="")
+									.name= name
+							.leader__changes
+								if changes == "down" 
+									.count 3
+									.status.status_down
+								else 
+									.count 10
+									.status.status_up
+							.leader__dinamics: img(src="img/content/leader-dinamics.png", alt="")
+							.leader__scores
+								.scoregraph
+									.scoregraph__wrap
+										.scoregraph__in(style="width:#{persentage}%")
+									.scoregraph__count #{persentage}0
+					+leader(
+						"1",
+						"Александра Киаби",
+						"down",
+						"90"
+					) 
+					+leader(
+						"2",
+						"Алена Миланская",
+						"up",
+						"80"
+					)
+					+leader(
+						"3",
+						"Глеб Винокуров",
+						"down",
+						"44"
+					)
+					+leader(
+						"4",
+						"Александра Киаби",
+						"down",
+						"30"
+					)
+					+leader(
+						"5",
+						"Алена Миланская",
+						"up",
+						"25"
+					)
+					+leader(
+						"6",
+						"Глеб Винокуров",
+						"down",
+						"15"
+					)
+
+		+comments

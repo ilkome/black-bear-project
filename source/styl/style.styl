@@ -1,1666 +1,160 @@
+
 /*
 	proscom.ru 
 	Simple Communication
 	Ilya Komichev
 */
 
-@import "../css/normalize.css"
-@import "_tools.styl"
-@import "_common.styl"
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=cyrillic,latin")
+@import "css/normalize.css"
+@import "_tools"
+@import "_common"
+@import "_flexiblegs"
+
+
+small = "(min-height 700px) and (min-width 1300px)"
+fullhd = "(min-height 900px) and (min-width 1800px)"
 
 
 //	#layout
 // ===============================================
 html
 	height 100%
-body.page
-	position relative
-	min-height 100%
-	background #fff
+.page-body
+	height 100%
 	font-main()
-.style-nes
-	position relative
-	width 1167px
-	margin 0 auto
-	padding 0 20px
-
-.l-wrap
-	position relative
-	width 1167px
-	margin 0 auto
-	padding 0 20px
-.l-left
-	dtc()
-	width 21%
-	full() 
-.l-content
-	dtc()
-	width 79%
-	padding-left 50px
-	padding-bottom 50px
-	full()
-.row
-	display table
-	width 100%
-	padding-bottom 10px
-.table
-	display table
-	width 100%
-.col40
-	position relative
-	dtc()
-	width 40%
-	full() 
-.col50
-	dtc()
-	width 50%
-	full()
-.col65
-	dtc()
-	width 65%
-	full()
-.col35
-	dtc()
-	width 35%
-	full()
-
-.col50:first-child
-	padding-right 10px
-.col50:last-child
-	padding-left 10px
-	 
-.col60_padl
-	dtc()
-	padding-left 20px
-	width 60%
-	full() 
-.col60_padr
-	dtc()
-	padding-right 20px
-	width 60%
-	full()
-.padr10
-	padding-right 10px
-.padl10
-	padding-left 10px
-
-.no-margin-left
-	margin-left 0
-.no-padding
-	padding 0 
-.padding-bot-20
-	padding-bottom 20px
-.pad-right-30
-	padding-right 30px
-.min-height-200
-	min-height 200px
-
-.width-limit
-	width 620px
-
-
-//	#more
-// ===============================================
-.arrow
-	&:after, &:before
-		left 100%
-		top 50%
-		border solid transparent
-		content " "
-		height 0
-		width 0
-		position absolute
-		pointer-events none
-		z-index 2
-	&:after
-		border-left-color #fff
-		border-width 14px
-		margin-top -14px
-	&:before
-		border-left-color #f5f5f3
-		border-width 18px
-		margin-top -18px
-.arrow-left
-	&:after
-		right 100%
-		top 50%
-		border solid transparent
-		content " "
-		height 0
-		width 0
-		position absolute
-		pointer-events none
-		border-width 5px
-		margin-top -5px	
-.arrow-right
-	&:after
-		left 100%
-		top 50%
-		border solid transparent
-		content " "
-		height 0
-		width 0
-		position absolute
-		pointer-events none
-		border-width 5px
-		margin-top -5px
-
-
-//	#main
-// ===============================================
-//	#has
-.has-color-red
-	color color-red
-.has-bg-blue
-	background-color color-blue-light
-.has-bg-blue-dark
-	background-color color-blue
-	color #fff
-.has-inline-padding
-	padding 3px 5px
-	margin-bottom 5px
-.has-bg-grey
-	background color-grey
-.has-bottom-line
-	linebottom()
-.has-color-blue-grey
-	color color-blue-grey
-	
-//	#header
-.header
-	padding 30px 0 0 0
-.header__logo
-	float left
-	display block
-	width 208px
-	height 57px
-	margin-right 45px
-	background url("../img/logo.png") no-repeat
-.header__phone
-	float left
-	display block
-	padding 10px 45px 0 0
-	color #54585A
-	font-size 26px
-.header__lklink
-	float right
-	padding 13px 30px 12px 20px
-	color color-blue
-	font-size 14px
-	border 1px solid color-blue-light-bd
-	&:hover
-		tdn()
-		opacity .8
-	.icon
-		vertical-align middle
-		margin-right 20px
-.header__contacts
-	padding-top 10px
-	lino()
-	float left
-	.contacts__item
-		padding-bottom 10px
-		color color-blue-grey
-		.icon
-			vertical-align baseline
-			margin-right 10px
-		a
-			color color-blue-grey
-			tdn() 
-			&:hover
-				tdu() 
-.header__in
-	padding-top 40px
-	padding-bottom 20px
-	clearfix() 
-	width 100%
-	full() 
-.header__menu
-	float left
-	lino()
-	.menu__item
-		position relative
-		display table-cell
-		full() 
-		text-align center
-		&_drop
-			.menu__link
-				padding-right 35px
-		&_drop:after
-			top 50%
-			right 15px
-			border solid transparent
-			content " "
-			height 0
-			width 0
-			position absolute
-			border-top-color color-blue-grey
-			border-width 5px
-			margin-left -5px
-			margin-top -2px
-			anim()
-		&_drop:hover
-			&:after
-				border-top-color #fff
-			.menu__link
-				color #fff
-				tdn()
-				background-color color-blue				
-		&_hl
-			.menu__link
-				color color-red
-	.menu__link
-		display block
-		padding 13px 25px
-		color #000
-		font-size 14px
-		text-align center
-		&:after
-			content " "
-			display block
-		.is-active a
-			color color-red 
-	.menu-drop
-		z-index 5
-		display none
-		position absolute 
-		left 0px 
-		top 42px
-		background color-grey
-		min-width 210px
-		text-align left
-		lino()
-		a
-			display block
-			padding 10px 20px
-			color #54585A
-			&:hover
-				color #fff
-				background-color color-blue
-				tdn()
-.header__search
-	float right
-.header__banner
-	position relative
-	margin-bottom 20px
-	background color-red
-	img
-		display block
-		width 100%
-	.banner__text-prev
-		position absolute 
-		left 25px 
-		bottom 15px
-		width 410px
-		full() 
-		padding 40px 40px 30px 40px
-		color #FFF
-		font-size 13px
-		background-color alpha(color-blue, .8)
-		.action
-			padding-top 20px
-	.banner__text-line
-		padding 15px 20px
-		color #fff
-		a
-			tdu() 
-			color #fff
-			&:hover
-				tdn()
-		.close-link
-			display block
-			float right
-			anim()
-			&:hover
-				transform scale(1.2)
-
-//	#footer
-.footer__in
-	padding 40px 40px	
-.footer__menu
-	background-color color-grey
-	.l-wrap 
-	.footer__in
-		background-color color-grey
-	ul
-		display table-cell 
-		width 200px
-		padding-right 20px
-		lino()
-	li
-		display block
-		padding-bottom 10px
-		color color-grey-dark
-	li.title
-		padding-bottom 25px
-		font-weight bold
-	a
-		display block
-		color color-grey-dark
-		tdu() 
-		&:hover
-			tdn() 
-.footer__info
-	display table
-	width 100%
-	full() 
-	background #ececec
-	.footer__in
-		display table
-		width 100%
-		full() 
-.footer__pics
-	dtc()
-	full() 
-	.pic
-		dtc()
-		vertical-align middle
-		padding-right 50px
-.footer__copy
-	dtc()
-	full() 
-	vertical-align middle
-	text-align right
-	font-grey()			
-
-//	#menu-left
-.left-menu
-	margin-bottom 45px
-	padding 10px 0
-	background-color color-blue-light
-	ul
-		lino()
-	li.is-active a
-		color #fff
-		background-color color-blue
-	a
-		display block
-		padding 15px 20px
-		&:hover
-			background-color color-blue
-			color #fff
-			tdn() 
-.left-menu_red
-	@extend .left-menu
-	background-color color-red-grey
-	li.is-active a
-		background-color color-red
-	a
-		color color-red
-		&:hover
-			background-color color-red
-
-//	#site-navig
-.search-form
-	position relative
-	width 240px
-	.search__field
-		position relative
-		width 100%
-		full() 
-	.search__submit
-		position absolute 
-		right 10px 
-		top 10px
-		width 20px
-		height 20px
-		padding 0
-		margin 0
-		background url("../img/i/search.png") center center no-repeat
-		&:hover
-			opacity .8
-			background url("../img/i/search.png") center center no-repeat
-.pathway
-	margin-bottom 40px
-	bg-grey()
-	ul
-		lino()
-		clearfix()
-		padding-left 1px 
-		overflow hidden
-	li
-		float left
-		padding 3px 2px
-	a
-		position relative
-		display block
-		color color-blue-grey
-		background #fff
-		padding 6px 5px 6px 25px
-		font-12()
-		@extend .arrow
-	.home
-		background #fff url("../img/logo-pathway.png") center center no-repeat
-		width 16px
-		height 19px
-		margin-top 0px
-		padding 4px 5px 4px 10px
-.show-more
-	display block
-	padding 5px 10px
-	font-12()
-	text-align center
-	background color-grey
-	anim-none()		
-
-//	#search	
-.page-search
-	padding-bottom 20px
-.page-search-form
-	padding 5px 5px
-	overflow hidden
-	bg-grey()
-	clearfix() 
-	.dates
-		clearfix() 
-	.inp
-		padding-right 15px
-	.inp-search
-		margin-bottom 0
-		font-12()
-		color color-blue-grey
-	.inp-search_sm
-		@extend .page-search-form .inp-search
-		width 85px
-	span.sep
-		display inline-block
-		width 15px
-		height 2px
-		margin-left 7px
-		margin-right 3px
-		background color-blue-grey
-	.select
-		margin-bottom 0
-	.action
-		margin -6px
-		float right
-.page-search-found
-	padding-top 10px
-	padding-bottom 20px
-	font-12()
-	color color-grey-dark
-	clearfix() 
-	.count
-		float left
-		padding-right 25px
-	.pages
-		float left
-		clearfix() 
-	.pages__name
-			float left
-	.pages__list
-		float left
-		lino()
-		
-		li
-			float left
-		a
-			padding 0 10px
-		.is-active a
-			color #000
-.page-search-letter
-	padding 20px 0 30px 0
-	font-size 16px
-	clearfix() 
-	.desc
-		margin-top 6px
-	.inp-search
-		width 380px
-		padding 5px 10px
-		margin-left 10px
-	.info
-		clear both
-		font-size 12px
-		font-style italic
-		color color-grey-dark
-
-//	#pager
-.pager
-	lino()
-	clearfix() 
-	padding-top 30px
-	li
-		display inline-block
-		padding 0 5px
-	a
-		display block
-		padding 3px 8px
-		font-12()
-	.is-active a
-		border 1px solid color-blue
-	span.sep
-		display block
-		padding 3px 8px
-	.prev
-	.next
-		position relative
-	
-	.prev a
-		@extend .arrow-left
-		&:after
-			border-right-color color-grey-dark
-	.next a 
-		@extend .arrow-right
-		&:after
-			border-left-color color-blue
-	
-	.prev.is-disable a:after
-		border-right-color color-grey-dark
-	.next.is-disable a:after
-		border-left-color color-grey-dark
-		
-	.is-disable a
-		color color-grey-dark
-.pager_center
-	text-align center
-.pager_red
-	.is-active a
-		border-color color-red
-	a
-		color color-red
-	.prev a:after
-		border-right-color color-red
-	.next a:after
-		border-left-color color-red
-
-.box-padding
-	padding 20px
-
-
-
-//	#site
-// ===============================================
-//	#red
-.box
-	padding-bottom 20px
-	clearfix() 
-.title-up
-	margin 7px 0 0 0
-	font-size 20px
-.infograph
-	background color-red-grey
-	margin-bottom 40px
-
-//	#content
-.big-blue-link
-	margin-bottom 20px
-		
-	a
-		display block
-		padding 60px 0
-		padding-left 160px
-		font-size 24px
-		border 1px solid color-blue-light-bd
-		&:hover
-			opacity .8
-			tdn()
-.big-blue-link.sience
-	background color-blue-light url("../img/blue-sience.png") 35px center no-repeat
-.big-blue-link.educ
-	background color-blue-light url("../img/blue-educ.png") 35px center no-repeat
-.big-blue-link.online
-	background color-blue-light url("../img/blue-online.png") 35px center no-repeat
-.big-blue-link.contacts
-	background color-blue-light url("../img/blue-contacts.png") 35px center no-repeat
-.content-box
-	padding-bottom 30px
-	p
-		line-height 20px
-.page-name
-	font-size 24px
-	margin-bottom 20px
-	&.has-margin-bottom
-		margin-bottom 40px
-.phones
-	position relative
-	padding 30px 40px 40px 40px
-	.phone
-		dtc()
-		width 33%
-		padding 0 20px
-		full() 
-		text-align center
-	.phone-num
-		width 220px
-		linebottom()
-		font-link()
-		font-size 24px
-	.phone-text
-		width 220px
-	.more
-		position absolute 
-		right 0px 
-		top 57px
-	.more a
-		display block
-		width 26px
-		height 26px
-		background url("../img/i/more.png") no-repeat
-.situation
-	padding 10px 10px 10px 90px
-	min-height 50px
-	margin-bottom 20px
-	&_green
-		background url("../img/i/situation-good.png") no-repeat
-	&_orange
-		background url("../img/i/situation-info.png") no-repeat
-	&_red
-		background url("../img/i/situation-stop.png") no-repeat
-.view-by
-	lino()
-	float right
-	li
-		float right
-		padding-left 20px
-	a
-		display block
-		width 16px
-		height 16px
-		background url("../img/i/sort-by.png") no-repeat
-		&:hover
-			opacity .7
-	li.list a
-		background-position -17px 0
-	li.list.is-active a
-		background-position -17px -16px
-		opacity 1
-	li.map a
-		background-position 0 0
-	li.map.is-active a
-		background-position 0 -17px
-		opacity 1
-
-//	#block
-.block
-	padding-bottom 40px
-	&.padding-bot-20
-		padding-bottom 20px
-.block_reforminfo
-	.block__name
-		h3 
-			color color-blue-grey
-			font-size 17px
-	.block__content
-		margin-top -15px
-		padding-top 20px
-		padding-left 20px
-		padding-right 20px
-		background-color color-red-grey
-		ul
-			lino()
-		li
-			padding-bottom 20px
-.block__name
-	linebottom()
-	h3
-		font-size 24px
-		font-weight 300
-		margin-bottom 0
-.block__name_no-border
-	@extend .block__name
-	border-bottom none
-.block__content
-	padding 10px 0 0 0
-.block__content_bg-blue
-	margin-top -15px
-	padding 25px 30px 20px 30px
-	background-color color-blue-light
-.block__content_bg-grey
-	margin-top -5px
-	padding 25px 30px 20px 30px
-	background-color color-red-grey
-.block__content_padding_ins
-	padding-left 20px
-	padding-right 20px
-
-//	#check-status
-.check-status
-	padding-bottom 40px
-	clearfix()
-	.link
-		display block
-		font-size 24px
-		padding 70px 0 70px 165px
-		&:hover
-			tdn()
-.check-status__write
-	float left
-	width 49%
-	height 170px
-	full() 
-	padding-right 10px
-	background #f4fff9 url("../img/i/check-status__write.png") 35px 35px no-repeat
-	border 1px solid #cceddf
-	anim()
-	&:hover
-		opacity .8
-	.link
-		color #00B97A
-.check-status__check
-	float right
-	width 49%
-	height 170px
-	full() 
-	padding-left 10px
-	background #f4f8ff url("../img/i/check-status__check.png") 35px 35px no-repeat
-	border 1px solid color-blue-light-bd
-	anim()
-	&:hover
-		opacity .8
-	.link
-		padding-top 60px
-		padding-bottom 50px
-		color color-blue-light-bd
-
-//	#departament
-.depart
-	width 680px
-	margin 0 auto
-.depart-boss
-	position relative
-	width 500px
-	margin 0 auto 20px auto
-	background color-blue-light
-	border 1px solid color-blue-light-bd
-	clearfix() 	
-.depart-boss__pic
-	position relative
-	float left
-	img
-		display block
-.depart-boss__content
-	position relative
-	overflow hidden
-	padding 25px 20px
-	text-align center
-	h3
-		color color-blue
-		font-size 24px
-	p 
-		margin-bottom 0
-.depart-boss_small
-	width auto
-	.depart-boss__content
-		text-align left
-		padding 20px 20px
-.depart-line
-	clearfix()
-	padding-bottom 20px
-.depart-header-blue
-	display inline-block
-	vertical-align top
-	width 310px
-	margin 0 10px
-	padding 20px 20px 20px 20px
-	height 120px
-	full() 
-	text-align center
-	background color-blue-light
-	border 1px solid color-blue-light-bd
-	h3
-		color color-blue-grey
-		font-size 20px
-		margin-bottom 10px
-	p
-		margin-bottom 0
-.depart-header-blue.inside-box
-	width 350px
-	height auto
-	padding 15px 20px
-	margin-bottom 20px
-.depart-sub-header
-	padding-bottom 20px
-	text-align center
-	.info
-		padding-bottom 10px
-		font-size 16px
-	.name-big
-		padding-bottom 5px
-		font-size 18px
-		color color-blue-grey
-	.prof
-		padding-bottom 5px
-		color color-grey-dark
-	.name-small
-		padding-bottom 5px
-		color color-blue-grey
-.depart-box-grey
-	padding 20px 20px 1px 20px 
-	margin-bottom 20px
-	background #f9f9f9
-.depart-box-grey.has-padding-bottom
-	padding-bottom 20px
-.depart-box-trans
-	padding 0px 20px 
-	margin-bottom 20px
-.depart-box-white
-	margin-bottom 20px
-	padding 20px 20px 10px 20px
-	background #fff
-	border 1px solid color-blue-light-bd
-.depart-worker
-	display inline-block
-	width 45%
-	margin 0 10px
-	padding 15px
-	full()
-	vertical-align top
-	border 1px solid color-grey-bd
-	background #fff
-	.info
-		font-size 14px
-	.name
-		padding-top 10px
-		padding-bottom 5px
-		font-size 14px
-		color color-blue-grey
-	.prof
-		padding-bottom 5px
-		color color-grey-dark
-		
-//	#formline
-.formline
-	padding-bottom 30px
-.formline__name
-	padding-bottom 10px
-.formline__desc
-	@extend .font-grey-small
-	font-style italic
-
-//	#item
-.item-date-link
-	padding-bottom 20px
-	.pic-left
-		display table-cell
-		width 0px
-		padding-right 20px
-		vertical-align top
-	.content-right
-		display table-cell
-		vertical-align top 
-	.file
-		width 40px
-		height 42px
-		position relative
-		color white
-		font-weight bold
-		font-size 10px
-		padding 29px 0 0 17px
-		box-sizing border-box
-		background url("../img/file.png") no-repeat
-	.pic
-		padding-bottom 10px
-	.normal
-		padding-bottom 3px
-	.big-blue-grey
-		padding-bottom 3px
-		font-size 16px
-		color color-blue-grey
-	.small-blue-grey
-		font-size 12px
-		color color-blue-grey
-	.small-grey
-		padding-bottom 3px
-		font-size 12px
-		font-grey()
-	.date
-		padding-bottom 3px
-		font-size 11px
-		display inline-block
-		font-grey()
-	.date__tag
-		position relative
-		display inline-block
-		padding 3px 10px 3px 5px
-		margin-left 15px
-		font-size 11px
-		color #fff
-		background-color color-blue-grey
-	.date__tag:after
-		right 100%
-		top 50%
-		border solid transparent
-		content " "
-		height 0
-		width 0
-		position absolute
-		pointer-events none
-		border-color rgba(136, 183, 213, 0)
-		border-right-color color-blue-grey
-		border-width 10px
-		margin-top -10px
-	.date__tag_green
-		background #8cc63e
-		&:after
-			border-right-color #8cc63e
-	.date__tag_red
-		background color-red
-		&:after
-			border-right-color color-red
-	.date_bg-blue-dark
-		@extend .has-bg-blue-dark
-		margin-bottom 5px
-		padding 3px 5px
-		color #fff
-	.link
-		font-size 16px
-	.meta
-		.map
-			background url("../img/i/map.png") no-repeat
-			padding-top 2px
-			padding-left 17px
-			margin-left 10px
-			color color-blue-grey
-			font-12()
-.item-lists
-	lino()
-	li
-		padding-bottom 20px
-	a
-		font-size 16px
-	.count
-		@extend .has-bg-blue-dark
-		margin-left 10px
-		padding 3px 5px			
-	.desc
-		font-grey()
-.item-lists_sm
-	li 
-		padding-bottom 15px
-		a
-			font-size 14px
-.item-table
+	background #eeeeee
+.page-white
+	background color-white
+.ilkome
 	display table
 	table-layout fixed
+	position relative
 	width 100%
-	border 1px solid #e3e3e3
-	margin-bottom 10px
-	.td
-		display table-cell 
-		vertical-align top
-		padding 15px
-	.pic
-		width 90px
-		text-align center
-		img
-			display inline-block
-			border 1px solid #e3e3e3
-	.desc
-		width 380px
-	.count
-		width 100px
-		text-align center
-		vertical-align middle
-	.place
-		text-align center
-		vertical-align middle
-	.line.big
-		font-size 16px
-		padding-bottom 3px
-	.line.normal
-		font-size 12px
-	.line.grey
-		color color-grey-dark	
-	.has-padding-bottom
-		padding-bottom 10px
-	.avaliable
-		margin-top 5px
-		padding-top 30px
-		font-size 12px
-	.avaliable.many
-		background url("../img/i/count-many.png") center 0 no-repeat
-	.avaliable.little
-		background url("../img/i/count-little.png") center 0 no-repeat
-	.place
-		font-size 12px
-		.km
-			display inline-block
-			padding 10px 0 10px 20px
-			background url("../img/i/pin.png") 0 center no-repeat
-		a
-			color color-black
+	min-width 1270px
+	min-height 100%
+@-moz-document url-prefix()
+	.ilkome
+		height 100%
 
-//	#map
-#map-box
-	height 380px
-.map
-	position relative
-.map__content
-	position relative
-.map__popup
-	display none
-	position absolute 
-	z-index 10
-	left 50% 
-	top 90px
-	width 315px
-	margin-left -160px
-	text-align center
+#menu
+	z-index 100
+	position fixed
+	left 0
+	top 0
+	opacity .1
 	background #fff
-	box-shadow 0 0 8px rgba(0, 1, 3, 0.33)
-	&:after
-		position absolute 
-		left 50%
-		bottom -9px
-		margin-left -9px
-		content " "
-		width 18px
-		height 9px
-		background url("../img/arrow-down.png") no-repeat
-	.name
-		padding 20px 20px
-	.desc
-		padding 10px 20px
-		font-size 12px
-		background color-red-grey
-	.more
-		padding 20px 20px
-		
-//	#vote
-.vote
-	.choice
-		padding-top 30px
-	.action
-		padding-top 30px
-		text-align center
-
-//	#review
-.reviews
-	position relative
-	padding-bottom 10px
-	max-width 400px
-	.review
-		float left
-	.link
-		float left
-		width 19px
-		height 19px
-		cursor pointer
-		&:hover
-			opacity .8
-	.lSAction
-		position absolute 
-		right 0px 
-		bottom 0px
-	.lSPrev
-		@extend .reviews .link
-		margin-right 30px
-		background url("../img/arrow-blue.png") no-repeat
-		transform rotate(180deg)
-	.lSNext
-		@extend .reviews .link
-		background url("../img/arrow-blue.png") no-repeat
-.review__text
-	position relative
-	font-size 16px
-.review__name
-	padding-top 30px
-	font-grey()
-	font-style italic
-
-//	#faq
-.faq
-	position relative
-	padding-bottom 30px
-	&.is-active
-		.faq__quest a
-			color alpha(color-blue, .8)
-		.faq__quest:after
-			transform rotate(180deg)		
-.faq__quest
-	padding 20px 50px 20px 70px
-	position relative
-	background url("../img/quest.png") 15px center no-repeat
-	background-color color-blue-light
-	border 1px solid color-blue-light-bd
-	&:after
-		position absolute 
-		right 20px 
-		bottom 20px
-		content " "
-		width 19px
-		height 10px
-		background url("../img/arrow-quest.png") right bottom no-repeat
-		anim()
-	a:hover
-		tdn() 
-		color alpha(color-blue, .8)
-.faq__answer
-	display none
-	position relative
-	padding-left 30px
-	padding-top 20px
-	padding-bottom 20px
-
-//	#comments
-.comments-count
-	display inline-block
-	padding-left 20px
-.comments-write
-	position relative
-	padding-bottom 20px
-	border-bottom 5px solid color-grey
-	.pic
-		position absolute 
-		left 0px 
-		top 0px
-	.content
-		padding-left 80px
-	.user-name
-		padding-bottom 10px
-	.user-text
-		padding-bottom 20px
-	.action
-		position relative
-		text-align right
-.comments-list
-	position relative
-	padding-top 20px
-.comment
-	padding-bottom 40px
-	clearfix() 
-	.answer
-		display none
-.comment__prev
-	float left
-	width 55px
-	padding-right 20px
-.comment__content
-	overflow hidden
-	.meta
-		clearfix() 
-		padding-bottom 10px
-	.name
-		float left
-		padding-right 20px
-	.date
-		float left
-		color color-blue-grey
-	.time
-		float left
-		padding-right 5px
-		padding-top 2pxv
-	.date_tag
-		font-12()
-		float left
-		padding 2px 3px
-		background #c6cfd4
-		color #fff
-	.content
-		padding-bottom 10px
-		line-height 20px
-.comment_red .name a
-	color color-red
-
-//	#event
-.eventinfo
-	width 280px
-	margin 0 20px 20px 0
-.eventinfo__date
-	padding 10px 10px 10px 65px
-	color #fff
-	line-height 19px
-	background color-blue-grey url("../img/i/calendar.png") 15px center no-repeat
-	strong
-		display block
-.eventinfo__content
-	padding 15px 15px 20px 15px
-	background color-grey
-	line-height 20px
-	ul
-		lino()
-		li
-			padding-bottom 15px
-
-//	#news
-.news_red
-	margin -25px -30px -25px 0
-	background #eeeeee
-.news-item
-	position relative
-	padding 10px 70px 5px 15px
-	border 1px solid #fff
-	border-bottom none
-.news-item__name
-	a
-		font-12()
-		color color-red
-.news-item__meta
-	padding-top 5px
-	.comments-count
-		padding-left 0
-	.user
-		padding-left 10px
-		a
-			font-12()
-			color color-blue-grey
-.news-item__rating
-	position absolute 
-	right 15px 
-	top 20px
-	bottom 0
-	font-size 26px
-	color color-blue-grey
-
-//	#slider
-.slider-inform
-	position relative
-	width 700px
-	.lSGallery
-		position absolute 
-		width 0px
-		right 30px
-		width 400px 
-		bottom 30px
-		text-align right
-		lino()
-		li
-			display inline-block
-			opacity .5
-			anim()
-			&:hover
-				opacity .8
-		li.active
-			opacity 1
-		a
-			display block
-	.slide
-		position relative
-		float left
-	.pic
-		position relative
-	.text
-		position absolute 
-		width 250px
-		left 0px 
-		top 40px
-		padding 20px 40px
-		background alpha(#fff, .7)
-		ul
-			lino()
-		li
-			padding-bottom 4px
-		a
-			color color-black			
-		p
-			margin-bottom 0
-		i
-			font-size 14px
-	.action
-		position absolute 
-		left 40px 
-		bottom 30px
-
-//	#structure
-.strukure-line
-	padding-bottom 30px
-	clearfix() 
-.strukure-full
-	position relative
-.strukure-info
-	font-size 20px
-	color color-blue-grey
-.strukure-name
-	padding-top 10px
-	padding-bottom 5px
-	font-size 14px
-.strukure-prof
-	padding-bottom 5px
-	color color-grey-dark
-.strukure-left
-	float left
-	width 265px
-	padding-right 35px
-.strukure-right
-	overflow hidden
-.strukure-space
-	height 20px
-//	#tabs
-.tabs
-	font-size 14px
-.tabs-navig
-	clearfix() 
-	lino()
-	margin-bottom 30px
-	border-bottom 1px solid color-grey-bd
-.tabs-navig li
-	float left
-	padding 10px 25px
-	border-top 1px solid transparent
-	border-bottom 1px solid color-grey-bd
-	margin-bottom -1px
-.tabs-navig li.active
-	padding 10px 24px
-	border 1px solid color-grey-bd
-	border-bottom-color #fff
-	background #fff
-.tabs-navig li.active a
-	color color-blue-grey
 	&:hover
-		tdn() 
-		cursor default
-
-//	#tags
-.tags
-	padding-bottom 3px
-	font-size 11px
-	display inline-block
-	font-grey()
-.tags__item
-	position relative
-	display inline-block
-	padding 3px 10px 3px 5px
-	margin-left 20px
-	font-size 11px
-	color #fff
-	background-color color-blue-grey			
-.tags__item:after
-	right 100%
-	top 50%
-	border solid transparent
-	content " "
-	height 0
-	width 0
-	position absolute
-	pointer-events none
-	border-right-color color-blue-grey
-	border-width 10px
-	margin-top -10px
-
-//	#timeline	
-.timeline-item
-	position relative
-	padding-top 102px
-	&:first-child
-		padding-top 82px
-	&.last
-		padding-bottom 80px
-.timeline-item_no-date
-	padding-top 20px
-.timeline-item__meta
-	position relative
-	padding 4px 4px 2px 15px
-	border 2px solid color-grey
-	clearfix() 
-.timeline-item__cat
-	float left
+		opacity 1
 	a
 		display inline-block
-		font-12()
-		color color-blue-grey
-.timeline-item__data
-	position absolute 
-	width 200px
-	left 50%
-	top 0px
-	margin-left -10px
-	.pos
-		position absolute
-		width 60px 
-		left 50%
-		top -85px
-		margin-left -124px
-		display inline-block
-		padding 4px 10px
-		height 55px
-		text-align center
-		color #fff
-		background-color color-red
-		.num
-			font-size 30px
-		.month
-			font-12()
-	.sep
-		position absolute 
-		left 50% 
-		top auto
-		bottom -20px
-		width 3px
-		margin-left -1.5px
-		height 20px
-		background-color color-red
-	.sep-top
-		@extend .timeline-item__data .sep
-		left 49% 
-		top -20px
-	.sep-no-date
-		@extend .timeline-item__data .sep
-		top -22px
-		left 20px
-	.time 
-		text-align left
-		padding-top 4px
-		font-12()
-		color color-blue-grey
-	.comments-count a
-		padding-top 2px
-		padding-bottom 2px		
-.timeline-item__content
-	border 2px solid color-grey
-	border-top 0
-	padding 15px
-	.name
-		display inline-block
-		padding-bottom 20px
-		color color-red
-.timeline-item__pic
-	display table-cell
-	padding-right 20px
-	vertical-align top
-.timeline-item__text
-	display table-cell
-	vertical-align top
-	a
-		color color-red
-.timeline-item__last-bg
-	position absolute 
-	left 50%
-	bottom 20px
-	width 3px
-	margin-left 3px
-	height 60px
-	background-color color-red
-	&:after
-		content " "
-		display block
-		position absolute 
-		left -5px
-		bottom 0px
-		width 13px
-		height 13px
-		border-radius 13px
-		background-color color-red
-.timeline-item__comments
-	border-top 0
-	padding 0 15px
-	background #f9f9f9
-	border 2px solid color-grey
-.timeline-item__comments__name
-	margin 0 -15px
-	padding 10px 15px
-	color color-blue-grey
-	background color-grey
-	.hideshow
-		float right
-		display block
-		width 23px
-		height 19px
-		background url("../img/i/hideshow.png") no-repeat
-		&:hover
-			opacity .7
+		padding 5px
 
-//	#filter
-.filter-items
-	padding-bottom 10px
-	clearfix() 
-	&.has-padding-bottom
-		padding-bottom 40px
-.filter-item
+.l-left
+	display table-cell
 	position relative
-	display inline-block
-	width 210px
-	text-align left
-.filter-item__name
-	padding-bottom 10px
-	font-size 16px
-.filter-item__name-ch
-	position relative
-	padding 10px 15px
-	color color-grey-dark
-	border 1px solid color-grey-med
-	cursor pointer
-	&:after
-		position absolute
-		right 10px
-		top 28px
-		content " "
-		width 10px
-		height 6px
-		margin-top -12px 
-		background url("../img/i/arrow-grey-dark-bottom.png") no-repeat
-		transform rotate(-90deg)
-		anim()
-	&.is-open:after
-		transform rotate(0deg)
-.filter-item__content
-	display none
-	z-index 15
-	position absolute
-	width 100%
-	full()  
-	left 0px 
-	top 64px
-	border 1px solid color-grey-med
-	padding 10px 0 10px 0
-	background #fff
-	.line
-		position relative
-		padding 7px 15px
-.filter-item__search
-	width 240px
-	padding-top 27px
-	.inp-search
-		width 100%
-		full() 
-		margin-bottom 20px
-		padding-left 40px
-		border-color color-grey-med
-		background url("../img/i/search.png") 15px center no-repeat !important	
-
-//	#select
-.select-wrap
-	position relative
-	.title
-		text-overflow ellipsis
-		white-space nowrap
-		overflow hidden
-	.select
-		position relative
-		padding 10px 15px
-		padding-right 30px
-		color color-grey-dark
-		border 1px solid color-grey-med
-		cursor pointer
-		&:after
-			position absolute
-			right 10px
-			top 28px
-			content " "
-			width 10px
-			height 6px
-			margin-top -12px 
-			background url("../img/i/arrow-grey-dark-bottom.png") no-repeat
-			transform rotate(-90deg)
-			anim()
-		&.is-open:after
-			transform rotate(0deg)
-			
-	ul.option-list
-		display:none
-		overflow hidden
-		z-index 5
-		position absolute
+	width 260px
+	height auto
+	vertical-align top
+	background color-black
+	@media small
+		z-index 10
+		position fixed
+		display block
 		left 0
-		top 0px
-		width 100%
-		full()
-		lino()
-		background #fff
-		border 2px solid #f0f0f0
-		border-top none
-		li
-			padding 10px 15px
-			cursor pointer
-			&:hover
-				color #fff
-				background #0072b9
-			&.active
-				color #fff
-				background #0072b9
-				cursor default
+		top 0
+		height 100%
+.l-right
+	display table-cell 
+	position relative
+	width 100%
+	padding 20px 20px 80px 20px
+	full()
+	vertical-align top
+	@media small
+		padding-left 280px
+
+.row
+	table-layout fixed
+	display table
+	width 100%
+.col
+	width 100%
+	dtc()
+	vertical-align top
+	full()
+	&.is-middle
+		vertical-align middle
+.row-2
+	> .col
+		width 50%
+	> .col:first-child
+		padding-right 15px
+	> .col:last-child
+		padding-left 15px
+.row-3
+	> .col
+		width 33.333%
+	> .col:first-child
+		padding-right 10px
+	> .col:last-child
+		padding-left 10px
+
+.pad-b-80
+	padding-bottom 80px
 
 
 //	#btns
 // ===============================================
-.btn
+.btn 
 	display inline-block
-	padding 14px 30px
-	font-size 16px
-	font-weight 600
-	tdn()
+	width 200px
+	padding 15px 10px
+	full() 
+	text-transform uppercase
+	white-space nowrap
+	color color-white
+	font-size 13px
+	font-bold()
+	text-align center
+	border-radius 3px
 	&:hover
-		tdn()
-.btn_white
-	color color-blue
-	background #fff
-	&:hover
-		background alpha(#fff, .9)
-
-.btn_trans_sm
-	display inline-block
-	padding 5px 10px 5px 25px
-	font-12()
-	border 1px solid color-grey
-	&:hover
-		border-color color-blue
-		tdn()
-.btn_trans_answer
-	@extend .btn_trans_sm
-	background url("../img/i/replay.png") 10px center no-repeat
-.btn_trans_comments
-	@extend .btn_trans_sm
-	color color-blue-grey
-	background url("../img/i/comments-count.png") 10px center no-repeat
-.btn_trans_comments_red
-	@extend .btn_trans_comments
-	&:hover
-		border-color color-red
-.btn_trans_comments_red_white
-	@extend .btn_trans_comments_red
-	background-color #ededef
-	border-color #fff
-	color color-red
-.btn_blue, input.btn_blue
-	color #fff
+		color color-white
+.btn-blue
+	@extend .btn
 	background color-blue
 	&:hover
-		background alpha(color-blue, .8)
-.btn_blue_wide, input.btn_blue_wide
-	@extend .btn_blue
-	padding-left 40px
-	padding-right 40px
-
-.btn_red
+		background #599cc8
+.btn-green
 	@extend .btn
-	font-size 16px
-	color #fff
-	text-align center
-	background-color color-red
+	background #3cc8b4
 	&:hover
-		background alpha(color-red, .8.5)
-.btn_red_sm
-	font-size 14px
-	padding 10px 20px
+		background #1abca5
+.btn-grey
+	@extend .btn
+	color #A2A2A2
+	background #e7e7e7
+	&:hover
+		color #A2A2A2
+		background #dedede
+.btn-red
+	@extend .btn
+	background color-red
+	&:hover
+		background #bd5e5e
+.btn-blue-dotted
+	display block
+	width 100%
+	full()
+	padding 15px
+	font-size 16px
+	color #50b3a5
+	text-align center
+	border 1px dashed #50b3a5
+	border-radius 4px
+	&:hover
+		color alpha(#50b3a5, .7)
+		border-color alpha(#50b3a5, .7)
 
 
 //	#icon
@@ -1668,30 +162,860 @@ body.page
 .icon
 	display inline-block
 	vertical-align baseline
-.icon-map
-	width 12px
-	height 16px
-	background url("../img/i/map.png") no-repeat 
-.icon-email
-	width 16px
-	height 10px
-	background url("../img/i/email.png") no-repeat 
-.icon-close
-	width 9px
-	height 9px
-	background url("../img/i/close.png") no-repeat 
-.icon-user
-	width 26px
-	height 32px
-	background url("../img/i/user.png") no-repeat 
+.icon-medals
+	font-size 30px
+	display inline-block
+	padding-right 25px
+	background url("../img/icons/medal.png") center right no-repeat
+	&.has-margin
+		//margin-top 15px
+		margin-right 15px
+
+
+//	#main
+// ===============================================
+
+//	#content
+.content
+	padding-top 60px
+	padding-bottom 30px
+.content__name
+	padding-bottom 40px
+	.desc
+		color color-grey
+		font-size 13px
+		text-transform uppercase
+.content-wrap
+	width 1036px
+	margin 0 auto
+	padding 0 40px
+	full()
+.content-text
+	padding 90px 0 50px 0
+	font-light()
+	&.has-small-padding
+		padding-top 30px
+	h1 
+		font-size 36px
+		margin-bottom 75px
+		&.is-small
+			font-size 16px
+			line-height 16px
+			text-transform uppercase
+			font-regular()
+	p
+		margin-bottom 30px
+		line-height 30px
+		font-size 16px
+
+ol.list-offer
+	lino()
+	margin-bottom 75px
+	li
+		margin-bottom 40px
+		font-size 16px
+		line-height 40px
+	li.name
+		margin-bottom 10px
+		text-transform uppercase
+		font-light()
+.add-task-full
+	padding-bottom 20px
+	a
+		@extend .btn-red
+		width 100%
+		display block
+		padding 25px
+		font-size 16px
+		background #c46d6d
+		.link
+			display inline-block
+			padding-left 30px
+			background url("../img/icons/plus.png") no-repeat
 	
+//	#blocks
+.close-popup
+	float left
+	background color-grey-opacity
+	border-radius 4px
+	a
+		display block
+		width 75px
+		height 75px
+		background url("../img/icons/close.png") center center no-repeat
+		&:hover
+			transform rotate(180deg)
+.dateblock
+	display inline-block
+	position relative
+	padding-left 40px
+	text-align left
+	.day
+		position absolute 
+		left 0px 
+		top -2px
+		color color-grey-dark
+		font-size 30px
+	.month
+		padding-top 6px
+		font-size 13px
+		line-height 13px
+		color color-grey
+		text-transform uppercase
+	.year
+		font-size 11px
+		color color-grey
+.membersblock
+	display inline-block
+	padding-right 30px
+	color color-grey-dark
+	font-size 30px
+	background url("../img/icons/membersblock.png") right 13px no-repeat
+.rub
+	display inline-block
+	width 18px
+	height 18px
+	background url("../img/icons/rub.png") no-repeat
+.slider-nav
+	float left
+	padding 28px 0 0 30px
+	clearfix()
+	ul
+		lino()
+	li
+		display inline-block
+		vertical-align middle
+	a
+		display block
+	li.prev
+		padding-right 15px
+		a
+			width 17px
+			height 14px
+			background url("../img/icons/arrow-right.png") no-repeat
+			transform rotate(-180deg)
+			&:hover
+				opacity .7
+	li.next
+		padding-left 15px
+		a
+			width 17px
+			height 14px
+			background url("../img/icons/arrow-right.png") no-repeat
+			&:hover
+				opacity .7
+	li.sep
+		width 1px
+		height 22px
+		margin 0 5px
+		background #e6e6e6
+.action-btns
+	text-align center
+	a
+		margin 0 10px	
+
+//	#infoboxs
+.infoboxs
+	position relative
+	padding-bottom 50px
+	wrap()
+	gutter(10px)
+	align(left)
+	//align(middle)
+.infobox
+	padding 10px
+	col(3, 1)
+	anim()
+	@media fullhd
+		col(4, 1)
+.infobox-in
+	text-align center
+	padding 20px
+	background #fff
+	border-radius 4px
+	border 1px solid transparent
+	anim()
+	&:hover
+		border 1px solid alpha(color-grey, .5)
+	@media small
+		padding 50px 40px
+.infobox_empty
+	.booty-in
+		position relative
+	.w1
+		width 40%
+	.w2
+		width 60%
+	.w3
+		width 80%
+	.line
+		display block
+		height 10px
+		margin 0 auto
+		margin-bottom 10px
+		background #f1f1f1
+	.desc
+		margin-top 30px
+.infobox__pic
+	img
+		anim()
+	img:hover
+		opacity .7
+.infobox__content
+	padding-top 30px
+	color color-grey
+	.name
+		padding-bottom 10px
+		font-16-ttu()
+		anim()
+		&:hover
+			color color-red
+	.date
+		padding-bottom 30px
+		font-size 13px
+		text-transform uppercase
+	.desc
+		font-size 14px
+		font-light()
+		line-height 25px
+		
+//	#greybox
+.greybox
+	background color-grey-opacity
+	margin 0 -20px 60px -20px
+	padding 60px 0 40px 0
+
+//	#files
+.files
+	position relative
+	padding-bottom 30px
+	&.has-padding
+		padding-bottom 100px
+	&.has-padding-60
+		padding-bottom 60px
+.file
+	margin-bottom 3px
+	padding 10px 15px 10px 10px
+	clearfix() 
+	text-align left
+	border-radius 4px
+	background color-grey-opacity
+	anim()	
+.file__ext
+	float left
+	width 28px
+	height 32px
+	padding-top 9px
+	font-size 11px
+	color color-white
+	text-align center
+	vertical-align middle
+	&.red
+		background url("../img/icons/file-extend-red.png") no-repeat
+.file__prev
+	float left
+	width 28px
+	font-size 11px
+	color color-white
+	text-align center
+	vertical-align middle
+.file__name
+	float left
+	padding-top 7px
+	padding-left 20px
+	a
+		color color-grey
+		text-transform uppercase
+		font-size 13px
+		font-regular()
+		&:hover
+			color color-red
+.file__download
+	float right
+	padding-top 10px
+	a
+		display inline-block
+		width 16px
+		height 16px 
+		background url("../img/icons/download.png") 0 -16px no-repeat
+		&:hover
+			background-position 0 0
+.file__remove
+	float right
+	padding-top 8px
+	a
+		display inline-block
+		width 16px
+		height 16px 
+		background url("../img/icons/remove.png") center center no-repeat
+		opacity .5
+		&:hover
+			opacity 1
+			
+//	#filter-menu
+.filter-menu
+	float left
+	padding 15px 0 0 20px
+	overflow hidden
+	ul
+		lino()
+		clearfix()
+		background color-grey-opacity
+		border-radius 30px
+		padding 3px
+	li
+		float left
+		&.is-active
+			a
+				color color-white
+				background color-red
+				border-radius 30px
+	a
+		display block
+		padding 12px 15px
+		color color-grey
+		text-transform uppercase
+		&:hover
+			color color-red
+					
+//	#footer
+.footer
+	position absolute
+	left 0
+	bottom 40px
+	width 100%
+	padding-left 300px
+	padding-right 40px
+	full()
+	clearfix() 
+.footer-copy
+	float left
+	padding 5px 0 4px 45px
+	color color-grey
+	background url("../img/logo-sm.png") 0 center no-repeat
+.footer-menu
+	float right
+	ul 
+		lino()
+	li
+		display inline-block
+		padding-left 30px
+	a
+		color color-grey
+		font-size 13px
+		&:hover
+			color color-red
+	li.is-active a
+		color color-red
+		
+// #left
+.left-logo
+	width 260px
+	a
+		display block
+		width 150px
+		height 26px
+		margin 45px auto 50px auto
+		background url("../img/logo.png") no-repeat
+.left-user
+	position relative
+	width 150px
+	margin 0 auto
+	padding-bottom 20px
+	a.settings
+		z-index 5
+		position absolute 
+		left 0px 
+		top 0px
+		width 18px
+		height 18px
+		background url("../img/icons/settings.png") no-repeat
+		&:hover
+			transform rotate(90deg) scale(1.2)
+	.notify
+		z-index 5
+		position absolute 
+		right -5px 
+		top 0px
+		width 18px
+		height 18px
+		a
+			font-size 20px
+			color color-red
+			&:hover
+				font-size 22px
+	.prev
+		position relative
+		width 149px
+		height 166px
+		padding-bottom 15px
+		.rating
+			position absolute 
+			left 0px 
+			top 0px
+		.pic
+			position absolute 
+			left 6px 
+			top 6px
+	.score
+		color color-grey-dark
+		font-size 12px
+		text-align center
+		color #474747
+		.big
+			display inline-block
+			margin-right 3px
+			font-size 16px
+			font-weight bold
+			color color-grey-dark
+
+//	#left-menu
+.left-menu
+	ul
+		lino()
+	a
+		position relative
+		padding-left 35px
+		color color-grey-dark
+		font-size 15px
+		text-transform uppercase
+		&:hover
+			color color-white
+			&:before
+				opacity 1
+		&:before
+			content " "
+			position absolute 
+			left 0px
+			top -2px
+			width 24px
+			height 24px
+			background red
+			opacity .3
+			anim()
+	li
+		padding 20px 0 20px 60px
+	li.is-active
+		position relative
+		border-left 3px solid color-red
+		a
+			color color-white
+			&:before
+				opacity 1
+	li.menu-tourns a:before
+		background url("../img/icons/menu-tourns.png") center center no-repeat
+	li.menu-train a:before
+		background url("../img/icons/menu-train.png") center center no-repeat
+	li.menu-rating a:before
+		background url("../img/icons/menu-rating.png") center center no-repeat
+	li.menu-booty a:before
+		background url("../img/icons/menu-booty.png") center center no-repeat
+	li.menu-faq a:before
+		background url("../img/icons/menu-faq.png") center center no-repeat
+
+//	#pager
+.pager
+	text-align center
+	padding-bottom 20px
+	ul
+		display inline-block
+		lino()
+	li.prev
+		padding-right 15px
+		a
+			width 17px !important
+			height 14px !important
+			background url("../img/icons/arrow-right.png") no-repeat
+			transform rotate(-180deg)
+			&:hover
+				opacity .7
+	li.next
+		padding-left 15px
+		a
+			width 17px !important
+			height 14px !important
+			background url("../img/icons/arrow-right.png") no-repeat
+			&:hover
+				opacity .7
+	li.is-disable
+		a
+			cursor default
+			opacity .4 !important
+	li
+		display table-cell
+		width 35px
+		vertical-align middle
+		text-align center
+		&:hover
+			a
+				width 30px
+				height 30px
+				span
+					font-size 16px
+		&.is-active
+			a
+				width 30px
+				height 30px
+			span
+				font-size 16px
+	a
+		display block
+		width 8px
+		height 8px
+		margin 0 auto
+		background #c2c2c2
+		border-radius 15px
+	span
+		display inline-block
+		padding-top 3px
+		font-size 0
+		color color-white
+
+// #rating-select
+.rating
+	position relative
+	clearfix()
+.rating__select
+	float left
+	clearfix()
+	div
+		position relative
+		display inline-block
+		width 40px
+		height 20px
+		&:after
+			display block
+			content " "
+			position absolute 
+			left 0px 
+			top 11px
+			width 8px
+			height 8px
+			background #c2c2c2
+			border-radius 15px
+		&.star-on-png
+			&:after
+				background color-red
+.rating__count
+	float right
+	font-size 20px
+	font-regular()
+		
+//	#search
+.search
+	position relative
+	float left
+	anim()
+.search-btn
+	z-index 5
+	position relative
+	vertical-align middle
+	width 75px
+	a.open
+		display block
+		width 75px
+		height 75px
+		background color-grey-opacity url("../img/icons/search.png") center center no-repeat
+		&:hover
+			background-color color-grey-opacity
+	a.close
+		display none
+		width 75px
+		height 75px
+		background url("../img/icons/close.png") center center no-repeat
+		&:hover
+			transform rotate(180deg)
+.search-form
+	z-index 4
+	position absolute
+	overflow hidden
+	left -510px 
+	top 0px
+	width 0px
+	height 75px
+	background color-grey-opacity
+	anim()
+	width 510px
+	&.show
+		left 0
+	.input
+		position absolute 
+		left 75px 
+		top 0px
+		width 360px
+		height 75px
+		color #949494
+		font-light()
+		font-size 18px
+		background none !important
+		border none
+	.submit
+		z-index 10
+		position absolute 
+		right 0px 
+		top 0px
+		float right
+		width 75px
+		height 75px
+		background url("../img/icons/search-a.png") center center no-repeat !important
+		cursor pointer
+		
+//	#sort-menu
+.sort-menu
+	float right
+	padding-top 30px
+	ul
+		lino()
+		clearfix()
+	li
+		float left
+		text-align center
+		&.sort-desc
+			span
+				background url("../img/icons/arrow-up-grey.png") right center no-repeat
+				&:hover
+					background url("../img/icons/arrow-up-blue.png") right center no-repeat
+		&.is-active 
+			a
+				color color-blue
+			span
+				background url("../img/icons/arrow-down-blue.png") right center no-repeat
+			&.sort-desc
+				span
+					background url("../img/icons/arrow-up-blue.png") right center no-repeat
+			
+	a
+		display block
+		color #B2B2B2
+		text-transform uppercase
+		&:hover
+			color color-blue
+			span
+				background url("../img/icons/arrow-down-blue.png") right center no-repeat
+	span
+		display inline-block
+		padding-right 15px
+		background url("../img/icons/arrow-down-grey.png") right center no-repeat
+	.date
+		width 125px
+	.members
+		width 140px
+	.price
+		width 160px
+
+//	#taskadd-line
+.taskadd-line
+	padding-bottom 30px
+	&.has-padding
+		padding-bottom 60px
+	&.has-no-padding
+		padding-bottom 0
+.taskadd-line__name
+	padding-bottom 13px
+	font-size 16px
+	font-regular()
+.taskadd-line__content
+	position relative
+	input, select
+		margin-bottom 0
+					
+//	#tableview
+.tableview
+	padding-bottom 40px
+.tableview-item
+	display table
+	width 100%
+	table-layout fixed
+	margin-bottom 2px
+	background color-white
+	border-radius 3px
+.tableview-item__num,
+.tableview-item__pic,
+.tableview-item__name,
+.tableview-item__date,
+.tableview-item__members,
+.tableview-item__price
+	display table-cell 
+	padding 20px 10px
+	vertical-align middle
+.tableview-item__num
+	width 10px
+	padding-left 20px
+	color color-grey
+	text-align center
+	vertical-align top
+.tableview-item__pic
+	width 70px
+	vertical-align top
+	img
+		border 10px solid #ededed
+		border-radius 32px
+.tableview-item__name 
+	.cat
+		color color-grey
+		font-size 10px
+		text-transform uppercase
+	.name
+		a
+			display table
+			color color-grey-dark
+			text-transform uppercase
+			line-height 20px
+			&:hover
+				color color-red
+.tableview-item__date
+	width 130px
+	text-align left
+.tableview-item__members
+	width 120px
+	text-align left
+.tableview-item__price
+	width 170px
+	text-align right
+	padding-right 20px
+	font-size 20px
+	color color-red
+	white-space nowrap
+	span.hight
+		font-size 30px
+
+//	#textarea-desc
+.textarea-desc
+	position relative
+	padding-bottom 10px
+	textarea
+		margin 0
+		border-bottom 0
+		border-radius 4px 4px 0 0
+.textarea-desc__more
+	margin-top -5px
+	padding 15px 20px 10px 20px
+	background color-grey-opacity
+	border 1px solid #d6d6d6
+	border-top 0
+	border-radius 0 0 4px 4px
+	clearfix()
+	.attach
+		float left
+		a
+			display inline-block
+			padding-left 25px
+			color color-grey
+			background url("../img/icons/attach.png") 0 center no-repeat
+			&:after
+				content " "
+				background url("../img/icons/attach-a.png") 0 center no-repeat
+			&:hover
+				color color-red
+				background url("../img/icons/attach-a.png") 0 center no-repeat
+	.edittools
+		float right
+		display none
+
+//	#userprev
+.userprev
+	padding-bottom 40px
+.userprev__name
+	padding-top 30px
+	padding-bottom 10px
+	font-size 16px
+	text-transform uppercase
+	font-weight 500
+	
+//	#upperbar
+.upperbar
+	@extend .row
+	vertical-align middle
+	overflow hidden
+	background color-white
+	border-radius 3px
+	height 75px
+	margin-bottom 20px
+	font-size 13px
+	clearfix()
+	.fl-right
+		display table-cell 
+		padding 15px 20px 0 0
+	&.is-big
+		height 120px
+		margin -20px
+		margin-bottom 20px
+		padding 20px
+		border-radius 0
+	.has-arrow
+		position relative
+		&:after
+			z-index 4
+			bottom -45px
+			left 50%
+			border solid transparent
+			content " "
+			height 0
+			width 0
+			position absolute
+			pointer-events none
+			border-bottom-color #eeeeee
+			border-width 26px
+			margin-left -26px
+.upperbar__info
+	float left
+	display table
+	.num
+		dtc()
+		width 65px
+		font-size 16px
+		padding-right 25px
+		text-align right
+		height 75px
+		vertical-align middle
+	.pic
+		dtc()
+		height 75px
+		vertical-align middle
+		img 
+			display block
+			anim()
+			&:hover
+				opacity .7
+	.name
+		dtc()
+		height 75px
+		padding-left 30px
+		vertical-align middle
+		font-16-ttu()
+		a
+			color color-grey-dark
+			&:hover
+				color color-red
+
+//	#upper-contacts
+.upper-contacts
+	clearfix()
+	font-size 16px
+	.phone
+		float left
+		color color-grey-dark
+		font-regular()
+	.sepline
+		float left
+		width 2px
+		height 22px
+		background #e6e6e6
+		margin 0 15px
+	.text 
+		float left
+		
+
+//	#plugins
+// ===============================================
+
 //	#scroller
 .scroller-box
 	overflow hidden 
 	position relative
 	height 300px
 	padding-bottom 5px
-.mCustomScrollBox 
+.mCustomScrollBox
 	position relative
 	overflow hidden
 	height 100%
@@ -1735,3 +1059,24 @@ body.page
 				width 5px
 				height 100%
 				margin 0px auto
+
+//	#ripplelink
+.ripplelink
+	position relative
+	overflow hidden
+	anim()
+	z-index 0
+	&:hover
+		z-index 1000
+.ripplelink-ink
+	display block
+	position absolute
+	background rgba(255, 255, 255, 0.3)
+	border-radius 100%
+	transform scale(0)
+.ripplelink-animate
+	animation ripple 0.9s linear
+@keyframes ripple
+	100%
+		opacity 0
+		transform scale(2.5)

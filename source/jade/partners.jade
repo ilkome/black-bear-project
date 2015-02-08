@@ -1,0 +1,57 @@
+extends _layout
+
+block append content
+	.upperbar
+		+upper-search
+	
+	.infoboxs
+		mixin infobox(pic, name, date, desc)
+			.infobox
+				.infobox-in
+					.infobox__pic 
+						a(href="#")
+							img(src="img/#{pic}.png", alt="")
+					.infobox__content.js-showhover-box
+						a(href="#") 
+							.name= name
+						.date= date
+						.desc Описание в две строчки. Опросы общественного мнения, проведенные в 2010 году
+						.hover: a(href="#").btn-red.ripplelink Смотреть задачи
+		+infobox(
+			"booty-1",
+			"Счет в твою пользу"
+		)
+		+infobox(
+			"booty-2",
+			"Весомый аргумент"
+		)
+		+infobox(
+			"booty-3",
+			"Завершение начатого"
+		)
+		+infobox(
+			"booty-4",
+			"Любитель разнообразия"
+		)
+		+infobox(
+			"booty-2",
+			"Любитель разнообразия"
+		)
+		
+		mixin infobox_empty
+			.infobox.infobox_empty
+				.infobox-in
+					.infobox__pic 
+						img(src="img/booty-empty.png", alt="")
+					.infobox__content
+						.line.w2
+						.line.w1
+						.desc 
+							.line.w3
+							.line
+		+infobox_empty
+		+infobox_empty
+		+infobox_empty
+		+infobox_empty
+		+infobox_empty
+		+infobox_empty

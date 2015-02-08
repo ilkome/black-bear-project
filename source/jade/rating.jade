@@ -1,0 +1,49 @@
+extends _layout
+
+block append content
+	.upperbar
+		.fl-left
+			.sort-menu
+				ul
+					li.sort-desc.is-active: a(href="#") Участники
+		.fl-right
+			.sort-menu
+				ul
+					li: a(href="#") Баллы
+
+	.user-ratingview
+		mixin user-rview-item
+			.user-rview-item
+				.user-rview-item__num 1
+				.user-rview-item__pic: img(src="img/content/task-1.png", alt="")
+				.user-rview-item__name
+					.name: a(href="#") Евгений Павленко
+				.user-rview-item__rating
+					.user-level
+						.num 32
+						.level уровень
+						.count 
+							.black 4 120 
+							| / 5 000
+						.status.down
+			.user-rview-item
+				.user-rview-item__num 1
+				.user-rview-item__pic: img(src="img/content/task-1.png", alt="")
+				.user-rview-item__name
+					.name: a(href="#") Александр Подобед
+				.user-rview-item__rating
+					.user-level
+						.num 16
+						.level уровень
+						.count 
+							.black 4 473 
+							| / 5 000
+						.status.up
+
+		+user-rview-item
+		+user-rview-item
+		+user-rview-item
+		+user-rview-item
+		+user-rview-item
+		
+	+pager

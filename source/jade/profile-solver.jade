@@ -1,0 +1,217 @@
+extends _layout
+
+block append content
+	.upperbar
+		.fl-left
+			.upperbar__num 4
+			.upperbar__pic: img(src="img/user-ava.png", alt="")
+			.upperbar__name Мишин Антон
+		.fl-right
+			.user-level
+				.num 16
+				.level уровень
+				.count 
+					.black 4 120 
+					| / 5 000
+
+	.row.row-2
+		.col-50
+			.row.row-2
+				.col-50
+					.infobox
+						.infobox__meta
+							.infobox__name: h3 общие сведения
+							.infobox__menu: a(href="#") 
+						.infobox__content
+							.infoline 
+								.infoline__name Имя
+								.infoline__content Владимир Горюнов
+							.infoline
+								.infoline__name Локация
+								.infoline__content Россия, Москва
+							.infoline
+								.infoline__name Имя
+								.infoline__content Владимир Горюнов
+							.infoline
+								.infoline__name Website
+								.infoline__content: a(href="#") www.proscom.ru
+							.infoline
+								.infoline__name Ссылки
+								.infoline__content
+									.social-links
+										ul
+											li.fb: a(href="#")
+											li.vk: a(href="#")
+											li.tw: a(href="#")
+				.col-50
+					.infobox
+						.infobox__meta
+							.infobox__name: h3 Работа
+							.infobox__menu: a(href="#") 
+						.infobox__content
+							.infoline 
+								.infoline__name Род занятий
+								.infoline__content Art-Director
+							.infoline
+								.infoline__name Навыки
+								.infoline__content Какими навыками вы обладаете?
+							.infoline
+								.infoline__name Место работы
+								.infoline__content Где вы работали?
+							.infoline
+								.infoline__name Website
+								.infoline__content: a(href="#") www.proscom.ru
+					.infobox
+						.infobox__meta
+							.infobox__name: h3 Образование
+							.infobox__menu: a(href="#") 
+						.infobox__content
+							.infoline 
+								.infoline__name Учебное заведение
+								.infoline__content Где вы учились?
+							
+		.col-50
+			.row.row-2
+				.col-50
+					.infobox
+						.infobox__meta
+							.infobox__name: h3 Компетенции
+						.infobox__content
+							.infoline 
+								.infoline__name Владение пакетом Adobe
+								.infoline__content 
+									.rating
+										.rating__counts 
+											ul
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li
+							.infoline 
+								.infoline__name Управление командой
+								.infoline__content 
+									.rating
+										.rating__counts 
+											ul
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li
+												li
+												li
+												li
+												li
+							.infoline 
+								.infoline__name Владение пакетом Adobe
+								.infoline__content 
+									.rating
+										.rating__counts 
+											ul
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li
+							.infoline 
+								.infoline__name Управление командой
+								.infoline__content 
+									.rating
+										.rating__counts 
+											ul
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li
+												li
+												li
+												li
+												li
+							.infoline 
+								.infoline__name Владение пакетом Adobe
+								.infoline__content 
+									.rating
+										.rating__counts 
+											ul
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li
+							.infoline 
+								.infoline__name Управление командой
+								.infoline__content 
+									.rating
+										.rating__counts 
+											ul
+												li.star
+												li.star
+												li.star
+												li.star
+												li.star
+												li
+												li
+												li
+												li
+												li
+				.col-50
+					.infobox
+						.infobox__meta
+							.fl-right
+								+pager-small
+							.infobox__name
+								h3 Трофеи
+								.desc 8 
+						.infobox__content
+							.bootys_oneline
+								.booty
+									.booty__pic
+										a(href="#")
+											img(src="img/icons/.booty-1.png", alt="")
+									.booty__content
+										a(href="#") 
+											.name Счет в твою пользу
+											.date 24 сентября 2014
+								.booty
+									.booty__pic
+										a(href="#")
+											img(src="img/icons/.booty-2.png", alt="")
+									.booty__content
+										a(href="#") 
+											.name Весомый аргумент
+											.date 24 сентября 2014
+								.booty
+									.booty__pic
+										a(href="#")
+											img(src="img/icons/.booty-1.png", alt="")
+									.booty__content
+										a(href="#") 
+											.name Завершение начатого
+											.date 24 сентября 2014
+								.booty
+									.booty__pic
+										a(href="#")
+											img(src="img/icons/.booty-2.png", alt="")
+									.booty__content
+										a(href="#") 
+											.name Любитель разнообразия
+											.date 24 сентября 2014

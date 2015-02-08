@@ -1,0 +1,41 @@
+extends _layout
+
+block append content
+	.upperbar.is-big
+		.fl-left
+			.close-popup: a(href="#")
+			.slider-nav
+				ul
+					li.prev: a(href="#")
+					li.sep
+					li.next: a(href="#")
+		.fl-right.has-arrow
+			a(href="#").btn-green.ripplelink Предложить решение
+
+	.content
+		.content-wrap
+			.content__name
+				.name: h1 Придумать название нового бренда напитка BubbleTea и разработать партнерскую программу
+				.desc Первый этап конкурса
+			.taskadd-line__content
+				.textarea-desc
+					textarea(placeholder="Подробное описание").textarea-big
+					.textarea-desc__more
+						.attach: a(href="#") Прикрепить файл
+						.edittools Edit tools here
+
+			.files
+				.file
+					.file__ext.red pdf
+					.file__name: a(href="#") Требования к решению PDF
+					.file__remove: a(href="#")
+				.file
+					.file__prev
+						a(href="#")
+							img(src="img/content/file-prev.png", alt="", height="32")
+					.file__name: a(href="#") Print_Screen.jpg
+					.file__remove: a(href="#")
+
+			.action-btns
+				a(href="#").btn-grey.ripplelink Отмена
+				a(href="#").btn-blue.ripplelink Отправить решение

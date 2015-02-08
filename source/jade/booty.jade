@@ -1,0 +1,69 @@
+extends _layout
+
+block append content
+	.upperbar
+		.upperbar__info
+			.num 4
+			.pic
+				a(href="#") 
+					img(src="img/ava.png", alt="")
+			.name
+				a(href="#") мишин антон
+		.fl-right
+			.icon-medals.has-margin 8
+	
+	.infoboxs
+		mixin infobox(pic, name, date, desc)
+			.infobox
+				.infobox-in
+					.infobox__pic 
+						a(href="#")
+							img(src="img/#{pic}.png", alt="")
+					.infobox__content
+						a(href="#") 
+							.name= name
+						.date= date
+						.desc Описание в две строчки. Опросы общественного мнения, проведенные в 2010 году
+		+infobox(
+			"booty-1",
+			"Счет в твою пользу",
+			"24 сентября 2014"
+		)
+		+infobox(
+			"booty-2",
+			"Весомый аргумент",
+			"12 июня 2014"
+		)
+		+infobox(
+			"booty-3",
+			"Завершение начатого",
+			"30 Мая 2013"
+		)
+		+infobox(
+			"booty-4",
+			"Любитель разнообразия",
+			"1 января 2013"
+		)
+		+infobox(
+			"booty-2",
+			"Любитель разнообразия",
+			"1 января 2013"
+		)
+		
+		mixin infobox_empty
+			.infobox.infobox_empty
+				.infobox-in
+					.infobox__pic 
+						img(src="img/booty-empty.png", alt="")
+					.infobox__content
+						.line.w2
+						.line.w1
+						.desc 
+							.line.w3
+							.line
+		+infobox_empty
+		+infobox_empty
+		+infobox_empty
+		+infobox_empty
+		+infobox_empty
+		+infobox_empty

@@ -1,12 +1,13 @@
 
-
 /*
 	Ilya Komichev
-	style-nes.com
+	ilko.me
+
+	Helpful stylus
 */
 
 
-//	#tools
+//	tools
 // ===============================================
 clearfix()
 	&:before
@@ -30,13 +31,17 @@ hide()
 .full_100
 	full()
 	width 100%
+dt()
+	display table
 dtc()
 	display table-cell 
 	vertical-align top
 .inline
 	display inline
-.margin_no
-	margin 0
+*, *:before, *:after
+	box-sizing border-box
+@-ms-viewport
+	width device-width
 
 //	#position
 .fl-left
@@ -47,16 +52,16 @@ dtc()
 	text-align center
 .align-right
 	text-align right
-.va-center
+.middle
 	vertical-align middle
 
 
 //	#pad-marg
-mrno()
+mrgno()
 	margin 0
-pdno()
+pdnno()
 	padding 0
-.margin-none
+.margin-no
 	margin 0
 
 //	#decoration

@@ -1,0 +1,97 @@
+extends _layout
+
+block append content
+	.upperbar
+		+upper-search
+		.filter-menu
+			ul
+				li.is-active: a(href="#") Избранное
+				li: a(href="#") Архив
+				li: a(href="#") Все
+		.sort-menu
+			ul
+				li.date.sort-desc: a(href="#")
+					span Публикация
+				li.date.is-active: a(href="#") 
+					span Окончание
+				li.members: a(href="#") 
+					span Участники
+				li.price.sort-desc.is-active: a(href="#") 
+					span Стоимость
+	
+	.add-task-full
+		a(href="#").btn-red.ripplelink 
+			.link Добавить задачу
+
+	.tableview
+		mixin tableview-item
+			.tableview-item
+				.tableview-item__num 1
+				.tableview-item__pic: img(src="img/icons/cube-red.png", alt="")
+				.tableview-item__name
+					.cat Бригада
+					.name: a(href="#") Название проекта Придумать название магазина доставки сладкой продукции
+				.tableview-item__date
+					.dateblock
+						.day 15
+						.month Сентября
+						.year 2014
+				.tableview-item__date
+					.dateblock
+						.day 26
+						.month Декабря
+						.year 2014
+				.tableview-item__members
+					.membersblock 13
+				.tableview-item__price
+					span.hight 500
+					| 000
+					.rub
+			.tableview-item
+				.tableview-item__num 2
+				.tableview-item__pic: img(src="img/icons/heart-red.png", alt="")
+				.tableview-item__name
+					.cat Медицина
+					.name: a(href="#") Предложите простую систему оценки времени Web – программинга Web-Система регистрации
+				.tableview-item__date
+					.dateblock
+						.day 1
+						.month Марта
+						.year 2014
+				.tableview-item__date
+					.dateblock
+						.day 18
+						.month Июня
+						.year 2014
+				.tableview-item__members
+					.membersblock 356
+				.tableview-item__price
+					span.hight 67
+					| 000
+					.rub
+			.tableview-item
+				.tableview-item__num 3
+				.tableview-item__pic: img(src="img/icons/circ-red.png", alt="")
+				.tableview-item__name
+					.cat Медицина
+					.name: a(href="#") Название проекта Придумать название магазина доставки сладкой продукции
+				.tableview-item__date
+					.dateblock
+						.day 1
+						.month Марта
+						.year 2014
+				.tableview-item__date
+					.dateblock
+						.day 18
+						.month Июня
+						.year 2014
+				.tableview-item__members
+					.membersblock 356
+				.tableview-item__price
+					span.hight 5 
+					| 000 000
+					.rub
+		+tableview-item
+		+tableview-item
+		
+	+pager

@@ -1,0 +1,48 @@
+extends _layout
+
+block append content
+	.row.row-2
+		.col-50
+			.upperbar
+				.upperbar__pic: img(src="img/content/task-1.png", alt="")
+				.upperbar__name Придумать название магазина доставки сладкой продукции
+				.slider-nav
+					ul
+						li.prev: a(href="#")
+						li.sep
+						li.next: a(href="#")
+			
+			mixin infobox-graph
+				.infobox
+					.infobox__meta
+						.infobox__name: h3 Просмотры
+						.infobox__price
+							| 17
+							.rub
+					.infobox__content: img(src="img/content/infobox-graph.png", alt="")
+			
+			+infobox-graph
+			+infobox-graph
+			+infobox-graph
+
+
+		.col-50
+			.upperbar
+				.upperbar__name Общая статистика
+			
+			mixin infobox-statistic
+				.infobox.infobox_statistic
+					.infobox__price
+						| 17
+						.rub
+					.infobox__count
+						.num 18 970
+						.desc участников
+					.infobox__more: a(href="#") Посмотреть все задачи
+			.row.row-2
+				.col-50
+					+infobox-statistic
+					+infobox-statistic
+				.col-50
+					+infobox-statistic
+					+infobox-statistic

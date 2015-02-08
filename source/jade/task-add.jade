@@ -1,0 +1,149 @@
+block vars
+	- var iswhite = 1 
+extends _layout
+
+block append content
+	.content-text.has-small-padding
+		.content-wrap
+			.fl-left
+				h1.is-small создание задачи
+			.fl-right
+				.upper-contacts
+					.phone 8 800 900 31 01
+					.sepline
+					.text Наш менеджер готов Вам помочь
+			.clear
+
+			.taskadd-line
+				.taskadd-line__name Категория
+				.taskadd-line__content
+					select(data-placeholder="Выберите категорию").select-grey.width-500
+						option(value="") Вариант номер один
+						option(value="") Второй вариант 
+						option(value="") Еще есть третий вариант
+			.taskadd-line
+				.taskadd-line__name Название
+				.taskadd-line__content
+					input(type="text", placeholder="Введите название задачи", autofocus).input-trans
+			.taskadd-line
+				.taskadd-line__name Бюджет
+				.taskadd-line__content
+					.input-with-price
+						input(type="text", placeholder="Ваш бюджет").input-price
+			.taskadd-line.has-padding
+				.taskadd-line__name Краткое описание задачи
+				.taskadd-line__content
+					textarea
+		
+		.greybox
+			.content-wrap
+				.row.row-2
+					.col.js-addfield-box
+						.taskadd-line
+							.taskadd-line__name Дата публикации задачи
+							.taskadd-line__content
+								.row.row-3
+									.col
+										select(data-placeholder="Дата").full
+											option(value="") 12
+											option(value="") 13
+											option(value="") 15
+									.col
+										select(data-placeholder="Месяц").full
+											option(value="") Январь
+											option(value="") Февраль
+											option(value="") Март
+									.col
+										select(data-placeholder="Год").full
+											option(value="") 2000
+											option(value="") 2012
+											option(value="") 2099
+						.taskadd-line.has-padding
+							.taskadd-line__name Промежуточный инпут
+							.taskadd-line__content
+								input(type="text", placeholder="Название инпута").input-full
+						.taskadd-line
+							.taskadd-line__content
+								a(href="#").btn-blue-dotted.js-addfield-link Добавить еще инпут
+					.col
+						.taskadd-line
+							.taskadd-line__name Дата окончания задачи
+							.taskadd-line__content
+								.row.row-3
+									.col
+										select(data-placeholder="Дата").full
+											option(value="") 12
+											option(value="") 13
+											option(value="") 15
+									.col
+										select(data-placeholder="Месяц").full
+											option(value="") Январь
+											option(value="") Февраль
+											option(value="") Март
+									.col
+										select(data-placeholder="Год").full
+											option(value="") 2000
+											option(value="") 2012
+											option(value="") 2099
+						.taskadd-line
+							.taskadd-line__name &nbsp;
+							.taskadd-line__content
+								.row.row-3
+									.col
+										select(data-placeholder="Дата").full
+											option(value="") 12
+											option(value="") 13
+											option(value="") 15
+									.col
+										select(data-placeholder="Месяц").full
+											option(value="") Январь
+											option(value="") Февраль
+											option(value="") Март
+									.col
+										select(data-placeholder="Год").full
+											option(value="") 2000
+											option(value="") 2012
+											option(value="") 2099
+		.content-wrap
+			.taskadd-line.has-no-padding
+				.taskadd-line__name Требования к решению
+				.taskadd-line__content
+					.textarea-desc
+						textarea(placeholder="Подробное описание").textarea-big
+						.textarea-desc__more
+							.attach: a(href="#") Прикрепить файл
+							.edittools Edit tools here
+			.files.has-padding-60
+				.file
+					.file__ext.red pdf
+					.file__name: a(href="#") Требования к решению PDF
+					.file__remove: a(href="#")
+				.file
+					.file__prev 
+						a(href="#")
+							img(src="img/content/file-prev.png", alt="", height="32")
+					.file__name: a(href="#") Print_screen.jpg
+					.file__remove: a(href="#")
+			
+			.row.row-2
+				.col
+					.taskadd-line
+						.taskadd-line__name Критерии оценки задачи
+						.taskadd-line__content
+							select(data-placeholder="Выберите критерий").select-grey.full
+								option(value="") Вариант номер один
+								option(value="") Второй вариант 
+								option(value="") Еще есть третий вариант
+					.taskadd-line.has-padding
+						.taskadd-line__content
+							a(href="#").btn-blue-dotted.js-addfield-link Добавить еще критерий
+				.col
+					.taskadd-line
+						.taskadd-line__name Выберите оценку от 1 до 10
+						.taskadd-line__content
+							.rating
+								.rating__select
+								.rating__count 0
+			.action-btns
+				a(href="#").btn-grey.ripplelink Отмена
+				a(href="#").btn-blue.ripplelink Создать задачу

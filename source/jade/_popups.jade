@@ -1,0 +1,84 @@
+.hide
+	.remodal(data-remodal-id="popup-edit-common")
+		.popupbox
+			.popupbox__name: h2 Общие сведения
+			.popupbox__close: a(href="#")
+			.popupbox__content
+				.infoline
+					.infoline__name Пол
+					.infoline__content 
+						select(data-placeholder="Выберите категорию")
+							option(value="") Вариант номер один
+							option(value="") Второй вариант 
+							option(value="") Еще есть третий вариант
+				.infoline
+					.infoline__name Место проживания
+					.infoline__content 
+						.row.row-2
+							.col-50
+								input(type="text", placeholder="Страна")
+							.col-50
+								input(type="text", placeholder="Город")
+				.infoline
+					.infoline__name Контакты
+					.infoline__content 
+						.row.row-2
+							.col-30
+								select(data-placeholder="Выберите категорию")
+									option(value="") Вариант номер один
+									option(value="") Второй вариант 
+									option(value="") Еще есть третий вариант
+							.col-70
+								input(type="text", value="8 916 405 00 00")
+						.row.row-2
+							.col-30
+								select(data-placeholder="Выберите категорию")
+									option(value="") Вариант номер один
+									option(value="") Второй вариант 
+									option(value="") Еще есть третий вариант
+							.col-70
+								input(type="text", value="mail@mail.ru")
+				.infoline
+					.infoline__name Социальные сети
+					.infoline__content 
+						.row.row-2
+							.col-30
+								select(data-placeholder="Выберите категорию")
+									option(value="") Вариант номер один
+									option(value="") Второй вариант 
+									option(value="") Еще есть третий вариант
+							.col-70
+								input(type="text", value="link")
+				a(href="#").js-add-contacts.btn-green-dashed Добавить еще
+				.actions
+					a(href="#").btn-grey Отменить 
+					a(href="#").btn-green Сохранить 
+
+	.remodal(data-remodal-id="popup-evaluate-solutions")
+		.popupbox
+			.popupbox__name: h2 Оценить решения
+			.popupbox__close: a(href="#")
+			.popupbox__content
+				.solutions
+					mixin solution
+						.solution
+							.solutions__num 1
+							.solutions__pic: img(src="img/content/solutions-pic.png", alt="")
+							.solutions__name: a(href="#") Александра Киаби
+							.solutions__best
+							.solutions__rating
+								select(data-placeholder="Выберите категорию")
+									option(value="") Вариант номер один
+									option(value="") Второй вариант 
+									option(value="") Еще есть третий вариант
+					+solution
+					+solution
+					+solution
+					+solution
+					+solution
+
+				+pager
+				a(href="#").download-solution Скачать все решения
+				.actions
+					a(href="#").btn-grey Отменить 
+					a(href="#").btn-green Сохранить 

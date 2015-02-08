@@ -1,0 +1,64 @@
+extends _layout
+
+block append content
+	.upperbar
+		.upperbar__num 4
+		.upperbar__pic: img(src="img/content/logo-sm-1.png", alt="")
+		.upperbar__name Придумать название магазина доставки сладкой продукции
+	
+	.row.row-2
+		.col-50
+			.row.row-2
+				.col-50
+					.infobox
+						.infobox__meta
+							.infobox__name: h3 Контактное лицо
+							.infobox__menu: a(href="#") 
+						.infobox__content
+							.infoline
+								.infoline__name Имя
+								.infoline__content Владимир Горюнов
+							.infoline
+								.infoline__name Локация
+								.infoline__content Россия, Москва
+							.infoline
+								.infoline__name Имя
+								.infoline__content Владимир Горюнов
+							.infoline
+								.infoline__name Website
+								.infoline__content: a(href="#") www.proscom.ru
+							.infoline
+								.infoline__name Ссылки
+								.infoline__content
+									.social-links
+										ul
+											li.fb: a(href="#")
+											li.vk: a(href="#")
+											li.tw: a(href="#")
+				.col-50
+					.infobox
+						.infobox__meta
+							.infobox__name: h3 Общая информация об организации
+							.infobox__menu: a(href="#") 
+						.infobox__content
+							h3 Подзаголовок
+							p Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. 
+							p Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или "невозможных" слов. Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые 
+
+		.col-50
+			mixin infobox-statistic
+				.infobox.infobox_statistic
+					.infobox__price
+						| 17
+						.rub
+					.infobox__count
+						.num 18 970
+						.desc участников
+					.infobox__more: a(href="#") Посмотреть все задачи
+			.row.row-2
+				.col-50
+					+infobox-statistic
+					+infobox-statistic
+				.col-50
+					+infobox-statistic
+					+infobox-statistic

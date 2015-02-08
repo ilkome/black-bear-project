@@ -1,0 +1,44 @@
+extends _layout
+
+block append content
+	.upperbar
+		.fl-left
+			.filter-menu.is-blue
+				ul
+					li.is-active: a(href="#") Избранное
+					li: a(href="#") Все
+					li: a(href="#") Архив
+		.fl-right
+			.sort-menu
+				ul
+					li: a(href="#") Публикация
+					li: a(href="#") Дата окончания
+					li: a(href="#") Количество участников
+	
+	.tableview
+		mixin tableview-item
+			.tableview-item
+				.tableview-item__num 1
+				.tableview-item__pic: img(src="img/content/task-1.png", alt="")
+				.tableview-item__name
+					.cat Бригада
+					.name: a(href="#") Название проекта Придумать название магазина доставки сладкой продукции
+				.tableview-item__date
+					.dateblock
+						.day 20
+						.month Октября
+						.year 2014
+				.tableview-item__date
+					.dateblock
+						.day 20
+						.month Октября
+						.year 2014
+				.tableview-item__members
+					.membersblock 13
+		+tableview-item
+		+tableview-item
+		+tableview-item
+		+tableview-item
+		+tableview-item
+		
+	+pager

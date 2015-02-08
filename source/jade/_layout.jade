@@ -1,109 +1,44 @@
 //- #mixin
 include _mixin
-
+block vars
 
 doctype html
 //	proscom.ru
 //	Simple Communication
 html
 	include _head
+	#menu
+		a(href="about.html") about+
+		a(href="booty.html") booty+
+		a(href="faq.html") faq 
+		a(href="offer.html") offer+
+		a(href="partners.html") partners 
+		a(href="profile-seeker.html") profile-seeker 
+		a(href="profile-solver.html") profile-solver 
+		a(href="rating.html") rating
+		a(href="solution.html") solution 
+		a(href="statistics.html") statistics
+		a(href="task-add.html") task-add+-
+		a(href="task-item.html") task-item 
+		a(href="tasks.html") tasks+
+		a(href="training.html") training 
 	
+	body.page-body(
+		class=typeof 
+		iswhite === "undefined" ? undefined : "page-white"
+	)
+		//-include _popups
 
-	body.page
-		.style-nes
-
-			.header
-				a(href="/").header__logo
-				.header__phone (495) 251-83-00
-				ul.header__contacts
-					li.contacts__item
-						i.icon.icon-map
-						| Москва, Оружейный переулок, дом 43
-					li.contacts__item
-						i.icon.icon-email
-						a(href="#").contacts__link info@mosgorzdrav.ru
-				a(href="#").header__lklink
-					.icon.icon-user
-					| Личный кабинет
-				.clear
-
-
-				.header__in
-					mixin header__menu__item(name, action)
-						if action == "dropmenu"
-							li.menu__item.menu__item_drop.js-menu-drop-item
-								a(href="#").menu__link= name
-								ul.menu-drop
-									li
-										a(href="#") Личный кабинет
-									li
-										a(href="#") Записатья ко врачу
-									li
-										a(href="#") Найти поликлиннику
-									li
-										a(href="#") В помощь пациенту
-									li
-										a(href="#") Лекарства и аптеки
-									li
-										a(href="#") Частые вопросы
-						else if action == "hightlight"
-							li.menu__item.menu__item_hl
-								a(href="#").menu__link= name
-						else 
-							li.menu__item
-								a(href="#").menu__link= name
-					
-					ul.header__menu.js-menu-drop
-						+header__menu__item ("Гражданам", "dropmenu")
-						+header__menu__item ("Специалистам", "dropmenu")
-						+header__menu__item ("Департамент")
-						+header__menu__item ("Пресс-центр")
-						+header__menu__item ("Специальные проекты")
-						+header__menu__item ("Реформа 2015", "hightlight")
-					
-					.search-form.header__search
-						input(type="text", placeholder="Поиск по сайту").search__field.inp_dark
-						input(type="submit", value="").search__submit
+		.ilkome
+			include _left-col
 			
+			.l-right
+				block content
 
-			block content
-
-
-		.footer__menu
-			.l-wrap
-				.footer__in
+			.footer
+				.footer-copy 2014 © Все права защищены
+				.footer-menu
 					ul
-						li.title Гражданам
-						li: a(href="#") О департаменте
-						li: a(href="#") Для СМИ
-						li: a(href="#") Парнерам
-						li: a(href="#") Вакансии
-						li: a(href="#") Новости
-					ul
-						li.title Специалистам
-						li: a(href="#") Способы записи
-						li: a(href="#") Найти поликлиннику
-						li: a(href="#") Прикрепиться к поликлиннике
-						li: a(href="#") Получить полис
-						li: a(href="#") Доступные врачи
-					ul
-						li.title Департамент
-						li: a(href="#") Обращения
-						li: a(href="#") Контакты
-						li: a(href="#") Соглашения
-						li: a(href="#")  FAQ
-					ul
-						li.title Пресс-Центр
-					ul
-						li.title Сервисы
-		.footer__info
-			.l-wrap
-				.footer__in
-					.footer__pics
-						.pic
-							img(src="img/logo-dz-sm.png", alt="")
-						.pic
-							img(src="img/logo-pm-sm.png", alt="")
-						.pic
-							img(src="img/logo-emiac.png", alt="")
-					.footer__copy © Департамент здравоохранения города Москвы, 2004-2014
+						li: a(href="#") О проекте
+						li: a(href="#") Партнеры
+						li: a(href="#") Политика конфедициальности
