@@ -99,6 +99,38 @@ $(document).ready(function() {
 	});
 
 
+	//	change infobox height
+	// ===============================================
+	$(function(){
+		//	function
+		function infoboxFullHeight(){
+			maxHeight = "0";
+			$(".infobox-in").height("auto");
+			$(".infobox-in").each(function(){
+				thisHeight = $(this).height();
+				if(thisHeight > maxHeight) {
+					maxHeight = thisHeight;
+				}
+			});
+			$(".infobox-in").height(maxHeight);
+		};
+
+		//	run function
+		infoboxFullHeight();
+
+		//	change height on resize using timer
+		var timer;
+		$(window).on("resize", function(){
+			clearTimeout(timer);
+			timer = setTimeout(function(){
+				infoboxFullHeight();
+			}, 500);
+		});
+
+	});
+
+
+
 	// #ripplelink
 	// ===============================================
 	$(function(){
@@ -122,6 +154,4 @@ $(document).ready(function() {
 			ink.css({top: y+'px', left: x+'px'}).addClass("ripplelink-animate");
 		});
 	});
-
-
 });
