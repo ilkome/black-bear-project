@@ -13,9 +13,9 @@ block append content
 			.icon-medals.has-margin 8
 	
 	.infoboxs
-		mixin infobox(pic, name, date, desc)
+		mixin infobox(pic, name, date)
 			.infobox
-				.infobox-in
+				.infobox-in.js-infobox
 					.infobox__pic 
 						a(href="#")
 							img(src="img/#{pic}.png", alt="")
@@ -23,7 +23,8 @@ block append content
 						a(href="#") 
 							.name= name
 						.date= date
-						.desc Описание в две строчки. Опросы общественного мнения, проведенные в 2010 году
+						.content
+							.text Описание в две строчки. Опросы общественного мнения, проведенные в 2010 году
 		+infobox(
 			"booty-1",
 			"Счет в твою пользу",
@@ -52,7 +53,7 @@ block append content
 		
 		mixin infobox_empty
 			.infobox.infobox_empty
-				.infobox-in
+				.infobox-in.js-infobox
 					.infobox__pic 
 						img(src="img/booty-empty.png", alt="")
 					.infobox__content

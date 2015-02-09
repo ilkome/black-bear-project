@@ -3,19 +3,19 @@
 	Simple Communication
 */
 
-$(document).ready(function() {
+$(document).ready(function(){
 
 
 	//	#preventDefault
 	// ===============================================
-	$('a[href="#"]').click(function(e) {
+	$('a[href="#"]').click(function(e){
 		e.preventDefault();
 	});
 
 
 	/*//	#slider
 	// ===============================================
-	if ( $.isFunction($.fn.lightSlider) ) {
+	if ( $.isFunction($.fn.lightSlider) ){
 		$(".js-slider-reviews").lightSlider({
 			item: 1,
 			loop: true,
@@ -39,9 +39,9 @@ $(document).ready(function() {
 	//	#menu-drop
 	// ===============================================
 	$(".js-menu-drop-item").hover(
-		function() {
+		function(){
 			$(this).find(".menu-drop").stop().fadeIn();
-		}, function() {
+		}, function(){
 			$(this).find(".menu-drop").stop().fadeOut();
 		}
 	);
@@ -49,14 +49,14 @@ $(document).ready(function() {
 
 	// #hidden-text
 	// ===============================================
-	$(".js-hidden-link").on("click", function(e) {
+	$(".js-hidden-link").on("click", function(e){
 		e.preventDefault();
 
 		var thisis = $(this);
 		var box = $(this).closest(".js-hidden-box");
 		var content = box.find(".js-hidden-content");
 
-		if(content.is(":visible")) {
+		if(content.is(":visible")){
 			box.removeClass("is-active");
 			content.stop().slideUp();
 		} else {
@@ -68,22 +68,27 @@ $(document).ready(function() {
 */
 	// #search
 	// ===============================================
-	$(".js-search-form-action").on("click", function(e) {
-		e.preventDefault();
-
-		var thisis = $(this);
-		var block = $(this).closest(".js-search");
-		var box = block.find(".search-form");
-		box.find(".input").focus();
-		
-		if(!(box.hasClass("show"))) {
-			box.addClass("show");
-			thisis.fadeOut();
-			block.find(".close").show();
-		} else {
-			box.removeClass("show");
-			//block.find(".close").fadeIn();
-		}
+	$(function(){
+		$(".js-search-form-action").on("click", function(e){
+			e.preventDefault();
+			var thisis = $(this),
+				box = thisis.closest(".js-search"),
+				formBox = box.find(".search-form"),
+				openBtn = box.find(".open"),
+				closeBtn = box.find(".close");
+			
+			formBox.find(".input").focus();
+			
+			if((formBox.hasClass("show"))){
+				thisis.fadeOut();
+				formBox.removeClass("show");
+				openBtn.stop().fadeIn();
+			} else {
+				formBox.addClass("show");
+				thisis.fadeOut();
+				closeBtn.stop().fadeIn();
+			}
+		});
 	});
 
 
@@ -99,23 +104,23 @@ $(document).ready(function() {
 	});
 
 
-	//	change infobox height
+	//	make infobox full height
 	// ===============================================
 	$(function(){
-		//	function
 		function infoboxFullHeight(){
-			maxHeight = "0";
-			$(".infobox-in").height("auto");
-			$(".infobox-in").each(function(){
+			var maxHeight = "0",
+				infobox = $(".js-infobox");
+			
+			infobox.height("auto");
+			infobox.each(function(){
 				thisHeight = $(this).height();
-				if(thisHeight > maxHeight) {
+				if(thisHeight > maxHeight){
 					maxHeight = thisHeight;
 				}
 			});
-			$(".infobox-in").height(maxHeight);
+			infobox.height(maxHeight);
 		};
 
-		//	run function
 		infoboxFullHeight();
 
 		//	change height on resize using timer
@@ -126,17 +131,33 @@ $(document).ready(function() {
 				infoboxFullHeight();
 			}, 500);
 		});
-
 	});
 
+
+	//	show btn in infobox on hover 
+	// ===============================================
+	$(function(){
+		var infobox = $(".js-showhover-box"),
+			textBox = infobox.find(".desc");
+		infobox.hover( 
+			function(){
+				$(this).find(".text").stop().fadeOut(200);
+				$(this).find(".hover").stop().fadeIn(500);
+			},
+			function(){
+				$(this).find(".text").stop().fadeIn(500);
+				$(this).find(".hover").stop().fadeOut(200);
+			}
+		);
+	});
 
 
 	// #ripplelink
 	// ===============================================
 	$(function(){
 		var ink, d, x, y;
-		$(".ripplelink").click(function(e) {
-			if($(this).find(".ripplelink-ink").length === 0) {
+		$(".ripplelink").click(function(e){
+			if($(this).find(".ripplelink-ink").length === 0){
 				$(this).prepend("<span class='ripplelink-ink'></span>");
 			}
 

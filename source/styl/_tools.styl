@@ -76,8 +76,11 @@ tdu()
 
 
 //	#animation
-anim()
-	transition 0.3s ease-out
+anim(time = false)
+	if time
+		transition time
+	else
+		transition 0.3s ease-out
 anim-all()
 	transition all 0.3s ease-out
 anim-bg()

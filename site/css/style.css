@@ -408,7 +408,7 @@ html {
   position: fixed;
   left: 0;
   top: 0;
-  opacity: 0.1;
+  opacity: 0;
   background: #fff;
 }
 #menu:hover {
@@ -568,45 +568,45 @@ html {
 .icon-medals.has-margin {
   margin-right: 15px;
 }
-.content {
+.contentbox {
   padding-top: 60px;
   padding-bottom: 30px;
 }
-.content__name {
+.contentbox__name {
   padding-bottom: 40px;
 }
-.content__name .desc {
+.contentbox__name .desc {
   color: #949494;
   font-size: 13px;
   text-transform: uppercase;
 }
-.content-wrap {
-  width: 1036px;
-  margin: 0 auto;
-  padding: 0 40px;
-  box-sizing: border-box;
-}
-.content-text {
+.contentbox-text {
   padding: 90px 0 50px 0;
   font-weight: 300;
 }
-.content-text.has-small-padding {
+.contentbox-text.has-small-padding {
   padding-top: 30px;
 }
-.content-text h1 {
+.contentbox-text h1 {
   font-size: 36px;
   margin-bottom: 75px;
 }
-.content-text h1.is-small {
+.contentbox-text h1.is-small {
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   font-weight: 500;
 }
-.content-text p {
+.contentbox-text p {
   margin-bottom: 30px;
   line-height: 30px;
   font-size: 16px;
+}
+.contentbox-wrap {
+  width: 1036px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 ol.list-offer {
   margin: 0;
@@ -855,10 +855,22 @@ ol.list-offer li.name {
   font-size: 13px;
   text-transform: uppercase;
 }
-.infobox__content .desc {
+.infobox__content .content {
+  position: relative;
   font-size: 14px;
   font-weight: 300;
   line-height: 25px;
+}
+.infobox__content .content.has-min-height {
+  min-height: 60px;
+}
+.infobox__content .hover {
+  display: none;
+  text-indent: 0px;
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  width: 100%;
 }
 .greybox {
   background: #f5f5f5;
@@ -1298,24 +1310,38 @@ ol.list-offer li.name {
           transition: 0.3s ease-out;
 }
 .search-btn {
+  position: absolute;
+  left: 0px;
+  top: 0px;
   z-index: 5;
   position: relative;
   vertical-align: middle;
   width: 75px;
+  height: 75px;
+  background-color: #f5f5f5;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
+}
+.search-btn:hover {
+  background-color: #e7e7e7;
+}
+.search-btn a {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  left: 0px;
+  top: 0px;
+  width: 75px;
+  height: 75px;
+  -webkit-transition: none;
+          transition: none;
 }
 .search-btn a.open {
-  display: block;
-  width: 75px;
-  height: 75px;
-  background: #f5f5f5 url("../img/icons/search.png") center center no-repeat;
-}
-.search-btn a.open:hover {
-  background-color: #f5f5f5;
+  background: url("../img/icons/search.png") center center no-repeat;
 }
 .search-btn a.close {
-  display: none;
-  width: 75px;
-  height: 75px;
+  -webkit-transition: rotate 0.3s ease-out;
+          transition: rotate 0.3s ease-out;
   background: url("../img/icons/close.png") center center no-repeat;
 }
 .search-btn a.close:hover {
@@ -1323,18 +1349,20 @@ ol.list-offer li.name {
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+.search-btn a.close.hide {
+  display: none;
+}
 .search-form {
   z-index: 4;
   position: absolute;
   overflow: hidden;
   left: -510px;
   top: 0px;
-  width: 0px;
+  width: 510px;
   height: 75px;
   background: #f5f5f5;
   -webkit-transition: 0.3s ease-out;
           transition: 0.3s ease-out;
-  width: 510px;
 }
 .search-form.show {
   left: 0;
@@ -1361,6 +1389,10 @@ ol.list-offer li.name {
   height: 75px;
   background: url("../img/icons/search-a.png") center center no-repeat !important;
   cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+.search-form .submit:hover {
+  background-color: #e7e7e7 !important;
 }
 .sort-menu {
   float: right;

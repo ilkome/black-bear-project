@@ -42,7 +42,7 @@ html
 	position fixed
 	left 0
 	top 0
-	opacity .1
+	opacity 0
 	background #fff
 	&:hover
 		opacity 1
@@ -176,21 +176,16 @@ html
 // ===============================================
 
 //	#content
-.content
+.contentbox
 	padding-top 60px
 	padding-bottom 30px
-.content__name
+.contentbox__name
 	padding-bottom 40px
 	.desc
 		color color-grey
 		font-size 13px
 		text-transform uppercase
-.content-wrap
-	width 1036px
-	margin 0 auto
-	padding 0 40px
-	full()
-.content-text
+.contentbox-text
 	padding 90px 0 50px 0
 	font-light()
 	&.has-small-padding
@@ -207,6 +202,12 @@ html
 		margin-bottom 30px
 		line-height 30px
 		font-size 16px
+.contentbox-wrap
+	width 1036px
+	margin 0 auto
+	padding 0 40px
+	full()
+
 
 ol.list-offer
 	lino()
@@ -372,10 +373,21 @@ ol.list-offer
 		padding-bottom 30px
 		font-size 13px
 		text-transform uppercase
-	.desc
+	.content
+		position relative
 		font-size 14px
 		font-light()
 		line-height 25px
+		&.has-min-height
+			min-height 60px
+	.hover
+		display none
+		text-indent 0px
+		position absolute 
+		left 0px 
+		top 10px
+		width 100%
+		
 		
 //	#greybox
 .greybox
@@ -705,35 +717,46 @@ ol.list-offer
 	float left
 	anim()
 .search-btn
+	position absolute 
+	left 0px 
+	top 0px
 	z-index 5
 	position relative
 	vertical-align middle
 	width 75px
-	a.open
+	height 75px
+	background-color color-grey-opacity
+	anim()
+	&:hover
+		background-color #e7e7e7
+	a
 		display block
+		position absolute
+		z-index 10
+		left 0px 
+		top 0px
 		width 75px
 		height 75px
-		background color-grey-opacity url("../img/icons/search.png") center center no-repeat
-		&:hover
-			background-color color-grey-opacity
+		anim-none()
+	a.open
+		background url("../img/icons/search.png") center center no-repeat
 	a.close
-		display none
-		width 75px
-		height 75px
+		transition rotate 0.3s ease-out
 		background url("../img/icons/close.png") center center no-repeat
 		&:hover
 			transform rotate(180deg)
+		&.hide
+			display none
 .search-form
 	z-index 4
 	position absolute
 	overflow hidden
 	left -510px 
 	top 0px
-	width 0px
+	width 510px
 	height 75px
 	background color-grey-opacity
 	anim()
-	width 510px
 	&.show
 		left 0
 	.input
@@ -757,6 +780,9 @@ ol.list-offer
 		height 75px
 		background url("../img/icons/search-a.png") center center no-repeat !important
 		cursor pointer
+		border-radius 0 4px 4px 0
+		&:hover
+			background-color #e7e7e7 !important
 		
 //	#sort-menu
 .sort-menu

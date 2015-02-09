@@ -5,42 +5,53 @@ block append content
 		+upper-search
 	
 	.infoboxs
-		mixin infobox(pic, name, date, desc)
+		mixin infobox(pic, name)
 			.infobox
-				.infobox-in
+				.infobox-in.js-infobox.js-showhover-box
 					.infobox__pic 
 						a(href="#")
 							img(src="img/#{pic}.png", alt="")
-					.infobox__content.js-showhover-box
+					.infobox__content
 						a(href="#") 
 							.name= name
-						.date= date
-						.desc Описание в две строчки. Опросы общественного мнения, проведенные в 2010 году
-						.hover: a(href="#").btn-red.ripplelink Смотреть задачи
+						.content
+							.text Описание в две строчки. Опросы общественного мнения, проведенные в 2010 году
+							.hover: a(href="#").btn-red.ripplelink Смотреть задачи
 		+infobox(
 			"booty-1",
-			"Счет в твою пользу"
+			"Яндекс"
 		)
+		.infobox
+			.infobox-in.js-infobox.js-showhover-box
+				.infobox__pic 
+					a(href="#")
+						img(src="img/booty-1.png", alt="")
+				.infobox__content
+					a(href="#") 
+						.name Самсунг
+					.content.has-min-height
+						.text Мне подходит
+						.hover: a(href="#").btn-red.ripplelink Смотреть задачи
 		+infobox(
 			"booty-2",
-			"Весомый аргумент"
+			"Гугл"
 		)
 		+infobox(
 			"booty-3",
-			"Завершение начатого"
+			"Майкрософт"
 		)
 		+infobox(
 			"booty-4",
-			"Любитель разнообразия"
+			"Яблоко"
 		)
 		+infobox(
 			"booty-2",
-			"Любитель разнообразия"
+			"Помидорка"
 		)
 		
 		mixin infobox_empty
 			.infobox.infobox_empty
-				.infobox-in
+				.infobox-in.js-infobox
 					.infobox__pic 
 						img(src="img/booty-empty.png", alt="")
 					.infobox__content
