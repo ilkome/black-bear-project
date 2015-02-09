@@ -75,9 +75,7 @@ html
 		padding-left 280px
 
 .row
-	table-layout fixed
-	display table
-	width 100%
+	dt()
 .col
 	width 100%
 	dtc()
@@ -547,9 +545,12 @@ ol.list-offer
 		z-index 5
 		position absolute 
 		right -5px 
-		top 0px
+		top -5px
 		width 18px
 		height 18px
+		anim()
+		&:hover
+			top -6px
 		a
 			font-size 20px
 			color color-red
@@ -684,6 +685,7 @@ ol.list-offer
 
 // #rating-select
 .rating
+	padding-top 10px
 	position relative
 	clearfix()
 .rating__select
@@ -910,15 +912,20 @@ ol.list-offer
 	padding-bottom 10px
 	textarea
 		margin 0
-		border-bottom 0
-		border-radius 4px 4px 0 0
+		border-radius 4px
+		padding-bottom 70px
 .textarea-desc__more
-	margin-top -5px
+	position relative
+	box-sizing content-box
+	width auto
+	margin 1px 1px
+	margin-top -46px
+	height 20px
 	padding 15px 20px 10px 20px
 	background color-grey-opacity
-	border 1px solid #d6d6d6
-	border-top 0
-	border-radius 0 0 4px 4px
+	border 0
+	border-radius 4px
+	overflow hidden
 	clearfix()
 	.attach
 		float left
@@ -958,15 +965,17 @@ ol.list-offer
 	margin-bottom 20px
 	font-size 13px
 	clearfix()
+	&.is-big
+		height 80px
+		box-sizing content-box
+		margin -20px 0px 20px -20px
+		padding 20px
+		border-radius 0
+		.fl-right
+			padding-top 10px
 	.fl-right
 		display table-cell 
 		padding 15px 20px 0 0
-	&.is-big
-		height 120px
-		margin -20px
-		margin-bottom 20px
-		padding 20px
-		border-radius 0
 	.has-arrow
 		position relative
 		&:after

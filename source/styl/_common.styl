@@ -165,6 +165,10 @@ input[type="phone"]
 	border 1px solid #d6d6d6
 	border-radius 4px
 	anim()
+	&:hover
+		border-color alpha(color-grey, .7)
+	&:focus
+		border-color color-grey
 input.input-full
 	width 100%
 	full()
@@ -213,7 +217,10 @@ textarea
 	border 1px solid #d6d6d6
 	border-radius 4px
 	anim()
-	
+	&:hover
+		border-color alpha(color-grey, .7)
+	&:focus
+		border-color color-grey
 .textarea_full
 	width 100%
 

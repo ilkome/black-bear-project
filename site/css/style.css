@@ -213,6 +213,18 @@ input[type="phone"] {
   -webkit-transition: 0.3s ease-out;
           transition: 0.3s ease-out;
 }
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="phone"]:hover {
+  border-color: rgba(148,148,148,0.7);
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="phone"]:focus {
+  border-color: #949494;
+}
 input.input-full {
   width: 100%;
   box-sizing: border-box;
@@ -268,6 +280,12 @@ textarea {
   border-radius: 4px;
   -webkit-transition: 0.3s ease-out;
           transition: 0.3s ease-out;
+}
+textarea:hover {
+  border-color: rgba(148,148,148,0.7);
+}
+textarea:focus {
+  border-color: #949494;
 }
 .textarea_full {
   width: 100%;
@@ -451,8 +469,8 @@ html {
 }
 .row,
 .upperbar {
-  table-layout: fixed;
   display: table;
+  table-layout: fixed;
   width: 100%;
 }
 .col {
@@ -1084,9 +1102,14 @@ ol.list-offer li.name {
   z-index: 5;
   position: absolute;
   right: -5px;
-  top: 0px;
+  top: -5px;
   width: 18px;
   height: 18px;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
+}
+.left-user .notify:hover {
+  top: -6px;
 }
 .left-user .notify a {
   font-size: 20px;
@@ -1262,6 +1285,7 @@ ol.list-offer li.name {
   color: #fff;
 }
 .rating {
+  padding-top: 10px;
   position: relative;
 }
 .rating:before,
@@ -1553,16 +1577,21 @@ ol.list-offer li.name {
 }
 .textarea-desc textarea {
   margin: 0;
-  border-bottom: 0;
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px;
+  padding-bottom: 70px;
 }
 .textarea-desc__more {
-  margin-top: -5px;
+  position: relative;
+  box-sizing: content-box;
+  width: auto;
+  margin: 1px 1px;
+  margin-top: -46px;
+  height: 20px;
   padding: 15px 20px 10px 20px;
   background: #f5f5f5;
-  border: 1px solid #d6d6d6;
-  border-top: 0;
-  border-radius: 0 0 4px 4px;
+  border: 0;
+  border-radius: 4px;
+  overflow: hidden;
 }
 .textarea-desc__more:before,
 .textarea-desc__more:after {
@@ -1616,16 +1645,19 @@ ol.list-offer li.name {
   display: table;
   clear: both;
 }
+.upperbar.is-big {
+  height: 80px;
+  box-sizing: content-box;
+  margin: -20px 0px 20px -20px;
+  padding: 20px;
+  border-radius: 0;
+}
+.upperbar.is-big .fl-right {
+  padding-top: 10px;
+}
 .upperbar .fl-right {
   display: table-cell;
   padding: 15px 20px 0 0;
-}
-.upperbar.is-big {
-  height: 120px;
-  margin: -20px;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 0;
 }
 .upperbar .has-arrow {
   position: relative;
