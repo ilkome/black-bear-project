@@ -185,6 +185,14 @@ select {
   background: #fff;
   border: 1px solid #d6d6d6;
   border-radius: 4px;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
+}
+select:hover {
+  border-color: rgba(148,148,148,0.7);
+}
+select:focus {
+  border-color: #949494;
 }
 select.select-grey {
   background: #f5f5f5;
@@ -192,6 +200,7 @@ select.select-grey {
 select option {
   padding: 5px 10px;
   color: #5f5f5f;
+  border-color: none;
 }
 select.full {
   width: 100%;
@@ -1284,32 +1293,32 @@ ol.list-offer li.name {
   font-size: 0;
   color: #fff;
 }
-.rating {
+.ratingbox {
   padding-top: 10px;
   position: relative;
 }
-.rating:before,
-.rating:after {
+.ratingbox:before,
+.ratingbox:after {
   content: "";
   display: table;
   clear: both;
 }
-.rating__select {
+.ratingbox__select {
   float: left;
 }
-.rating__select:before,
-.rating__select:after {
+.ratingbox__select:before,
+.ratingbox__select:after {
   content: "";
   display: table;
   clear: both;
 }
-.rating__select div {
+.ratingbox__select div {
   position: relative;
   display: inline-block;
   width: 40px;
   height: 20px;
 }
-.rating__select div:after {
+.ratingbox__select div:after {
   display: block;
   content: " ";
   position: absolute;
@@ -1320,10 +1329,10 @@ ol.list-offer li.name {
   background: #c2c2c2;
   border-radius: 15px;
 }
-.rating__select div.star-on-png:after {
+.ratingbox__select div.star-on-png:after {
   background: #b64c4c;
 }
-.rating__count {
+.ratingbox__count {
   float: right;
   font-size: 20px;
   font-weight: 500;

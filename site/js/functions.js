@@ -92,10 +92,10 @@ $(document).ready(function(){
 	});
 
 
-	//	#rating
+	//	#ratingbox
 	// ===============================================
-	$('.rating__select').raty({
-		target     : '.rating__count',
+	$('.js-ratingbox').raty({
+		target     : '.ratingbox__count',
 		targetType : 'score',
 		targetKeep : true,
 		starType   : 'div', 
