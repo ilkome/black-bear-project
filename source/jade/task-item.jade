@@ -1,36 +1,26 @@
 extends _layout
 
 block append content
-	.upperbar 
-		.fl-left
-			.close-popup: a(href="#")
-			.slider-nav
-				ul
-					li.prev: a(href="#")
-					li.sep
-					li.next: a(href="#")
-			.upperbar__name Придумать название магазина доставки сладкой продукции
-		.fl-right
-			.textline
-				.textline__info Бюджет
-				.textline__content
-					.price
-						| 12 500 000
-						.cur
-			a(href="#").btn-grey Учавствовать
-	
-	.upperbar.is-fixed 
-		.fl-left
-			.close-popup: a(href="#")
-			.slider-nav
-				ul
-					li.prev: a(href="#")
-					li.sep
-					li.next: a(href="#")
-			.upperbar__name Придумать название магазина доставки сладкой продукции
-		.fl-right
-			.task-status.publish Опубликованна
-			a(href="#").btn-grey-edit Редактировать
+	.upperbar.js-upperbar
+		.upperbar-in
+			.fl-left
+				.close-popup: a(href="#")
+				.slider-nav
+					ul
+						li.prev: a(href="#")
+						li.sep
+						li.next: a(href="#")
+				.upperbar__name Придумать название магазина доставки сладкой продукции
+			.fl-right
+				.textline
+					.textline__info Бюджет
+					.textline__content
+						.price
+							| 12 500 000
+							.cur
+				a(href="#").btn-grey Учавствовать
+				.task-status.publish Опубликованна
+				a(href="#").btn-grey-edit Редактировать
 	
 	.contentbox-wrap
 		.contentbox

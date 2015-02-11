@@ -1,18 +1,19 @@
 extends _layout
 
 block append content
-	.upperbar
-		.upperbar__info
-			.num 4
-			.pic
-				a(href="#") 
-					img(src="img/ava.png", alt="")
-			.name
-				a(href="#") мишин антон
-		.fl-right
-			.icon-medals.has-margin 8
+	.upperbar.js-upperbar
+		.upperbar-in
+			.upperbar__info
+				.num 4
+				.pic
+					a(href="#") 
+						img(src="img/ava.png", alt="")
+				.name
+					a(href="#") мишин антон
+			.fl-right
+				.icon-medals.has-margin 8
 	
-	.infoboxs
+	.infoboxs.infoboxs-4-col
 		mixin infobox(pic, name, date)
 			.infobox
 				.infobox-in.js-infobox

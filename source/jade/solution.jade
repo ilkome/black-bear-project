@@ -1,16 +1,17 @@
 extends _layout
 
 block append content
-	.upperbar.is-big
-		.fl-left
-			.close-popup: a(href="#")
-			.slider-nav
-				ul
-					li.prev: a(href="#")
-					li.sep
-					li.next: a(href="#")
-		.fl-right.has-arrow
-			a(href="#").btn-green.ripplelink Предложить решение
+	.upperbar.js-upperbar.is-big
+		.upperbar-in
+			.fl-left
+				.close-popup: a(href="#")
+				.slider-nav
+					ul
+						li.prev: a(href="#")
+						li.sep
+						li.next: a(href="#")
+			.fl-right.has-arrow
+				a(href="#").btn-green.ripplelink Предложить решение
 
 	.contentbox
 		.contentbox-wrap

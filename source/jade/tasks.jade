@@ -1,26 +1,27 @@
 extends _layout
 
 block append content
-	.upperbar
-		+upper-search
-		.filter-menu
-			ul
-				li.is-active: a(href="#") Избранное
-				li: a(href="#") Архив
-				li: a(href="#") Все
-		.sort-menu
-			ul
-				li.date.sort-desc: a(href="#")
-					span Публикация
-				li.date.is-active: a(href="#") 
-					span Окончание
-				li.members: a(href="#") 
-					span Участники
-				li.price.sort-desc.is-active: a(href="#") 
-					span Стоимость
+	.upperbar.js-upperbar
+		.upperbar-in
+			+upper-search
+			.filter-menu
+				ul
+					li.is-active: a(href="#") Избранное
+					li: a(href="#") Архив
+					li: a(href="#") Все
+			.sort-menu
+				ul
+					li.date.sort-desc: a(href="#")
+						span Публикация
+					li.date.is-active: a(href="#") 
+						span Окончание
+					li.members: a(href="#") 
+						span Участники
+					li.price.sort-desc.is-active: a(href="#") 
+						span Стоимость
 	
 	.add-task-full
-		a(href="#").btn-red.ripplelink 
+		a(href="#").btn-red.ripplelink
 			.link Добавить задачу
 
 	.tableview

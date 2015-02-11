@@ -14,8 +14,8 @@
     <script src="js/jquery.raty.js" type="text/javascript"></script>
     <script src="js/functions.js" type="text/javascript"></script>
   </head>
-  <div id="menu"><a href="about.html">about+</a><a href="booty.html">booty+</a><a href="faq.html">faq </a><a href="offer.html">offer+</a><a href="partners.html">partners+</a><a href="profile-seeker.html">profile-seeker </a><a href="profile-solver.html">profile-solver </a><a href="rating.html">rating</a><a href="solution.html">solution+</a><a href="statistics.html">statistics</a><a href="task-add.html">task-add+-</a><a href="task-item.html">task-item </a><a href="tasks.html">tasks+</a><a href="training.html">training </a></div>
-  <body class="page-body">
+  <div id="menu"><a href="about.html">about+</a><a href="booty.html">booty+</a><a href="faq.html">faq </a><a href="offer.html">offer+</a><a href="partners.html">partners+</a><a href="profile-seeker.html">profile-seeker </a><a href="profile-solver.html">profile-solver </a><a href="rating.html">rating</a><a href="solution.html">solution+</a><a href="statistics.html">statistics</a><a href="task-add.html">task-add+-</a><a href="task-item.html">task-item </a><a href="tasks.html">tasks+</a><a href="training.html">training+</a></div>
+  <body class="page-body page-white">
     <div class="ilkome">
       <div class="l-left">
         <div class="left-logo"><a href="/"></a></div>
@@ -41,64 +41,102 @@
         </div>
       </div>
       <div class="l-right">
-        <div class="upperbar">
-          <div class="search js-search">
-            <div class="search-btn"><a href="#" class="open js-search-form-action"></a><a href="#" class="close hide js-search-form-action"></a></div>
-            <div class="search-form">
-              <form action="">
-                <input type="text" placeholder="Поиск" class="input"/>
-                <input type="submit" value="" class="submit"/>
-              </form>
+        <div class="upperbar js-upperbar">
+          <div class="upperbar-in">
+            <div class="search js-search">
+              <div class="search-btn"><a href="#" class="open js-search-form-action"></a><a href="#" class="close hide js-search-form-action"></a></div>
+              <div class="search-form">
+                <form action="">
+                  <input type="text" placeholder="Поиск" class="input"/>
+                  <input type="submit" value="" class="submit"/>
+                </form>
+              </div>
             </div>
+            <div class="filter-menu">
+              <ul>
+                <li class="is-active"><a href="#">Избранное</a></li>
+                <li><a href="#">Все</a></li>
+                <li><a href="#">Архив</a></li>
+              </ul>
+            </div>
+            <div class="fl-right"><a href="#" class="btn-green ripplelink js-fadein-link">Задать свой вопрос</a></div>
           </div>
-          <div class="filter-menu">
-            <ul>
-              <li class="is-active"><a href="#">Избранное</a></li>
-              <li><a href="#">Все</a></li>
-              <li><a href="#">Архив</a></li>
-            </ul>
-          </div>
-          <div class="fl-right"><a href="#" class="btn-green">Задать свой вопрос</a></div>
         </div>
-        <div class="content-wrap">
-          <div class="faq-ask">
-            <div class="faq-ask__line">
-              <div class="col-30">
-                <select data-placeholder="Выберите категорию">
-                  <option value="">Вариант номер один</option>
-                  <option value="">Второй вариант </option>
-                  <option value="">Еще есть третий вариант</option>
-                </select>
+        <div class="faq-ask">
+          <div class="faq-ask-in js-fadein-box">
+            <div class="contentbox-wrap">
+              <div class="row">
+                <div class="col col-30">
+                  <select data-placeholder="Выберите категорию" class="full select-grey">
+                    <option value="">Вариант номер один</option>
+                    <option value="">Второй вариант </option>
+                    <option value="">Еще есть третий вариант</option>
+                  </select>
+                </div>
+                <div class="col col-70">
+                  <input type="text" placeholder="Загаловок вопроса" class="full">
+                </div>
               </div>
-              <div class="col-70">
-                <input type="text" placeholder="Загаловок вопроса">
+              <div class="faq-ask__text">
+                <textarea placeholder="Содержимое вопроса" class="textarea-big"></textarea>
               </div>
+              <div class="action"><a href="#" class="btn-grey ripplelink js-fadein-link"> Отмена</a><a href="#" class="btn-blue ripplelink js-fadein-link"> Задать вопрос</a></div>
             </div>
-            <div class="faq-ask__text">
-              <textarea placeholder="Содержимое вопроса" class="textarea-big"></textarea>
-            </div>
-            <div class="action"><a href="#" class="btn-grey">Отмена</a><a href="#" class="btn-blue">Задать вопрос</a></div>
           </div>
+        </div>
+        <div class="contentbox-wrap">
           <div class="faq">
-            <div class="faq-item js-hidden-box"><a href="#" class="js-hidden-link">
+            <div class="faq-item js-hidden-box">
+              <div class="faq-item-quest">
                 <div class="faq-item__num">1</div>
                 <div class="faq-item__name">
                   <div class="cat">Использование сервисов Сайта</div>
-                  <div class="name"><a href="#">Я зарегистрировался(ась) на Сайте. Оплатил(а) коммерческий аккаунт. Но у меня так и выходит "Ваш базовый аккаунт не позволяет видеть проекты в онлайн режиме. как быть дальше?</a></div>
+                  <div class="name"><a href="#" class="js-hidden-link">Я зарегистрировался(ась) на Сайте. Оплатил(а) коммерческий аккаунт. Но у меня так и выходит "Ваш базовый аккаунт не позволяет видеть проекты в онлайн режиме. как быть дальше?</a></div>
                 </div>
-                <div class="faq-item__action"><a href="#" class="plus"></a><a href="#" class="close"></a></div></a>
+                <div class="faq-item__action"><a href="#" class="js-hidden-link plus">+</a></div>
+              </div>
               <div class="faq-item__content js-hidden-content">
                 В каталоге фрилансеров представлены только фрилансеры (пользователи, у которых в учётных данных указан пункт «Я - Фрилансер»). В учетных данных фрилансера указан статус занятости любой другой, кроме статуса Занят. <br>
                 Обязательным условием размещения фрилансера в каталоге фрилансеров является наличие работ в портфолио. Обратите, пожалуйста, внимание, что работы обязательно должны быть загружены в отмеченных Вами специализациях портфолио; работы же, загруженные в раздел портфолио Мои лучшие работы, не дают права на отображение Вашего профиля в каталоге фрилансеров.
               </div>
             </div>
-            <div class="faq-item is-active"><a href="#" class="js-hidden-link">
+            <div class="faq-item js-hidden-box">
+              <div class="faq-item-quest">
                 <div class="faq-item__num">2</div>
                 <div class="faq-item__name">
                   <div class="cat">Использование сервисов Сайта</div>
-                  <div class="name"><a href="#">Я зарегистрировался(ась) на Сайте. Оплатил(а) коммерческий аккаунт. Но у меня так и выходит "Ваш базовый аккаунт не позволяет видеть проекты в онлайн режиме. как быть дальше?</a></div>
+                  <div class="name"><a href="#" class="js-hidden-link">Я зарегистрировался(ась) на Сайте. Оплатил(а) коммерческий аккаунт. Но у меня так и выходит "Ваш базовый аккаунт не позволяет видеть проекты в онлайн режиме. как быть дальше?</a></div>
                 </div>
-                <div class="faq-item__action"><a href="#" class="plus"></a><a href="#" class="close"></a></div></a>
+                <div class="faq-item__action"><a href="#" class="js-hidden-link plus">+</a></div>
+              </div>
+              <div class="faq-item__content js-hidden-content">
+                В каталоге фрилансеров представлены только фрилансеры (пользователи, у которых в учётных данных указан пункт «Я - Фрилансер»). В учетных данных фрилансера указан статус занятости любой другой, кроме статуса Занят. <br>
+                Обязательным условием размещения фрилансера в каталоге фрилансеров является наличие работ в портфолио. Обратите, пожалуйста, внимание, что работы обязательно должны быть загружены в отмеченных Вами специализациях портфолио; работы же, загруженные в раздел портфолио Мои лучшие работы, не дают права на отображение Вашего профиля в каталоге фрилансеров.
+              </div>
+            </div>
+            <div class="faq-item js-hidden-box">
+              <div class="faq-item-quest">
+                <div class="faq-item__num">1</div>
+                <div class="faq-item__name">
+                  <div class="cat">Использование сервисов Сайта</div>
+                  <div class="name"><a href="#" class="js-hidden-link">Я зарегистрировался(ась) на Сайте. Оплатил(а) коммерческий аккаунт. Но у меня так и выходит "Ваш базовый аккаунт не позволяет видеть проекты в онлайн режиме. как быть дальше?</a></div>
+                </div>
+                <div class="faq-item__action"><a href="#" class="js-hidden-link plus">+</a></div>
+              </div>
+              <div class="faq-item__content js-hidden-content">
+                В каталоге фрилансеров представлены только фрилансеры (пользователи, у которых в учётных данных указан пункт «Я - Фрилансер»). В учетных данных фрилансера указан статус занятости любой другой, кроме статуса Занят. <br>
+                Обязательным условием размещения фрилансера в каталоге фрилансеров является наличие работ в портфолио. Обратите, пожалуйста, внимание, что работы обязательно должны быть загружены в отмеченных Вами специализациях портфолио; работы же, загруженные в раздел портфолио Мои лучшие работы, не дают права на отображение Вашего профиля в каталоге фрилансеров.
+              </div>
+            </div>
+            <div class="faq-item js-hidden-box">
+              <div class="faq-item-quest">
+                <div class="faq-item__num">2</div>
+                <div class="faq-item__name">
+                  <div class="cat">Использование сервисов Сайта</div>
+                  <div class="name"><a href="#" class="js-hidden-link">Я зарегистрировался(ась) на Сайте. Оплатил(а) коммерческий аккаунт. Но у меня так и выходит "Ваш базовый аккаунт не позволяет видеть проекты в онлайн режиме. как быть дальше?</a></div>
+                </div>
+                <div class="faq-item__action"><a href="#" class="js-hidden-link plus">+</a></div>
+              </div>
               <div class="faq-item__content js-hidden-content">
                 В каталоге фрилансеров представлены только фрилансеры (пользователи, у которых в учётных данных указан пункт «Я - Фрилансер»). В учетных данных фрилансера указан статус занятости любой другой, кроме статуса Занят. <br>
                 Обязательным условием размещения фрилансера в каталоге фрилансеров является наличие работ в портфолио. Обратите, пожалуйста, внимание, что работы обязательно должны быть загружены в отмеченных Вами специализациях портфолио; работы же, загруженные в раздел портфолио Мои лучшие работы, не дают права на отображение Вашего профиля в каталоге фрилансеров.

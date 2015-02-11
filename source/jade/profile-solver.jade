@@ -1,18 +1,19 @@
 extends _layout
 
 block append content
-	.upperbar
-		.fl-left
-			.upperbar__num 4
-			.upperbar__pic: img(src="img/user-ava.png", alt="")
-			.upperbar__name Мишин Антон
-		.fl-right
-			.user-level
-				.num 16
-				.level уровень
-				.count 
-					.black 4 120 
-					| / 5 000
+	.upperbar.js-upperbar
+		.upperbar-in
+			.fl-left
+				.upperbar__num 4
+				.upperbar__pic: img(src="img/user-ava.png", alt="")
+				.upperbar__name Мишин Антон
+			.fl-right
+				.user-level
+					.num 16
+					.level уровень
+					.count 
+						.black 4 120 
+						| / 5 000
 
 	.row.row-2
 		.col-50

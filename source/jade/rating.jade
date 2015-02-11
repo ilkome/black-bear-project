@@ -1,15 +1,16 @@
 extends _layout
 
 block append content
-	.upperbar
-		.fl-left
-			.sort-menu
-				ul
-					li.sort-desc.is-active: a(href="#") Участники
-		.fl-right
-			.sort-menu
-				ul
-					li: a(href="#") Баллы
+	.upperbar.js-upperbar
+		.upperbar-in
+			.fl-left
+				.sort-menu
+					ul
+						li.sort-desc.is-active: a(href="#") Участники
+			.fl-right
+				.sort-menu
+					ul
+						li: a(href="#") Баллы
 
 	.user-ratingview
 		mixin user-rview-item

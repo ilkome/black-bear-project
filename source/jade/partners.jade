@@ -1,10 +1,11 @@
 extends _layout
 
 block append content
-	.upperbar
-		+upper-search
+	.upperbar.js-upperbar
+		.upperbar-in
+			+upper-search
 	
-	.infoboxs
+	.infoboxs.infoboxs-4-col
 		mixin infobox(pic, name)
 			.infobox
 				.infobox-in.js-infobox.js-showhover-box

@@ -1,43 +1,79 @@
 extends _layout
 
 block append content
-	.upperbar
-		.fl-left
+	.upperbar.js-upperbar
+		.upperbar-in
+			+upper-search
 			.filter-menu.is-blue
 				ul
 					li.is-active: a(href="#") Избранное
-					li: a(href="#") Все
 					li: a(href="#") Архив
-		.fl-right
+					li: a(href="#") Все
 			.sort-menu
 				ul
-					li: a(href="#") Публикация
-					li: a(href="#") Дата окончания
-					li: a(href="#") Количество участников
-	
-	.tableview
+					li.date.sort-desc: a(href="#")
+						span Публикация
+					li.date.is-active: a(href="#") 
+						span Окончание
+					li.members: a(href="#") 
+						span Участники
+
+	.tableview.is-blue
 		mixin tableview-item
 			.tableview-item
 				.tableview-item__num 1
-				.tableview-item__pic: img(src="img/content/task-1.png", alt="")
+				.tableview-item__pic: img(src="img/icons/cube-blue.png", alt="")
 				.tableview-item__name
 					.cat Бригада
 					.name: a(href="#") Название проекта Придумать название магазина доставки сладкой продукции
 				.tableview-item__date
 					.dateblock
-						.day 20
-						.month Октября
+						.day 15
+						.month Сентября
 						.year 2014
 				.tableview-item__date
 					.dateblock
-						.day 20
-						.month Октября
+						.day 26
+						.month Декабря
 						.year 2014
 				.tableview-item__members
 					.membersblock 13
-		+tableview-item
-		+tableview-item
-		+tableview-item
+			.tableview-item
+				.tableview-item__num 2
+				.tableview-item__pic: img(src="img/icons/heart-blue.png", alt="")
+				.tableview-item__name
+					.cat Медицина
+					.name: a(href="#") Предложите простую систему оценки времени Web – программинга Web-Система регистрации
+				.tableview-item__date
+					.dateblock
+						.day 1
+						.month Марта
+						.year 2014
+				.tableview-item__date
+					.dateblock
+						.day 18
+						.month Июня
+						.year 2014
+				.tableview-item__members
+					.membersblock 356
+			.tableview-item
+				.tableview-item__num 3
+				.tableview-item__pic: img(src="img/icons/circ-blue.png", alt="")
+				.tableview-item__name
+					.cat Медицина
+					.name: a(href="#") Название проекта Придумать название магазина доставки сладкой продукции
+				.tableview-item__date
+					.dateblock
+						.day 1
+						.month Марта
+						.year 2014
+				.tableview-item__date
+					.dateblock
+						.day 18
+						.month Июня
+						.year 2014
+				.tableview-item__members
+					.membersblock 356
 		+tableview-item
 		+tableview-item
 		

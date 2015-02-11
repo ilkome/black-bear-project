@@ -1,72 +1,63 @@
 /*
 	proscom.ru
 	Simple Communication
+
+	ilko.me
+	Ilya Komichev
 */
 
 $(document).ready(function(){
 
 
 	//	#preventDefault
+	//	auto
 	// ===============================================
 	$('a[href="#"]').click(function(e){
 		e.preventDefault();
 	});
 
 
-	/*//	#slider
-	// ===============================================
-	if ( $.isFunction($.fn.lightSlider) ){
-		$(".js-slider-reviews").lightSlider({
-			item: 1,
-			loop: true,
-			auto: false,
-			pause: 4000,
-			pager: false,
-			cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-			swipeThreshold: 100,
-		});
-		$('.js-slider-inform').lightSlider({
-			gallery:true,
-			item:1,
-			thumbItem:3,
-			thumbMargin:1,
-			slideMargin:0,
-			pagerWidthMin:1,
-		});
-	}
-
-
-	//	#menu-drop
-	// ===============================================
-	$(".js-menu-drop-item").hover(
-		function(){
-			$(this).find(".menu-drop").stop().fadeIn();
-		}, function(){
-			$(this).find(".menu-drop").stop().fadeOut();
-		}
-	);
-
-
-	// #hidden-text
+	//	hide show text
+	//	auto
 	// ===============================================
 	$(".js-hidden-link").on("click", function(e){
 		e.preventDefault();
 
-		var thisis = $(this);
-		var box = $(this).closest(".js-hidden-box");
-		var content = box.find(".js-hidden-content");
+		var thisis = $(this),
+			box = $(this).closest(".js-hidden-box"),
+			content = box.find(".js-hidden-content")
+			plusBtn = box.find(".js-hidden-link.plus");
 
 		if(content.is(":visible")){
 			box.removeClass("is-active");
-			content.stop().slideUp();
+			content.stop().slideUp(400, upperbarFixed);
+			plusBtn.removeClass("open");
 		} else {
 			box.addClass("is-active");
-			content.stop().slideDown();
+			content.stop().slideDown(400, upperbarFixed);
+			plusBtn.addClass("open");
 		}
 	});
 
-*/
-	// #search
+
+	//	fadeIn box
+	//	auto  
+	// ===============================================
+	$(function(){
+		$(".js-fadein-link").on("click", function(e){
+			e.preventDefault();
+			var box = $(".js-fadein-box");
+			if(box.is(":hidden")){
+				box.stop().fadeIn();
+			} else {
+				box.stop().fadeOut();
+			}
+		});
+	});
+
+
+	//	search
+	//	auto
 	// ===============================================
 	$(function(){
 		$(".js-search-form-action").on("click", function(e){
@@ -92,7 +83,8 @@ $(document).ready(function(){
 	});
 
 
-	//	#ratingbox
+	//	extra ratingbox
+	//	plugin
 	// ===============================================
 	$('.js-ratingbox').raty({
 		target     : '.ratingbox__count',
@@ -104,37 +96,26 @@ $(document).ready(function(){
 	});
 
 
-	//	make infobox full height
+	//	infobox full height
+	//	function
 	// ===============================================
-	$(function(){
-		function infoboxFullHeight(){
-			var maxHeight = "0",
-				infobox = $(".js-infobox");
-			
-			infobox.height("auto");
-			infobox.each(function(){
-				thisHeight = $(this).height();
-				if(thisHeight > maxHeight){
-					maxHeight = thisHeight;
-				}
-			});
-			infobox.height(maxHeight);
-		};
-
-		infoboxFullHeight();
-
-		//	change height on resize using timer
-		var timer;
-		$(window).on("resize", function(){
-			clearTimeout(timer);
-			timer = setTimeout(function(){
-				infoboxFullHeight();
-			}, 500);
+	function infoboxFullHeight(){
+		var maxHeight = "0",
+			infobox = $(".js-infobox");
+		
+		infobox.height("auto");
+		infobox.each(function(){
+			thisHeight = $(this).height();
+			if(thisHeight > maxHeight){
+				maxHeight = thisHeight;
+			}
 		});
-	});
+		infobox.height(maxHeight);
+	};
+	
 
-
-	//	show btn in infobox on hover 
+	//	show btn in infobox on hover
+	//	auto 
 	// ===============================================
 	$(function(){
 		var infobox = $(".js-showhover-box"),
@@ -152,7 +133,42 @@ $(document).ready(function(){
 	});
 
 
-	// #ripplelink
+	//	fix upperbar
+	//	function
+	// ===============================================
+	function upperbarFixed(){
+		var upperbar = $(".js-upperbar"),
+			windowHeight = $(window).height(),
+			windowWidth = $(window).width();
+
+		if (upperbar.length) {
+			var upperbarHeight = upperbar.outerHeight() + 20,
+				colRight = $(".l-right"),
+				contentHeight = colRight.outerHeight();
+		
+			if (windowHeight < contentHeight && windowHeight >= 700 && windowWidth > 1280) {
+				if(!(upperbar.hasClass("is-fixed"))){
+					upperbar.stop().fadeOut(100, function(){
+						upperbar.addClass("is-fixed");	
+						colRight.css({paddingTop: upperbarHeight});
+						upperbar.stop().fadeIn(400);
+					});
+				}				
+			} else {
+				if((upperbar.hasClass("is-fixed"))){
+					upperbar.stop().fadeOut(100, function(){
+						upperbar.removeClass("is-fixed");
+						colRight.css({paddingTop: '20px'});
+						upperbar.stop().fadeIn(400);
+					});
+				}
+			}
+		}
+	};
+
+
+	//	ripplelink
+	//	auto
 	// ===============================================
 	$(function(){
 		var ink, d, x, y;
@@ -175,4 +191,24 @@ $(document).ready(function(){
 			ink.css({top: y+'px', left: x+'px'}).addClass("ripplelink-animate");
 		});
 	});
+
+
+	//	run functions
+	// ===============================================
+	upperbarFixed();
+	infoboxFullHeight();
+
+
+	//	run functions on resize
+	//	use timer to make resize correct
+	// ===============================================
+	var timer;
+	$(window).on("resize", function(){
+		clearTimeout(timer);
+		timer = setTimeout(function(){
+			upperbarFixed();
+			infoboxFullHeight();
+		}, 200);
+	});
+
 });

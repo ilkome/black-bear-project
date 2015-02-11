@@ -1,6 +1,8 @@
 /*
 	proscom.ru 
 	Simple Communication
+	
+	ilko.me
 	Ilya Komichev
 */
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=cyrillic,latin");
@@ -14,11 +16,7 @@
 .hide {
   display: none;
 }
-.full {
-  box-sizing: border-box;
-}
-.full_100 {
-  box-sizing: border-box;
+.w100 {
   width: 100%;
 }
 .inline {
@@ -178,7 +176,6 @@ select {
   margin-bottom: 10px;
   height: 53px;
   padding: 0px 10px;
-  box-sizing: border-box;
   color: #5f5f5f;
   font-size: 16px;
   font-family: 'Roboto', arial, tahoma, sans-serif;
@@ -198,6 +195,7 @@ select.select-grey {
   background: #f5f5f5;
 }
 select option {
+  width: auto;
   padding: 5px 10px;
   color: #5f5f5f;
   border-color: none;
@@ -215,7 +213,6 @@ input[type="phone"] {
   width: 310px;
   margin-bottom: 20px;
   padding: 15px 20px;
-  box-sizing: border-box;
   background: #fff;
   border: 1px solid #d6d6d6;
   border-radius: 4px;
@@ -234,9 +231,9 @@ input[type="email"]:focus,
 input[type="phone"]:focus {
   border-color: #949494;
 }
-input.input-full {
+input.input-full,
+input.full {
   width: 100%;
-  box-sizing: border-box;
 }
 input.input-trans {
   width: 100%;
@@ -283,7 +280,6 @@ textarea {
   height: 250px;
   margin-bottom: 20px;
   padding: 20px;
-  box-sizing: border-box;
   background: #fff;
   border: 1px solid #d6d6d6;
   border-radius: 4px;
@@ -407,12 +403,14 @@ html {
   height: 100%;
 }
 .page-body {
+  overflow-y: scroll;
   height: 100%;
   font-size: 14px;
   color: #5f5f5f;
   font-family: 'Roboto', arial, tahoma, sans-serif;
   font-weight: 500;
   background: #eee;
+  min-width: 1320px;
 }
 .page-white {
   background: #fff;
@@ -468,7 +466,6 @@ html {
   position: relative;
   width: 100%;
   padding: 20px 20px 80px 20px;
-  box-sizing: border-box;
   vertical-align: top;
 }
 @media (min-height: 700px) and (min-width: 1300px) {
@@ -476,21 +473,27 @@ html {
     padding-left: 280px;
   }
 }
-.row,
-.upperbar {
+.row {
   display: table;
-  table-layout: fixed;
   width: 100%;
+  table-layout: fixed;
 }
 .col {
   width: 100%;
   display: table-cell;
   vertical-align: top;
   vertical-align: top;
-  box-sizing: border-box;
 }
 .col.is-middle {
   vertical-align: middle;
+}
+.col-30 {
+  width: 30%;
+  padding-right: 10px;
+}
+.col-70 {
+  width: 70%;
+  padding-left: 10px;
 }
 .row-2 > .col {
   width: 50%;
@@ -522,7 +525,6 @@ html {
   display: inline-block;
   width: 200px;
   padding: 20px 10px;
-  box-sizing: border-box;
   text-transform: uppercase;
   white-space: nowrap;
   color: #fff;
@@ -571,7 +573,6 @@ html {
 .btn-blue-dotted {
   display: block;
   width: 100%;
-  box-sizing: border-box;
   padding: 15px;
   font-size: 16px;
   color: #50b3a5;
@@ -634,7 +635,6 @@ html {
   width: 1036px;
   margin: 0 auto;
   padding: 0 40px;
-  box-sizing: border-box;
 }
 ol.list-offer {
   margin: 0;
@@ -788,6 +788,8 @@ ol.list-offer li.name {
 .infoboxs {
   position: relative;
   padding-bottom: 50px;
+}
+.infoboxs-col-1 {
   font-size: 0;
   text-align: center;
   display: block;
@@ -798,7 +800,7 @@ ol.list-offer li.name {
           justify-content: flex-start;
   text-align: left;
 }
-.infoboxs > * {
+.infoboxs-col-1 > * {
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -806,17 +808,71 @@ ol.list-offer li.name {
   vertical-align: top;
   display: inline-block;
 }
-.infoboxs > * {
+.infoboxs-col-1 > * {
   padding: 0 10px;
 }
-.infobox {
-  padding: 10px;
+.infoboxs-col-2 {
+  font-size: 0;
+  text-align: center;
+  display: block;
+  margin: 0 -10px 0 -10px;
+  -webkit-justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: left;
+}
+.infoboxs-col-2 > * {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  font-size: 1rem;
+  vertical-align: top;
+  display: inline-block;
+}
+.infoboxs-col-2 > * {
+  padding: 0 10px;
+}
+.infoboxs-col-2 .infobox {
+  width: 100%;
+}
+@media (min-height: 900px) and (min-width: 1800px) {
+  .infoboxs-col-2 .infobox {
+    width: 50%;
+  }
+}
+.infoboxs-4-col {
+  font-size: 0;
+  text-align: center;
+  display: block;
+  margin: 0 -10px 0 -10px;
+  -webkit-justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: left;
+}
+.infoboxs-4-col > * {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  font-size: 1rem;
+  vertical-align: top;
+  display: inline-block;
+}
+.infoboxs-4-col > * {
+  padding: 0 10px;
+}
+.infoboxs-4-col .infobox {
   width: 33.333333333333336%;
 }
 @media (min-height: 900px) and (min-width: 1800px) {
-  .infobox {
+  .infoboxs-4-col .infobox {
     width: 25%;
   }
+}
+.infobox {
+  padding: 10px;
 }
 .infobox-in {
   text-align: center;
@@ -824,6 +880,8 @@ ol.list-offer li.name {
   background: #fff;
   border-radius: 4px;
   border: 1px solid transparent;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
 }
 .infobox-in:hover {
   border: 1px solid rgba(148,148,148,0.5);
@@ -832,6 +890,62 @@ ol.list-offer li.name {
   .infobox-in {
     padding: 50px 40px;
   }
+}
+.infobox__head {
+  display: table;
+  width: 100%;
+  table-layout: "auto";
+  overflow: hidden;
+  padding: 0 30px;
+  height: 75px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 3px;
+}
+.infobox__head .col {
+  width: auto;
+}
+.infobox__head .pic-in {
+  padding: 10px 20px 10px 0px;
+}
+.infobox__head .pic-in img {
+  border: 10px solid #ededed;
+  border-radius: 32px;
+}
+.infobox__head .name-in {
+  padding: 27px 10px 10px 0;
+  overflow: hidden;
+  font-size: 16px;
+  color: #5f5f5f;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.infobox__head .slider-nav {
+  width: 120px;
+  position: relative;
+}
+.infobox__meta:before,
+.infobox__meta:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.infobox__meta .name {
+  float: left;
+}
+.infobox__meta .name h3 {
+  margin: 0;
+  font-size: 13px;
+  color: #949494;
+  text-transform: uppercase;
+}
+.infobox__meta .price {
+  float: right;
+  color: #b64c4c;
+  font-size: 16px;
+}
+.infobox__meta .price .rub {
+  margin-bottom: -3px;
 }
 .infobox_empty .booty-in {
   position: relative;
@@ -900,10 +1014,144 @@ ol.list-offer li.name {
   top: 10px;
   width: 100%;
 }
+.infobox__content img {
+  display: block;
+  width: 100%;
+}
+.infobox__price {
+  font-size: 20px;
+  color: #b64c4c;
+}
+.infobox__price .rub {
+  margin-bottom: -1px;
+}
+.infobox__count {
+  padding: 40px 0;
+  font-weight: 300;
+  white-space: nowrap;
+}
+.infobox__count .num {
+  font-size: 90px;
+  color: #5f5f5f;
+}
+.infobox__count .desc {
+  font-size: 20px;
+  color: #949494;
+}
+.infobox__more {
+  font-size: 13px;
+}
 .greybox {
   background: #f5f5f5;
   margin: 0 -20px 60px -20px;
   padding: 60px 0 40px 0;
+}
+.faq {
+  padding-bottom: 50px;
+}
+.faq-item.is-active .faq-item-quest {
+  border-color: #b64c4c;
+  border-color: #b64c4c;
+}
+.faq-item-quest {
+  display: table;
+  width: 100%;
+  table-layout: "auto";
+  margin-bottom: 2px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
+}
+.faq-item__num {
+  display: table-cell;
+  vertical-align: top;
+  padding: 25px 25px;
+  color: #949494;
+  text-align: center;
+  vertical-align: middle;
+}
+.faq-item__name {
+  display: table-cell;
+  vertical-align: top;
+  padding: 25px 0;
+  vertical-align: middle;
+}
+.faq-item__name .cat {
+  color: #949494;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.faq-item__name .name a {
+  display: table;
+  color: #5f5f5f;
+  text-transform: uppercase;
+  line-height: 20px;
+}
+.faq-item__name .name a:hover {
+  color: #b64c4c;
+}
+.faq-item__action {
+  display: table-cell;
+  vertical-align: top;
+  padding: 25px 30px;
+  vertical-align: middle;
+}
+.faq-item__action a {
+  display: block;
+}
+.faq-item__action a.plus {
+  font-size: 30px;
+  font-weight: 300;
+  color: #949494;
+}
+.faq-item__action a.open {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  color: #b64c4c;
+}
+.faq-item__content {
+  margin-bottom: 2px;
+  display: none;
+  background: #f5f5f5;
+  padding: 40px 60px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
+}
+.faq-ask {
+  position: absolute;
+  z-index: 10;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+}
+@media (min-height: 700px) and (min-width: 1300px) {
+  .faq-ask {
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+  }
+}
+.faq-ask-in {
+  display: none;
+  margin-top: 115px;
+  padding: 50px 0;
+  background: #eee;
+}
+@media (min-height: 700px) and (min-width: 1300px) {
+  .faq-ask-in {
+    margin: 75px 0 0 260px;
+  }
+}
+.faq-ask-in .action {
+  text-align: center;
+}
+.faq-ask-in .action a {
+  margin: 0 10px;
 }
 .files {
   position: relative;
@@ -997,6 +1245,13 @@ ol.list-offer li.name {
   padding: 15px 0 0 20px;
   overflow: hidden;
 }
+.filter-menu.is-blue a:hover {
+  color: #4691c2;
+}
+.filter-menu.is-blue li.is-active a {
+  color: #fff;
+  background: #4691c2;
+}
 .filter-menu ul {
   margin: 0;
   list-style: none;
@@ -1038,7 +1293,6 @@ ol.list-offer li.name {
   width: 100%;
   padding-left: 300px;
   padding-right: 40px;
-  box-sizing: border-box;
 }
 .footer:before,
 .footer:after {
@@ -1356,6 +1610,15 @@ ol.list-offer li.name {
   -webkit-transition: 0.3s ease-out;
           transition: 0.3s ease-out;
 }
+.search-btn:after {
+  content: " ";
+  position: absolute;
+  left: -20px;
+  top: 0px;
+  background: #fff;
+  width: 20px;
+  height: 75px;
+}
 .search-btn:hover {
   background-color: #e7e7e7;
 }
@@ -1453,7 +1716,7 @@ ol.list-offer li.name {
 .sort-menu li.sort-desc span {
   background: url("../img/icons/arrow-up-grey.png") right center no-repeat;
 }
-.sort-menu li.sort-desc span:hover {
+.sort-menu li.sort-desc:hover span {
   background: url("../img/icons/arrow-up-blue.png") right center no-repeat;
 }
 .sort-menu li.is-active a {
@@ -1482,13 +1745,23 @@ ol.list-offer li.name {
   background: url("../img/icons/arrow-down-grey.png") right center no-repeat;
 }
 .sort-menu .date {
-  width: 125px;
+  width: 130px;
+}
+@media (min-height: 900px) and (min-width: 1800px) {
+  .sort-menu .date {
+    width: 170px;
+  }
 }
 .sort-menu .members {
-  width: 140px;
+  width: 120px;
+}
+@media (min-height: 900px) and (min-width: 1800px) {
+  .sort-menu .members {
+    width: 170px;
+  }
 }
 .sort-menu .price {
-  width: 160px;
+  width: 170px;
 }
 .taskadd-line {
   padding-bottom: 30px;
@@ -1514,6 +1787,9 @@ ol.list-offer li.name {
 .tableview {
   padding-bottom: 40px;
 }
+.tableview.is-blue .name a:hover {
+  color: #4691c2;
+}
 .tableview-item {
   display: table;
   width: 100%;
@@ -1521,6 +1797,12 @@ ol.list-offer li.name {
   margin-bottom: 2px;
   background: #fff;
   border-radius: 3px;
+  background: rgba(255,255,255,0.6);
+  -webkit-transition: 0.3s ease-out;
+          transition: 0.3s ease-out;
+}
+.tableview-item:hover {
+  background: #fff;
 }
 .tableview-item__num,
 .tableview-item__pic,
@@ -1565,9 +1847,19 @@ ol.list-offer li.name {
   width: 130px;
   text-align: left;
 }
+@media (min-height: 900px) and (min-width: 1800px) {
+  .tableview-item__date {
+    width: 175px;
+  }
+}
 .tableview-item__members {
   width: 120px;
   text-align: left;
+}
+@media (min-height: 900px) and (min-width: 1800px) {
+  .tableview-item__members {
+    width: 140px;
+  }
 }
 .tableview-item__price {
   width: 170px;
@@ -1640,12 +1932,7 @@ ol.list-offer li.name {
   font-weight: 500;
 }
 .upperbar {
-  vertical-align: middle;
-  overflow: hidden;
-  background: #fff;
-  border-radius: 3px;
-  height: 75px;
-  margin-bottom: 20px;
+  width: 100%;
   font-size: 13px;
 }
 .upperbar:before,
@@ -1664,9 +1951,35 @@ ol.list-offer li.name {
 .upperbar.is-big .fl-right {
   padding-top: 10px;
 }
+@media (min-height: 700px) and (min-width: 1300px) {
+  .upperbar.is-fixed {
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0px;
+  }
+}
+@media (min-height: 700px) and (min-width: 1300px) and (min-height: 700px) and (min-width: 1300px) {
+  .upperbar.is-fixed .upperbar-in {
+    overflow: hidden;
+    margin-left: 260px;
+    margin-right: 0px;
+    padding: 0 20px;
+    border-radius: 0;
+    box-shadow: 0 0 8px rgba(0,0,0,0.21);
+  }
+}
+.upperbar .upperbar-in {
+  overflow: hidden;
+  height: 75px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 3px;
+}
 .upperbar .fl-right {
   display: table-cell;
-  padding: 15px 20px 0 0;
+  padding: 10px 20px 0 0;
 }
 .upperbar .has-arrow {
   position: relative;
@@ -1819,7 +2132,7 @@ ol.list-offer li.name {
   z-index: 0;
 }
 .ripplelink:hover {
-  z-index: 1000;
+  z-index: 2;
 }
 .ripplelink-ink {
   display: block;

@@ -2,6 +2,8 @@
 /*
 	proscom.ru 
 	Simple Communication
+	
+	ilko.me
 	Ilya Komichev
 */
 
@@ -21,9 +23,11 @@ fullhd = "(min-height 900px) and (min-width 1800px)"
 html
 	height 100%
 .page-body
+	overflow-y scroll
 	height 100%
 	font-main()
 	background #eeeeee
+	min-width 1320px
 .page-white
 	background color-white
 .ilkome
@@ -71,8 +75,12 @@ html
 	padding 20px 20px 80px 20px
 	full()
 	vertical-align top
+	anim()
+		&.has-padding
+			padding-top 20px
 	@media small
 		padding-left 280px
+		//padding-top 115px
 
 .row
 	dt()
@@ -83,6 +91,13 @@ html
 	full()
 	&.is-middle
 		vertical-align middle
+.col-30
+	width 30%
+	padding-right 10px
+.col-70
+	width 70%
+	padding-left 10px
+	
 .row-2
 	> .col
 		width 50%
@@ -167,7 +182,6 @@ html
 	padding-right 25px
 	background url("../img/icons/medal.png") center right no-repeat
 	&.has-margin
-		//margin-top 15px
 		margin-right 15px
 
 
@@ -318,25 +332,77 @@ ol.list-offer
 .infoboxs
 	position relative
 	padding-bottom 50px
+.infoboxs-col-1
 	wrap()
 	gutter(10px)
 	align(left)
-	//align(middle)
+.infoboxs-col-2
+	wrap()
+	gutter(10px)
+	align(left)
+	.infobox
+		col(1, 1)
+		@media fullhd
+			col(2, 1)
+.infoboxs-4-col
+	wrap()
+	gutter(10px)
+	align(left)
+	.infobox
+		col(3, 1)
+		@media fullhd
+			col(4, 1)
 .infobox
-	padding 10px
-	col(3, 1)
-	@media fullhd
-		col(4, 1)
+	padding 10px	
 .infobox-in
 	text-align center
 	padding 20px
 	background #fff
 	border-radius 4px
 	border 1px solid transparent
+	anim()
 	&:hover
 		border 1px solid alpha(color-grey, .5)
 	@media small
 		padding 50px 40px
+.infobox__head
+	dt("auto")
+	overflow hidden
+	padding 0 30px
+	height 75px
+	margin-bottom 20px
+	background color-white
+	border-radius 3px
+	.col
+		width auto
+	.pic-in
+		padding 10px 20px 10px 0px
+		img
+			border 10px solid #ededed
+			border-radius 32px
+	.name-in
+		padding 27px 10px 10px 0
+		overflow hidden
+		font-16-ttu()
+	.slider-nav
+		width 120px
+		position relative
+		
+.infobox__meta
+	clearfix()
+	.name
+		float left
+		h3
+			margin 0
+			font-size 13px
+			color color-grey
+			text-transform uppercase
+	.price
+		float right
+		color color-red
+		font-size 16px
+		.rub
+			margin-bottom -3px
 .infobox_empty
 	.booty-in
 		position relative
@@ -386,13 +452,114 @@ ol.list-offer
 		left 0px 
 		top 10px
 		width 100%
-		
-		
+	img
+		display block
+		width 100%
+.infobox__price
+	font-size 20px
+	color color-red
+	.rub 
+		margin-bottom -1px
+.infobox__count
+	padding 40px 0
+	font-light()
+	white-space nowrap
+	.num
+		font-size 90px
+		color color-grey-dark
+	.desc
+		font-size 20px
+		color color-grey
+.infobox__more
+	font-size 13px
+	
 //	#greybox
 .greybox
 	background color-grey-opacity
 	margin 0 -20px 60px -20px
 	padding 60px 0 40px 0
+
+//	#faq
+.faq
+	padding-bottom 50px
+.faq-item.is-active
+	.faq-item-quest
+		border-color color-red
+		border-color color-red
+.faq-item-quest
+	dt("auto")
+	margin-bottom 2px
+	background #f5f5f5
+	border-radius 4px
+	border-left 4px solid transparent
+	border-right 4px solid transparent
+	anim()
+.faq-item__num
+	dtc()
+	padding 25px 25px
+	color color-grey
+	text-align center
+	vertical-align middle
+.faq-item__name
+	dtc()
+	padding 25px 0
+	vertical-align middle
+	.cat
+		color color-grey
+		font-size 10px
+		text-transform uppercase
+	.name
+		a
+			display table
+			color color-grey-dark
+			text-transform uppercase
+			line-height 20px
+			&:hover
+				color color-red
+.faq-item__action
+	dtc()
+	padding 25px 30px
+	vertical-align middle
+	a
+		display block
+		&.plus
+			font-size 30px
+			font-light()
+			color color-grey
+		&.open
+			transform rotate(45deg)
+			color color-red
+.faq-item__content
+	margin-bottom 2px
+	display none
+	background #f5f5f5
+	padding 40px 60px
+	font-light()
+	font-size 16px
+	line-height 30px
+.faq-ask
+	position absolute
+	z-index 10
+	left 0px 
+	top 0px
+	width 100%
+	@media small
+		position fixed
+		top 0px 
+		z-index 10
+		
+.faq-ask-in
+	display none
+	margin-top 115px
+	padding 50px 0
+	background #eeeeee
+	@media small
+		margin 75px 0 0 260px
+	.action
+		text-align center
+		a
+			margin 0 10px
+	
 
 //	#files
 .files
@@ -466,6 +633,13 @@ ol.list-offer
 	float left
 	padding 15px 0 0 20px
 	overflow hidden
+	&.is-blue
+		a:hover
+			color color-blue
+		li.is-active
+			a
+				color #fff
+				background color-blue
 	ul
 		lino()
 		clearfix()
@@ -730,6 +904,14 @@ ol.list-offer
 	height 75px
 	background-color color-grey-opacity
 	anim()
+	&:after
+		content " "
+		position absolute 
+		left -20px 
+		top 0px
+		background #fff
+		width 20px
+		height 75px
 	&:hover
 		background-color #e7e7e7
 	a
@@ -800,7 +982,8 @@ ol.list-offer
 		&.sort-desc
 			span
 				background url("../img/icons/arrow-up-grey.png") right center no-repeat
-				&:hover
+			&:hover
+				span
 					background url("../img/icons/arrow-up-blue.png") right center no-repeat
 		&.is-active 
 			a
@@ -824,11 +1007,15 @@ ol.list-offer
 		padding-right 15px
 		background url("../img/icons/arrow-down-grey.png") right center no-repeat
 	.date
-		width 125px
+		width 130px
+		@media fullhd
+			width 170px
 	.members
-		width 140px
+		width 120px
+		@media fullhd
+			width 170px
 	.price
-		width 160px
+		width 170px
 
 //	#taskadd-line
 .taskadd-line
@@ -849,20 +1036,26 @@ ol.list-offer
 //	#tableview
 .tableview
 	padding-bottom 40px
+	&.is-blue
+		.name
+			a:hover
+				color color-blue
 .tableview-item
-	display table
-	width 100%
-	table-layout fixed
+	dt()
 	margin-bottom 2px
 	background color-white
 	border-radius 3px
+	background alpha(color-white, .6)
+	anim()
+	&:hover
+		background color-white
 .tableview-item__num,
 .tableview-item__pic,
 .tableview-item__name,
 .tableview-item__date,
 .tableview-item__members,
 .tableview-item__price
-	display table-cell 
+	display table-cell
 	padding 20px 10px
 	vertical-align middle
 .tableview-item__num
@@ -893,9 +1086,13 @@ ol.list-offer
 .tableview-item__date
 	width 130px
 	text-align left
+	@media fullhd
+		width 175px
 .tableview-item__members
 	width 120px
 	text-align left
+	@media fullhd
+		width 140px
 .tableview-item__price
 	width 170px
 	text-align right
@@ -956,13 +1153,7 @@ ol.list-offer
 	
 //	#upperbar
 .upperbar
-	@extend .row
-	vertical-align middle
-	overflow hidden
-	background color-white
-	border-radius 3px
-	height 75px
-	margin-bottom 20px
+	width 100%
 	font-size 13px
 	clearfix()
 	&.is-big
@@ -973,9 +1164,30 @@ ol.list-offer
 		border-radius 0
 		.fl-right
 			padding-top 10px
+	&.is-fixed
+		@media small
+			z-index 3
+			position fixed
+			width 100%
+			left 0
+			top 0px
+			.upperbar-in
+				@media small
+					overflow hidden
+					margin-left 260px
+					margin-right 0px
+					padding 0 20px
+					border-radius 0
+					box-shadow 0 0 8px rgba(0, 0, 0, 0.21)
+	.upperbar-in
+		overflow hidden
+		height 75px
+		margin-bottom 20px
+		background color-white
+		border-radius 3px
 	.fl-right
 		display table-cell 
-		padding 15px 20px 0 0
+		padding 10px 20px 0 0
 	.has-arrow
 		position relative
 		&:after
@@ -1101,7 +1313,7 @@ ol.list-offer
 	anim()
 	z-index 0
 	&:hover
-		z-index 1000
+		z-index 2
 .ripplelink-ink
 	display block
 	position absolute
