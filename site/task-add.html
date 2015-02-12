@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!--	proscom.ru-->
+<!--	Simple Communication-->
+<html>
+  <head>
+    <title>Black Bear</title>
+    <!-- meta-->
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- styles-->
+    <link href="css/jquery.remodal.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- scripts-->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.raty.js" type="text/javascript"></script>
+    <script src="js/jquery.remodal.min.js" type="text/javascript"></script>
+    <script src="js/functions.js" type="text/javascript"></script>
+  </head>
+  <div class="sysmenu is-fixed">
+    <ul>
+      <li><a href="task-item.html">task-item-</a></li>
+      <li><a href="faq.html">faq-</a></li>
+      <li><a href="profile-solver.html">profile-solver- </a></li>
+      <li><a href="statistics.html">statistics-</a></li>
+      <li><a href="task-add.html">task-add-</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="booty.html">booty</a></li>
+      <li><a href="offer.html">offer</a></li>
+      <li><a href="partners.html">partners</a></li>
+      <li><a href="profile-seeker.html">profile-seeker</a></li>
+      <li><a href="rating.html">rating</a></li>
+      <li><a href="solution.html">solution</a></li>
+      <li><a href="tasks.html">tasks</a></li>
+      <li><a href="training.html">training</a></li>
+    </ul>
+  </div>
+  <body class="page-body page-white">
+    <div class="ilkome">
+      <div class="l-left">
+        <div class="left-logo"><a href="/"></a></div>
+        <div class="left-user"><a href="#" class="settings"></a>
+          <div class="notify"><a href="#">16</a></div>
+          <div class="prev">
+            <div class="rating"><img src="img/content/user-rating.png" alt=""></div>
+            <div class="pic"><img src="img/ava-mishin.png" alt=""></div>
+          </div>
+          <div class="score"> 
+            <div class="big">1 120 </div>/ 5 000
+          </div>
+        </div>
+        <div class="left-menu">
+          <ul>
+            <li class="menu-tourns"><a href="#">Турниры</a></li>
+            <li class="menu-train"><a href="#">Тренировка </a></li>
+            <li class="menu-rating"><a href="#">Рейтинг</a></li>
+            <li class="menu-booty"><a href="#">Трофеи</a></li>
+            <li class="menu-faq"><a href="#">Вопросы</a></li>
+            <li class="menu-rating is-active"><a href="#">Активный</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="l-right">
+        <div class="contentbox-text has-small-padding">
+          <div class="contentbox-wrap">
+            <div class="fl-left">
+              <h1 class="is-small">создание задачи</h1>
+            </div>
+            <div class="fl-right">
+              <div class="upper-contacts">
+                <div class="phone">8 800 900 31 01</div>
+                <div class="sepline"></div>
+                <div class="text">Наш менеджер готов Вам помочь</div>
+              </div>
+            </div>
+            <div class="clear"></div>
+            <div class="taskadd-line">
+              <div class="taskadd-line__name">Категория</div>
+              <div class="taskadd-line__content">
+                <select data-placeholder="Выберите категорию" class="select-grey width-500">
+                  <option value="">Вариант номер один</option>
+                  <option value="">Второй вариант </option>
+                  <option value="">Еще есть третий вариант</option>
+                </select>
+              </div>
+            </div>
+            <div class="taskadd-line">
+              <div class="taskadd-line__name">Название</div>
+              <div class="taskadd-line__content">
+                <input type="text" placeholder="Введите название задачи" autofocus class="input-trans">
+              </div>
+            </div>
+            <div class="taskadd-line">
+              <div class="taskadd-line__name">Бюджет</div>
+              <div class="taskadd-line__content">
+                <div class="input-with-price">
+                  <input type="text" placeholder="Ваш бюджет" class="input-price">
+                </div>
+              </div>
+            </div>
+            <div class="taskadd-line has-padding">
+              <div class="taskadd-line__name">Краткое описание задачи</div>
+              <div class="taskadd-line__content">
+                <textarea></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="greybox">
+            <div class="contentbox-wrap">
+              <div class="row row-2">
+                <div class="col js-addfield-box">
+                  <div class="taskadd-line">
+                    <div class="taskadd-line__name">Дата публикации задачи</div>
+                    <div class="taskadd-line__content">
+                      <div class="row row-3">
+                        <div class="col">
+                          <select data-placeholder="Дата" class="full">
+                            <option value="">12</option>
+                            <option value="">13</option>
+                            <option value="">15</option>
+                          </select>
+                        </div>
+                        <div class="col">
+                          <select data-placeholder="Месяц" class="full">
+                            <option value="">Январь</option>
+                            <option value="">Февраль</option>
+                            <option value="">Март</option>
+                          </select>
+                        </div>
+                        <div class="col">
+                          <select data-placeholder="Год" class="full">
+                            <option value="">2000</option>
+                            <option value="">2012</option>
+                            <option value="">2099</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="taskadd-line has-padding">
+                    <div class="taskadd-line__name">Промежуточный инпут</div>
+                    <div class="taskadd-line__content">
+                      <input type="text" placeholder="Название инпута" class="input-full">
+                    </div>
+                  </div>
+                  <div class="taskadd-line">
+                    <div class="taskadd-line__content"><a href="#" class="btn-blue-dotted js-addfield-link">Добавить еще инпут</a></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="taskadd-line">
+                    <div class="taskadd-line__name">Дата окончания задачи</div>
+                    <div class="taskadd-line__content">
+                      <div class="row row-3">
+                        <div class="col">
+                          <select data-placeholder="Дата" class="full">
+                            <option value="">12</option>
+                            <option value="">13</option>
+                            <option value="">15</option>
+                          </select>
+                        </div>
+                        <div class="col">
+                          <select data-placeholder="Месяц" class="full">
+                            <option value="">Январь</option>
+                            <option value="">Февраль</option>
+                            <option value="">Март</option>
+                          </select>
+                        </div>
+                        <div class="col">
+                          <select data-placeholder="Год" class="full">
+                            <option value="">2000</option>
+                            <option value="">2012</option>
+                            <option value="">2099</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="taskadd-line">
+                    <div class="taskadd-line__name">&nbsp;</div>
+                    <div class="taskadd-line__content">
+                      <div class="row row-3">
+                        <div class="col">
+                          <select data-placeholder="Дата" class="full">
+                            <option value="">12</option>
+                            <option value="">13</option>
+                            <option value="">15</option>
+                          </select>
+                        </div>
+                        <div class="col">
+                          <select data-placeholder="Месяц" class="full">
+                            <option value="">Январь</option>
+                            <option value="">Февраль</option>
+                            <option value="">Март</option>
+                          </select>
+                        </div>
+                        <div class="col">
+                          <select data-placeholder="Год" class="full">
+                            <option value="">2000</option>
+                            <option value="">2012</option>
+                            <option value="">2099</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contentbox-wrap">
+            <div class="taskadd-line has-no-padding">
+              <div class="taskadd-line__name">Требования к решению</div>
+              <div class="taskadd-line__content">
+                <div class="textarea-desc">
+                  <textarea placeholder="Подробное описание" class="textarea-big"></textarea>
+                  <div class="textarea-desc__more">
+                    <div class="attach"><a href="#">Прикрепить файл</a></div>
+                    <div class="edittools">Edit tools here</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="files has-padding-60">
+              <div class="file">
+                <div class="file__ext red">pdf</div>
+                <div class="file__name"><a href="#">Требования к решению PDF</a></div>
+                <div class="file__remove"><a href="#"></a></div>
+              </div>
+              <div class="file">
+                <div class="file__prev"> <a href="#"><img src="img/content/file-prev.png" alt="" height="32"></a></div>
+                <div class="file__name"><a href="#">Print_screen.jpg</a></div>
+                <div class="file__remove"><a href="#"></a></div>
+              </div>
+            </div>
+            <div class="row row-2">
+              <div class="col">
+                <div class="taskadd-line">
+                  <div class="taskadd-line__name">Критерии оценки задачи</div>
+                  <div class="taskadd-line__content">
+                    <select data-placeholder="Выберите критерий" class="select-grey full">
+                      <option value="">Вариант номер один</option>
+                      <option value="">Второй вариант </option>
+                      <option value="">Еще есть третий вариант</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="taskadd-line has-padding">
+                  <div class="taskadd-line__content"><a href="#" class="btn-blue-dotted js-addfield-link">Добавить еще критерий</a></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="taskadd-line">
+                  <div class="taskadd-line__name">Выберите оценку от 1 до 10</div>
+                  <div class="taskadd-line__content">
+                    <div class="ratingbox">
+                      <div class="ratingbox__select js-ratingbox"></div>
+                      <div class="ratingbox__count">0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="action-btns"><a href="#" class="btn-grey ripplelink">Отмена</a><a href="#" class="btn-blue ripplelink">Создать задачу</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-copy">2014 © Все права защищены</div>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="#">О проекте</a></li>
+            <li><a href="#">Партнеры</a></li>
+            <li><a href="#">Политика конфедициальности</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

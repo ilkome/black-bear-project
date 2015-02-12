@@ -1,34 +1,41 @@
+block vars
+	- var iswhite = true
+
 extends _layout
 
 block append content
 	.upperbar.js-upperbar
-		.upperbar-in
-			.fl-left
-				.close-popup: a(href="#")
-				.slider-nav
-					ul
-						li.prev: a(href="#")
-						li.sep
-						li.next: a(href="#")
-				.upperbar__name Придумать название магазина доставки сладкой продукции
-			.fl-right
-				.textline
-					.textline__info Бюджет
-					.textline__content
+		.upperbar-in.has-bg-grey
+			.row-auto
+				.col.col-nav
+					.close-popup: a(href="#")
+					.slider-nav
+						ul
+							li.prev: a(href="#")
+							li.sep
+							li.next: a(href="#")
+				.col
+					.upperbar__info
+						.name Придумать название магазина доставки сладкой продукции
+				.col.col-price
+					.upperbar__price
+						.name Бюджет
 						.price
-							| 12 500 000
-							.cur
-				a(href="#").btn-grey Учавствовать
-				.task-status.publish Опубликованна
-				a(href="#").btn-grey-edit Редактировать
+							| 12 500 000 
+							.rub
+				.col
+					a(href="#").btn-blue.ripplelink Учавствовать
+				
+				//-.task-status.publish Опубликованна
+				//-a(href="#").btn-grey-edit Редактировать
 	
 	.contentbox-wrap
-		.contentbox
+		.contentbox.has-small-padding
 			.contentbox__name
-				.textline__info Анализ данных
 				.id id 
 					strong 8067
-				.pic: img(src="img/content/task-1.png", alt="")
+				.textline__info Анализ данных
+				.pic: img(src="img/icons/cube-red.png", alt="")
 				.name: h1 Придумать название нового бренда напитка BubbleTea и разработать партнерскую программу
 			.textline
 				.textline__info Опубликовал
@@ -38,216 +45,296 @@ block append content
 					.textline
 						.textline__info Просмотры
 						.textline__content
-							.icon-views 20
+							.viewsblock 20
 				.col
 					.textline
 						.textline__info Комментарии
 						.textline__content
-							.icon-comments 162
+							.commentsblock 162
 				.col
 					.textline
 						.textline__info Участники
 						.textline__content
-							.icon-membersblock 13
+							.membersblock 13
 				.col
 					.textline
 						.textline__info Решения
 						.textline__content
-							.icon-solutions 2
+							.solutionsblock 2
 				.col
 					.textline
 						.textline__info Бюджет
 						.textline__content
 							.price
 								| 12 500 000
-								.cur
+								.rub
 
 				a(href="#").fl-right.link-down Показать полностью
-				h2 Описание задачи
-				p Опросы общественного мнения, проведенные в 2010 году показали, что Москвичи меньше всего верят в то, что возможны позитивные изменения в двух сферах - транспортной ситуации города и системы здравоохранения Москвы.
+				.textbox
+					h2.textbox__name Описание задачи
+					p Опросы общественного мнения, проведенные в 2010 году показали, что Москвичи меньше всего верят в то, что возможны позитивные изменения в двух сферах - транспортной ситуации города и системы здравоохранения Москвы.
 			
-		.greybox
-			.greybox__name: h3 Статус задачи
-			.greybox__content
+	.greybox
+		.greybox__name: h3 Статус задачи
+		.greybox__content
+			.statustime
 				.statustime__info
 					.start.fl-left
-						.color-red Старт
+						.move Старт
 						.dateblock
-							.day 20
-							.month Октября
+							.day 18
+							.month Июня
 							.year 2014
-					.start.fl-right
-						.color-red Финиш
-						.dateblock
-							.day.fl-right 07
-							.month Сентября
+					.start.align-right
+						.move Финиш
+						.dateblock.is-right
+							.day 24
+							.month Февраля
 							.year 2014
 				.statustime__content
-					.month
-						.numbers
-							.line 1 
-							.line 2 
-							.line 3
-								.line__event Предоставить три варианта названия
-								.line__rating: a(href="#") Оценить решения
-							.line 4
-							.line 5
-							.line 6
-							.line 7
-							.line 8
-							.line 9
-							.line 10
-							.line 11
-							.line 12
-							.line 13
-							.line 14
-								.line__event Определиться с названием
-							.line 15
-							.line 16
-							.line 17
-							.line 18
-							.line.is-active 19
-							.line 20
-							.line 21
-							.line 22
-							.line 23
-							.line 24
-							.line 25
-							.line 26
-							.line 27
-							.line 28
-							.line 29
-							.line 30
-							.line 31
-						.name Август
-					.month.month_sep
-						.numbers
-							.line 1 
-							.line 2 
-							.line 3
-							.line 4
-							.line 5
-							.line 6
-							.line 7
-								.line__event_right Зарегистрировать название
-						.name Сентябрь
+					.monthsbox
+						.monthsbox-item
+							.month Август
+							.monthsbox-item-in
+								.daysbox
+									.daysbox__day 1 
+									.daysbox__day 2 
+									.daysbox__day 3
+										.line__event
+											.dot 
+											.text Предоставить три варианта названия
+											.line__rating: a(href="#").btn-blue.btn-small.ripplelink Оценить решения
+									.daysbox__day 4
+									.daysbox__day 5
+									.daysbox__day 6
+									.daysbox__day 7
+									.daysbox__day 8
+									.daysbox__day 9
+									.daysbox__day 10
+									.daysbox__day 11
+									.daysbox__day 12
+									.daysbox__day 13
+									.daysbox__day 14
+										.line__event
+											.dot 
+											.text Определиться с названием
+									.daysbox__day 15
+									.daysbox__day 16
+									.daysbox__day 17
+									.daysbox__day 18
+									.daysbox__day.is-active 19
+									.daysbox__day 20
+									.daysbox__day 21
+									.daysbox__day 22
+									.daysbox__day 23
+									.daysbox__day 24
+									.daysbox__day 25
+									.daysbox__day 26
+									.daysbox__day 27
+									.daysbox__day 28
+									.daysbox__day 29
+									.daysbox__day 30
+									.daysbox__day 31
+						.monthsbox-item.has-border
+							.month Август
+							.monthsbox-item-in
+								.daysbox
+									.daysbox__day 1 
+									.daysbox__day 2 
+									.daysbox__day 3
+									.daysbox__day 4
+									.daysbox__day 5
+									.daysbox__day 6
+									.daysbox__day 7
+										.line__event.is-right
+											.dot 
+											.text Зарегистрировать название
+									.name Сентябрь
 
-		.contentbox-wrap
-			h2 требования к решению
-			h3 Задача
+	.contentbox-wrap
+		.textbox
+			h2.textbox__name требования к решению
+			h3.textbox__subname Задача
 			p Задача заключается в том, чтобы используя любые программно-аппаратные средства и теоретические модели найти в массиве данных закономерности, которые позволили бы объяснить различия в эффективности работы амбулаторно-поликлинических учреждений Москвы и найти ответ на вопрос "что делать, чтобы повысить эффективность отдельных учреждений, или всех учреждений города". 
-			h3 На входе
-				ul
-					li Структура данных, хранящихся в системе с их описанием
-					li Первичная выгрузка ограниченного количества данных/агрегированных показателей
-			h3 Процесс
+			h3.textbox__subname На входе
+			ul
+				li Структура данных, хранящихся в системе с их описанием
+				li Первичная выгрузка ограниченного количества данных/агрегированных показателей
+			h3.textbox__subname Процесс
 			ol
 				li Каждый понедельник необходимо присылать промежуточные результаты
 				li Каждую пятницу начисляются баллы за промежуточные результаты
 				li Каждый понедельник принимаются запросы на выгрузку дополнительной информации
-			h3 Срок
+			h3.textbox__subname Срок
 			p 3 месяца
-			h3 Приз
+			h3.textbox__subname Приз
 			p Первое место 
 				span.color-red 150 000 руб
-			
-			.files.has-padding
-				.file
-					.file__ext.red pdf
-					.file__name: a(href="#") Требования к решению PDF
-					.file__download: a(href="#")
-
-			h2 Критерии оценки задачи
-			.ratings
-				mixin rating
-					.rating
-						.rating__name Анализ
-						.rating__counts 
-							ul
-								li.star
-								li.star
-								li.star
-								li.star
-								li.star
-								li
-								li
-								li
-								li
-								li
-						.rating__num 4
-				+rating
-				+rating
-				+rating
-				+rating
 		
-		.greybox
-			.fl-right
-				+pager-small
-			.greybox__name: h3 Таблица лидеров
-			.greybox__content
-				.leaders
-					.leader_ header
-						.leader__place: a(href="#").sort-desc.is-active
-						.leader__name: a(href="#")
-						.leader__changes: a(href="#")
-						.leader__dinamics: a(href="#")
-						.leader__scores: a(href="#")
-					
-					mixin leader(num, name, changes, persentage) 
-						.leader
-							.leader__place= num
-							.leader__name
-								a(href="#")
-									.pic: img(src="img/content/solutions-pic.png", alt="")
-									.name= name
-							.leader__changes
-								if changes == "down" 
-									.count 3
-									.status.status_down
-								else 
-									.count 10
-									.status.status_up
-							.leader__dinamics: img(src="img/content/leader-dinamics.png", alt="")
-							.leader__scores
-								.scoregraph
-									.scoregraph__wrap
-										.scoregraph__in(style="width:#{persentage}%")
-									.scoregraph__count #{persentage}0
-					+leader(
-						"1",
-						"Александра Киаби",
-						"down",
-						"90"
-					) 
-					+leader(
-						"2",
-						"Алена Миланская",
-						"up",
-						"80"
-					)
-					+leader(
-						"3",
-						"Глеб Винокуров",
-						"down",
-						"44"
-					)
-					+leader(
-						"4",
-						"Александра Киаби",
-						"down",
-						"30"
-					)
-					+leader(
-						"5",
-						"Алена Миланская",
-						"up",
-						"25"
-					)
-					+leader(
-						"6",
-						"Глеб Винокуров",
-						"down",
-						"15"
-					)
+		.files.has-padding
+			.file
+				.file__ext.red pdf
+				.file__name: a(href="#") Требования к решению PDF
+				.file__download: a(href="#")
 
-		+comments
+		h2.textbox__name Критерии оценки задачи
+		.ratings
+			mixin rating(name, count)
+				.ratingtable
+					.ratingtable__name= name
+					.ratingtable__counts 
+						.ratingbox.has-no-padding
+									.ratingbox__select.js-ratingbox-view(data-score="#{count}")
+					.ratingtable__num= count
+			+rating("Анализ", "4")
+			+rating("Креатив", "6")
+			+rating("Дизайн", "9")
+			+rating("Управление", "2")
+	
+	.greybox
+		.fl-right
+			+pager-small
+		.greybox__name: h3 Таблица лидеров
+		.greybox__content
+			.leaders
+				.leader-header
+					.leader-col.leader__place
+						a(href="#").sort-desc.is-active
+							span Место
+					.leader-col.leader__name
+						a(href="#")
+							span Имя
+					.leader-col.leader__changes
+						a(href="#")
+							span Изменения
+					.leader-col.leader__dinamics
+						a(href="#").is-active
+							span Динамика
+					.leader-col.leader__scores
+						a(href="#")
+							span Баллы (1000)
+				
+				mixin leader(num, name, changes, persentage) 
+					.leader
+						.leader-col.leader__place= num
+						.leader-col.leader__name
+							.pic
+								a(href="#")
+									img(src="img/content/solutions-pic.png", alt="")
+							.name
+								a(href="#")= name
+						.leader-col.leader__changes
+							if changes == "down" 
+								.count 3
+								.status.down
+							else 
+								.count 10
+								.status.up
+						.leader-col.leader__dinamics: img(src="img/content/leader-dinamics.png", alt="")
+						.leader-col.leader__scores
+							.scoregraph
+								.scoregraph__wrap
+									.scoregraph__in(style="width:#{persentage}%")
+							.scoregraph__count #{persentage}0
+				+leader(
+					"1",
+					"Александра Киаби",
+					"down",
+					"90"
+				) 
+				+leader(
+					"2",
+					"Алена Миланская",
+					"up",
+					"80"
+				)
+				.leader.is-active
+					.leader-col.leader__place 5
+					.leader-col.leader__name
+						.pic
+							a(href="#")
+								img(src="img/content/solutions-pic.png", alt="")
+						.name
+							a(href="#") Антон Мишин
+					.leader-col.leader__changes
+						.count 0
+					.leader-col.leader__dinamics: img(src="img/content/leader-dinamics.png", alt="")
+					.leader-col.leader__scores
+						.scoregraph
+							.scoregraph__wrap
+								.scoregraph__in(style="width:90%")
+						.scoregraph__count 90
+				+leader(
+					"3",
+					"Глеб Винокуров",
+					"down",
+					"44"
+				)
+				+leader(
+					"4",
+					"Александра Киаби",
+					"down",
+					"30"
+				)
+				+leader(
+					"5",
+					"Алена Миланская",
+					"up",
+					"25"
+				)
+				+leader(
+					"6",
+					"Глеб Винокуров",
+					"down",
+					"15"
+				)
+	.contentbox-wrap
+		.comments-name
+			h3.inline.textbox__name Обсуждение 
+			.inline.comments-count 236
+		
+		.comments-write.js-comment-write
+			.pic: img(src="img/ava-mishin-sm.png", alt="")
+			.content
+				form(action="#comment-write", id="comment-write")
+					a(href="#").join-comments.js-open-comment-write
+					.textarea-desc
+						textarea(placeholder="Ваш комментарий").margin-no
+						.textarea-desc__more
+							.attach: a(href="#") Прикрепить файл
+							.action
+								a(href="#").btn-blue.ripplelink.is-change Написать
+						
+				.files
+					.file
+						.file__ext.red pdf
+						.file__name: a(href="#") Требования к решению PDF
+						.file__remove: a(href="#")
+					.file
+						.file__prev 
+							a(href="#")
+								img(src="img/content/file-prev.png", alt="")
+						.file__name: a(href="#") Print_screen.jpg
+						.file__remove: a(href="#") 
+		
+		.comments-list
+			mixin comment
+				.comment__prev
+					a(href="#") 
+						img(src="img/ava.png", alt="")
+				.comment__meta
+					.name: a(href="#") Андрей Денисов
+					.date 23 мин. назад
+				.comment__content «Московские предприятия снизили выбросы до 40%. На сегодняшний день мы не связываем загрязнение воздуха с их выбросами. Причина - это воздействие автотранспорта и сжигание порубочных остатков», - сказал он
+					.answer
+						a(href="#") Ответить
+			.comment
+				+comment
+				.comment
+					+comment
+					.comment
+						+comment
+			.comment
+				+comment
+			
+		+pager

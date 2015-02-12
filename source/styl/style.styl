@@ -25,9 +25,9 @@ html
 .page-body
 	overflow-y scroll
 	height 100%
+	min-width 1320px
 	font-main()
 	background #eeeeee
-	min-width 1320px
 .page-white
 	background color-white
 .ilkome
@@ -36,29 +36,38 @@ html
 	position relative
 	width 100%
 	min-width 1270px
-	min-height 100%
+	height 100%
 @-moz-document url-prefix()
 	.ilkome
 		height 100%
 
-#menu
-	z-index 100
-	position fixed
-	left 0
-	top 0
-	opacity 0
+.sysmenu
 	background #fff
-	&:hover
-		opacity 1
-	a
+	ul
 		display inline-block
-		padding 5px
+		li
+			text-align left
+			white-space nowrap
+	&.is-fixed
+		position fixed
+		z-index 100
+		left 0
+		top 0
+		opacity 0
+		&:hover
+			opacity 1
+		ul
+			lino()
+		li
+			float left
+		a
+			display inline-block
+			padding 5px
 
 .l-left
 	display table-cell
 	position relative
 	width 260px
-	height auto
 	vertical-align top
 	background color-black
 	@media small
@@ -80,10 +89,14 @@ html
 			padding-top 20px
 	@media small
 		padding-left 280px
-		//padding-top 115px
 
 .row
 	dt()
+.row-auto
+	dt("auto")
+	> .col 
+		width auto
+		vertical-align middle
 .col
 	width 100%
 	dtc()
@@ -121,7 +134,7 @@ html
 
 //	#btns
 // ===============================================
-.btn 
+.btn
 	display inline-block
 	width 200px
 	padding 20px 10px
@@ -136,6 +149,10 @@ html
 	border-radius 3px
 	&:hover
 		color color-white
+.btn-small
+	width 150px
+	padding 10px 10px
+	font-light()
 .btn-blue
 	@extend .btn
 	background color-blue
@@ -195,12 +212,39 @@ html
 	padding-top 60px
 	&.has-small-padding
 		padding-top 30px
+	p
+		font-light()
+		line-height 30px
 .contentbox__name
-	padding-bottom 40px
+	position relative
+	&.has-padding
+		padding-bottom 40px
+	clearfix()
 	.desc
 		color color-grey
 		font-size 13px
 		text-transform uppercase
+	.id
+		float right
+		text-transform uppercase
+		color color-grey
+		font-size 13px
+		strong
+			color color-grey-dark
+	.pic
+		position absolute 
+		top 0px
+		left -45px
+		img
+			border 3px solid #ededed
+			border-radius 32px
+		@media small
+			left -75px
+			img
+				border 10px solid #ededed
+.contentbox__meta
+	.col
+		width 25%
 .contentbox-text
 	padding 90px 0 0px 0
 	font-light()
@@ -223,6 +267,7 @@ html
 	margin 0 auto
 	padding 0 40px
 	full()
+
 
 ol.list-offer
 	lino()
@@ -252,8 +297,10 @@ ol.list-offer
 //	#blocks
 .close-popup
 	float left
-	background color-grey-opacity
 	border-radius 4px
+	anim()
+	&:hover
+		background color-grey-opacity
 	a
 		display block
 		width 75px
@@ -266,6 +313,13 @@ ol.list-offer
 	position relative
 	padding-left 40px
 	text-align left
+	&.is-right
+		padding-left 0
+		padding-right 40px
+		text-align right
+		.day
+			left inherit
+			right 0
 	.day
 		position absolute 
 		left 0px 
@@ -281,12 +335,52 @@ ol.list-offer
 	.year
 		font-size 11px
 		color color-grey
+	
 .membersblock
 	display inline-block
-	padding-right 30px
 	color color-grey-dark
-	font-size 30px
-	background url("../img/icons/membersblock.png") right 13px no-repeat
+	font-size 20px
+	background url("../img/icons/membersblock.png") right center no-repeat
+	&:after
+		content " "
+		display inline-block
+		margin-left 5px
+		width 19px
+		height 12px
+		background url("../img/icons/membersblock.png") right center no-repeat
+.solutionsblock
+	display inline-block
+	color color-grey-dark
+	font-size 20px
+	&:after
+		content " "
+		display inline-block
+		margin-left 5px
+		width 11px
+		height 15px
+		background url("../img/icons/solutionsblock.png") right center no-repeat
+.commentsblock
+	display inline-block
+	color color-grey-dark
+	font-size 20px
+	&:after
+		content " "
+		display inline-block
+		margin-left 5px
+		width 23px
+		height 15px
+		background url("../img/icons/commentsblock.png") right center no-repeat
+.viewsblock
+	display inline-block
+	color color-grey-dark
+	font-size 20px
+	&:after
+		content " "
+		display inline-block
+		margin-left 5px
+		width 20px
+		height 12px
+		background url("../img/icons/viewsblock.png") right center no-repeat
 .rub
 	display inline-block
 	width 18px
@@ -358,6 +452,80 @@ ol.list-offer
 .booty__date
 	font-size 13px
 	text-transform uppercase
+
+//	#comments
+.comments-name
+	padding-bottom 30px
+.comments-count
+	margin-left 5px
+	color color-grey
+	font-size 16px
+.comments-write
+	position relative
+	padding-bottom 30px
+	.pic
+		position absolute 
+		left 0px 
+		top 0px
+	.content
+		padding-left 70px
+		textarea
+			height 55px
+			padding-top 15px
+			padding-bottom 10px
+			&.is-active
+				height 300px
+	.textarea-desc__more
+		display none
+		.action
+			float right
+			margin -15px -20px 0 0
+			position relative
+			.btn-blue
+				padding 15px
+				border-radius 0
+	.files
+		display none
+.comments-list
+	padding-bottom 20px
+.comment
+	position relative
+	padding-left 70px
+	padding-bottom 30px
+	.comment
+		margin-top 40px
+		padding-bottom 0
+.comment__prev
+	position absolute 
+	left 0px 
+	top 0px
+.comment__meta
+	.name
+		float left
+		padding-bottom 5px
+		a
+			color color-grey
+			&:hover
+				color color-red
+	.date
+		color #c2c2c2
+		float right
+.comment__content
+	clear both
+	font-size 16px
+	font-light()
+	.answer
+		padding-top 5px
+		a
+			display block
+			padding-left 20px
+			color color-grey
+			font-size 13px
+			font-regular()
+			background url("../img/icons/answer.png") 0 center no-repeat
+			&:hover
+				color color-red
+		
 
 //	#infobox
 .infoboxs
@@ -589,8 +757,121 @@ ol.list-offer
 //	#greybox
 .greybox
 	background color-grey-opacity
-	margin 0 -20px 60px -20px
-	padding 60px 0 40px 0
+	margin 100px -20px 100px -20px
+	padding 30px 50px
+.greybox__name
+	padding-bottom 30px
+	h3
+		font-size 13px
+		text-transform uppercase
+		font-regular()
+		color color-grey
+		margin-bottom 0
+.greybox__content
+	position relative
+	
+
+//	#statustime
+.statustime
+	padding 0 10px
+	border-left 4px solid #c2c2c2
+	border-right 4px solid #c2c2c2
+	border-bottom 1px solid #c2c2c2
+	margin-bottom 40px
+.statustime__info
+	.move
+		padding-bottom 10px
+		color color-red
+		text-transform uppercase
+		font-size 13px
+.statustime__content
+	position relative
+	padding-top 20px
+	clearfix()
+	.line__event
+		z-index 2
+		position absolute 
+		left 50%
+		margin-left -2.5px 
+		bottom 65px
+		&.is-right
+			.text
+				left -170px
+				border-radius 4px 4px 0 4px
+				&:after
+					left 150px
+					background url("../img/line-event-bg-right.png") no-repeat
+		.dot
+			position absolute 
+			left 0px 
+			bottom 0px
+			width 5px
+			height 5px
+			background #b64c4c
+			border-radius 3px
+		.text
+			position absolute 
+			left 23px 
+			bottom 2.5px
+			width 150px
+			padding 15px
+			color color-white
+			text-align left
+			background #c87979
+			border-radius 4px 4px 4px 0
+			&:after
+				content " "
+				position absolute 
+				left -13px 
+				bottom 0px
+				width 13px
+				height 15px
+				background url("../img/line-event-bg.png") no-repeat
+	.line__rating
+		z-index 2
+		position absolute 
+		left 22px 
+		bottom -45px
+
+//	#daysbox
+.monthsbox
+	dt("auto")
+.monthsbox-item
+	position relative
+	dtc()
+	&.has-border
+		border-left 4px solid #c2c2c2
+	.month
+		position absolute 
+		width 100%
+		bottom -40px
+		left 0px 
+		text-align center
+		vertical-align bottom
+		color #a6a6a6
+		text-transform uppercase
+.daysbox
+	dt("auto")
+	position relative
+.daysbox__day
+	dtc()
+	position relative
+	min-width 20px
+	padding 140px 0px 20px 0px
+	text-align center
+	font-size 13px
+	color color-grey
+	font-light()
+	border-left 1px solid #e3e3e3
+	border-right 1px solid #e3e3e3
+	&:first-child
+		border-left 0
+	&:last-child
+		border-right 0
+	&.is-active
+		border-right 2px solid #d5a0a0
+		border-left 2px solid #d5a0a0
+		background #f2ecec
 
 //	#faq
 .faq-item.is-active
@@ -800,7 +1081,110 @@ ol.list-offer
 			color color-red
 	li.is-active a
 		color color-red
-		
+
+//	#leaders
+.leaders
+	margin 0 -50px
+.leader-header, .leader
+	dt()
+	font-size 16px
+	anim()
+.leader-header
+	a
+		display block
+		color #B2B2B2
+		text-transform uppercase
+		font-size 13px
+		&:hover
+			color color-blue
+			span
+				background url("../img/icons/arrow-down-blue.png") right center no-repeat
+		&.is-active 
+			color color-blue
+			span
+				background url("../img/icons/arrow-down-blue.png") right center no-repeat
+			&.sort-desc
+				span
+					background url("../img/icons/arrow-up-blue.png") right center no-repeat
+	span
+		display inline-block
+		padding-right 15px
+		background url("../img/icons/arrow-down-grey.png") right center no-repeat
+.leader
+	font-light()
+	border-left 4px solid transparent
+	border-right 4px solid transparent
+	&:hover
+		background alpha(#ececec, .7)
+	&.is-active
+		background #ececec
+		border-color color-red
+		border-color color-red
+.leader-col
+	dtc("m")
+	padding 15px 10px
+	@media small
+		padding 15px 20px
+	@media fullhd
+		padding 15px 30px
+	
+.leader__place
+	padding-left 50px
+	width 10%
+.leader__name
+	width 20%
+	clearfix()
+	.pic
+		float left
+		padding-right 15px
+		img
+			display block
+	.name
+		float left
+		padding-top 2px
+		a
+			color color-grey
+			font-light()
+			&:hover
+				color color-red
+.leader__changes
+	width 15%
+	.count
+		float left
+	.status
+		float left
+		width 18px
+		height 18px
+		margin-top 2px
+		margin-left 15px
+		&.up
+			background url("../img/icons/rating-up.png") no-repeat
+		&.down
+			background url("../img/icons/rating-down.png") no-repeat
+.leader__dinamics
+	width 20%
+	img
+		display block
+		width 100%
+.leader__scores
+	width 30%
+	padding-right 50px
+	.scoregraph
+		dtc("m")
+		width 100%
+		padding-right 10px
+	.scoregraph__wrap
+		height 5px
+		overflow hidden
+		background #dddddd
+		border-radius 4px
+	.scoregraph__in
+		height 5px
+		border-radius 4px
+		background #c87979
+	.scoregraph__count
+		dtc("m")
+	
 // #left
 .left-logo
 	width 260px
@@ -1031,7 +1415,24 @@ ol.list-offer
 	margin-top -20px
 	font-size 20px
 	font-regular()
-		
+.ratingtable
+	dt()
+	padding-bottom 20px
+.ratingtable__name
+	dtc()
+	width 290px
+	color color-grey
+	text-transform uppercase
+	vertical-align middle
+.ratingtable__counts
+	dtc()
+	vertical-align middle
+.ratingtable__num
+	dtc()
+	width 280px
+	text-align right
+	vertical-align middle
+
 //	#search
 .search
 	position relative
@@ -1112,11 +1513,16 @@ ol.list-offer
 		border-radius 0 4px 4px 0
 		&:hover
 			background-color #e7e7e7 !important
-		
+
 //	#sort-menu
 .sort-menu
 	float right
 	padding-top 30px
+	&.is-float-left
+		float left
+		padding-left 30px
+	&.is-float-right
+		padding-right 30px
 	ul
 		lino()
 		clearfix()
@@ -1199,9 +1605,8 @@ ol.list-offer
 .tableview-item__date,
 .tableview-item__members,
 .tableview-item__price
-	display table-cell
+	dtc()
 	padding 20px 10px
-	vertical-align middle
 .tableview-item__num
 	width 10px
 	padding-left 20px
@@ -1237,6 +1642,12 @@ ol.list-offer
 	text-align left
 	@media fullhd
 		width 140px
+	.members
+		display inline-block
+		padding-right 30px
+		color color-grey-dark
+		font-size 30px
+		background url("../img/icons/membersblock-big.png") right 13px no-repeat
 .tableview-item__price
 	width 170px
 	text-align right
@@ -1259,13 +1670,13 @@ ol.list-offer
 	position relative
 	box-sizing content-box
 	width auto
-	margin 1px 1px
-	margin-top -46px
+	margin 2px 2px
+	margin-top -47px
 	height 20px
 	padding 15px 20px 10px 20px
 	background color-grey-opacity
 	border 0
-	border-radius 4px
+	border-radius 0 0 4px 4px
 	overflow hidden
 	clearfix()
 	.attach
@@ -1285,6 +1696,41 @@ ol.list-offer
 		float right
 		display none
 
+.textbox
+	margin-bottom 20px
+	p
+		margin-bottom 50px
+		font-light()
+		line-height 30px
+	ul, ol
+		margin-bottom 50px
+.textbox__name
+	margin-bottom 15px
+	font-16-ttu()
+.textbox__subname
+	margin-bottom 10px
+	font-16-ttu()
+	text-transform none
+	
+	
+//	#textline
+.textline
+	display inline-block
+	text-align left
+	padding-bottom 30px
+.textline__info
+	padding-bottom 10px
+	font-size 13px
+	color color-grey
+	text-transform uppercase
+.textline__content
+	position relative
+	font-16-ttu()
+	.price
+		white-space nowrap
+		color color-red
+	font-size 20px
+
 //	#userprev
 .userprev
 	padding-bottom 40px
@@ -1300,14 +1746,6 @@ ol.list-offer
 	width 100%
 	font-size 13px
 	clearfix()
-	/*&.is-big
-		height 80px
-		box-sizing content-box
-		margin -20px 0px 20px -20px
-		padding 20px
-		border-radius 0
-		.fl-right
-			padding-top 10px*/
 	&.is-fixed
 		@media small
 			z-index 3
@@ -1315,14 +1753,16 @@ ol.list-offer
 			width 100%
 			left 0
 			top 0px
-			.upperbar-in
-				@media small
+			@media small
+				.upperbar-in
 					overflow hidden
 					margin-left 260px
 					margin-right 0px
 					padding 0 20px
 					border-radius 0
 					box-shadow 0 0 8px rgba(0, 0, 0, 0.21)
+					&.has-bg-grey
+						background #f5f5f5
 	.upperbar-in
 		overflow hidden
 		height 75px
@@ -1347,6 +1787,18 @@ ol.list-offer
 			border-bottom-color #eeeeee
 			border-width 26px
 			margin-left -26px
+	.col
+		padding 0 10px
+		&:first-child
+			padding-left 0
+		&:last-child
+			padding-right 0
+	.col-nav
+		width 200px
+	.col-price
+		width 200px
+		padding-right 30px
+		text-align right
 .upperbar__info
 	float left
 	display table
@@ -1377,6 +1829,19 @@ ol.list-offer
 			color color-grey-dark
 			&:hover
 				color color-red
+.upperbar__price
+	text-align right
+	display inline-block
+	.name
+		text-align left
+		padding-bottom 10px
+		font-size 13px
+		color color-grey
+		text-transform uppercase
+	.price
+		margin-top -10px
+		font-size 20px
+		color color-red
 
 //	#upper-contacts
 .upper-contacts
@@ -1417,7 +1882,65 @@ ol.list-offer
 		.black
 			display inline-block
 			color color-grey-dark
-			
+	.status
+		float left
+		display inline-block
+		width 18px
+		height 18px
+		margin-top 20px
+		margin-left 15px
+		&.up
+			background url("../img/icons/rating-up.png") no-repeat
+		&.down
+			background url("../img/icons/rating-down.png") no-repeat
+
+//	#user-ratingview
+.user-ratingview
+	padding-bottom 30px		
+.user-rview-item
+	dt("auto")
+	margin-bottom 2px
+	background #f5f5f5
+	border-radius 4px
+	border-left 4px solid transparent
+	border-right 4px solid transparent
+	anim()
+	&:hover
+		background color-white
+	&.is-active
+		border-color color-red
+		border-color color-red
+		.user-rview-item__num
+			color color-red
+		a
+			color color-red
+.user-rview-item__num
+.user-rview-item__pic
+.user-rview-item__name
+.user-rview-item__rating
+	dtc()
+	vertical-align middle
+	padding 20px 20px
+.user-rview-item__num
+	width 40px
+	padding-right 0
+.user-rview-item__pic
+	width 50px
+	img
+		anim()
+		&:hover
+			opacity .7
+.user-rview-item__name
+	text-transform uppercase
+	line-height 20px
+	a
+		color color-grey-dark
+		&:hover
+			color color-red
+.user-rview-item__rating
+	width 210px
+	padding-right 0
+
 
 //	#plugins
 // ===============================================

@@ -1,4 +1,25 @@
 //- #mixin
+mixin sysmenu(fixed)
+
+	.sysmenu(
+		class=typeof 
+		fixed === "undefined" ? undefined : "is-fixed"
+	)
+		ul
+			li: a(href="task-item.html") task-item-
+			li: a(href="faq.html") faq-
+			li: a(href="profile-solver.html") profile-solver- 
+			li: a(href="statistics.html") statistics-
+			li: a(href="task-add.html") task-add-
+			li: a(href="about.html") about
+			li: a(href="booty.html") booty
+			li: a(href="offer.html") offer
+			li: a(href="partners.html") partners
+			li: a(href="profile-seeker.html") profile-seeker
+			li: a(href="rating.html") rating
+			li: a(href="solution.html") solution
+			li: a(href="tasks.html") tasks
+			li: a(href="training.html") training
 
 mixin upper-search
 	.search.js-search
@@ -56,51 +77,3 @@ mixin pager-small
 			li: a(href="#") 
 			li: a(href="#") 
 			li.next: a(href="#")
-
-mixin comments
-	.comments-name
-		h3.inline Обсуждение 
-		.inline.comments-count 236
-	
-	.comments-write
-		.pic: img(src="img/user-ava.png", alt="")
-		.content
-			form(action="#")
-				a(href="#").join-comments.js-open-comment-write
-				textarea(placeholder="Ваш комментарий") Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористиче. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки,скрытой в середине абзаца. Также все другие известные генераторы.
-				.meta
-					a(href="#").attach-file Прикрепить файл
-					input(type="submit", value="Отправить")
-		.files
-			.file
-				.file__ext.red pdf
-				.file__name: a(href="#") Требования к решению PDF
-				.file__download: a(href="#")
-			.file
-				.file__prev 
-					a(href="#")
-						img(src="img/content/file-prev.png", alt="")
-				.file__name: a(href="#") Print_screen.jpg
-				.file__download: a(href="#") 
-	
-	.comments-list
-		mixin comment
-			.comment__prev
-				a(href="#") 
-					img(src="img/content/user-1.jpg", alt="")
-			.comment__content
-				.meta
-					.name: a(href="#") Андрей Денисов
-					.date 23 мин. назад
-				.content «Московские предприятия снизили выбросы до 40%. На сегодняшний день мы не связываем загрязнение воздуха с их выбросами. Причина - это воздействие автотранспорта и сжигание порубочных остатков», - сказал он
-				a(href="#").answer Ответить
-		.comment
-			+comment
-			.comment
-				+comment
-				.comment
-					+comment
-		.comment
-			+comment
-		
-		+pager

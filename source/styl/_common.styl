@@ -17,7 +17,6 @@ font-regular()
 	font-weight 500
 font-bold()
 	font-weight 700
-
 font-main()
 	font-size 14px
 	color color-grey-dark
@@ -29,7 +28,7 @@ font-header()
 	color #252728
 	font-weight normal
 font-form()
-	color #5f5f5f
+	color color-grey-dark
 	font-size 16px
 	font-roboto()
 font-grey()
@@ -41,7 +40,11 @@ font-16-ttu()
 	color color-grey-dark
 	font-weight 500
 	text-transform uppercase
-
+.font-16-ttu
+	font-16-ttu()
+.color-red
+	color color-red
+	font-regular()
 
 //	#reset
 // ===============================================
@@ -53,17 +56,19 @@ font-16-ttu()
 
 //	#list
 ul
-	margin 0 0 15px 0px
+	margin 5px 0 40px 0px
 	li
-		margin 0 0 20px 15px
-		list-style disc outside
+		margin 0 0 20px 0px
+		list-style disc inside
+		font-light()
 		ul, ol
 			margin 15px 0 10px 0
 ol
-	margin 0 0 15px 0
+	margin 5px 0 40px 0
 	li
-		margin 0 0 15px 15px
+		margin 0 0 15px 0px
 		list-style decimal inside
+		font-light()
 		ul, ol
 			margin 15px 0 10px 0
 .no-list-style 
@@ -208,8 +213,6 @@ input[type="submit"]
 	padding 15px 30px
 	border none
 	anim()
-	&:hover
-		background #1aa257
 	&:active
 		opacity 0.8
 
@@ -221,7 +224,7 @@ textarea
 	padding 20px
 	full()
 	background #fff
-	border 1px solid #d6d6d6
+	border 2px solid #d6d6d6
 	border-radius 4px
 	anim()
 	&:hover

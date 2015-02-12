@@ -1,5 +1,4 @@
 node_modules/
-site/*.html
 site/css/style.css
 *.sublime-project
 *.sublime-workspace

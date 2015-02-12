@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!--	proscom.ru-->
+<!--	Simple Communication-->
+<html>
+  <head>
+    <title>Black Bear</title>
+    <!-- meta-->
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- styles-->
+    <link href="css/jquery.remodal.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- scripts-->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.raty.js" type="text/javascript"></script>
+    <script src="js/jquery.remodal.min.js" type="text/javascript"></script>
+    <script src="js/functions.js" type="text/javascript"></script>
+  </head>
+  <div class="sysmenu is-fixed">
+    <ul>
+      <li><a href="task-item.html">task-item-</a></li>
+      <li><a href="faq.html">faq-</a></li>
+      <li><a href="profile-solver.html">profile-solver- </a></li>
+      <li><a href="statistics.html">statistics-</a></li>
+      <li><a href="task-add.html">task-add-</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="booty.html">booty</a></li>
+      <li><a href="offer.html">offer</a></li>
+      <li><a href="partners.html">partners</a></li>
+      <li><a href="profile-seeker.html">profile-seeker</a></li>
+      <li><a href="rating.html">rating</a></li>
+      <li><a href="solution.html">solution</a></li>
+      <li><a href="tasks.html">tasks</a></li>
+      <li><a href="training.html">training</a></li>
+    </ul>
+  </div>
+  <body class="page-body">
+    <div class="ilkome">
+      <div class="l-left">
+        <div class="left-logo"><a href="/"></a></div>
+        <div class="left-user"><a href="#" class="settings"></a>
+          <div class="notify"><a href="#">16</a></div>
+          <div class="prev">
+            <div class="rating"><img src="img/content/user-rating.png" alt=""></div>
+            <div class="pic"><img src="img/ava-mishin.png" alt=""></div>
+          </div>
+          <div class="score"> 
+            <div class="big">1 120 </div>/ 5 000
+          </div>
+        </div>
+        <div class="left-menu">
+          <ul>
+            <li class="menu-tourns"><a href="#">Турниры</a></li>
+            <li class="menu-train"><a href="#">Тренировка </a></li>
+            <li class="menu-rating"><a href="#">Рейтинг</a></li>
+            <li class="menu-booty"><a href="#">Трофеи</a></li>
+            <li class="menu-faq"><a href="#">Вопросы</a></li>
+            <li class="menu-rating is-active"><a href="#">Активный</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="l-right">
+        <div class="hide">
+          <div data-remodal-id="common-info" class="popbox remodal">
+            <div class="popbox__name">
+              <h3>Общие сведения</h3>
+            </div>
+            <div class="popbox__content">
+              <div class="infoline">
+                <div class="infoline__name">Пол</div>
+                <div class="infoline__content">
+                  <div class="row row-2">
+                    <div class="col col-40">
+                      <select data-placeholder="Пол" class="full select-grey">
+                        <option value="">Мужской</option>
+                        <option value="">Женский</option>
+                      </select>
+                    </div>
+                    <div class="col col-60"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="infoline">
+                <div class="infoline__name">Место проживания</div>
+                <div class="infoline__content">
+                  <div class="row row-2">
+                    <div class="col">
+                      <input type="text" placeholder="Страна" class="full">
+                    </div>
+                    <div class="col">
+                      <input type="text" placeholder="Город" class="full">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="infoline">
+                <div class="infoline__name">Контакты</div>
+                <div class="infoline__content">
+                  <div class="row row-2">
+                    <div class="col col-40">
+                      <select data-placeholder="Телефон" class="full select-grey">
+                        <option value="">Телефон</option>
+                        <option value="">Другой телефон</option>
+                      </select>
+                    </div>
+                    <div class="col col-60">
+                      <input type="text" placeholder="Телефон" class="full">
+                    </div>
+                  </div>
+                  <div class="row row-2">
+                    <div class="col col-40">
+                      <select data-placeholder="Эл. Почта" class="full select-grey">
+                        <option value="">Эл. Почта</option>
+                        <option value="">Другая Эл. Почта</option>
+                      </select>
+                    </div>
+                    <div class="col col-60">
+                      <input type="text" placeholder="Эл. Почта" class="full">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="infoline">
+                <div class="infoline__name">Социальные сети</div>
+                <div class="infoline__content">
+                  <div class="row row-2">
+                    <div class="col col-40">
+                      <select data-placeholder="Социальные сети" class="full select-grey">
+                        <option value="">Социальные сети</option>
+                        <option value="">Другие Социальные сети</option>
+                      </select>
+                    </div>
+                    <div class="col col-60">
+                      <input type="text" placeholder="Ссылка" class="full">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="infoline">
+                <div class="infoline__name"><a href="#" class="btn-blue-dotted js-addfield-link">Добавить еще</a></div>
+              </div>
+            </div>
+            <div class="popbox__action"><a href="#" class="btn-grey ripplelink remodal-confirm">Отменить</a><a href="#" class="btn-green ripplelink remodal-confirm">Сохранить</a></div>
+          </div>
+        </div>
+        <div class="upperbar js-upperbar">
+          <div class="upperbar-in">
+            <div class="upperbar__info">
+              <div class="num">4</div>
+              <div class="pic"><a href="#"><img src="img/content/logo-sm-1.png" alt=""></a></div>
+              <div class="name"><a href="#">Придумать название магазина доставки сладкой продукции</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-2">
+          <div class="col">
+            <div class="row row-2">
+              <div class="infoboxs-col-2">
+                <div class="infobox infoboxtext">
+                  <div class="infobox-in">
+                    <div class="infobox__meta">
+                      <div class="name">
+                        <h3>Контактное лицо</h3>
+                      </div>
+                      <div class="menu"><a href="#common-info"> </a></div>
+                    </div>
+                    <div class="infobox__content">
+                      <div class="infoline">
+                        <div class="infoline__name">Имя</div>
+                        <div class="infoline__content">Владимир Горюнов</div>
+                      </div>
+                      <div class="infoline">
+                        <div class="infoline__name">Локация</div>
+                        <div class="infoline__content">Россия, Москва</div>
+                      </div>
+                      <div class="infoline">
+                        <div class="infoline__name">Имя</div>
+                        <div class="infoline__content">Владимир Горюнов</div>
+                      </div>
+                      <div class="infoline">
+                        <div class="infoline__name">Website</div>
+                        <div class="infoline__content"><a href="#">www.proscom.ru</a></div>
+                      </div>
+                      <div class="infoline no-padding">
+                        <div class="infoline__name">Ссылки</div>
+                        <div class="infoline__content">
+                          <div class="social-links">
+                            <ul>
+                              <li class="fb"><a href="#"></a></li>
+                              <li class="vk"><a href="#"></a></li>
+                              <li class="tw"><a href="#"></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="infobox infoboxtext">
+                  <div class="infobox-in">
+                    <div class="infobox__meta">
+                      <div class="name">
+                        <h3>Общая информация об организации</h3>
+                      </div>
+                      <div class="menu"><a href="#common-info"> </a></div>
+                    </div>
+                    <div class="infobox__content">
+                      <h3>Подзаголовок</h3>
+                      <p>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. </p>
+                      <p>Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или "невозможных" слов. Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="infoboxs-col-2">
+                            <div class="infobox infobox_statistic">
+                              <div class="infobox-in">
+                                <div class="infobox__price">5 000 000
+                                  <div class="rub"></div></div>
+                                <div class="infobox__count">
+                                  <div class="num">10</div>
+                                  <div class="desc">задач</div>
+                                </div>
+                                <div class="infobox__more"><a href="#">Посмотреть все задачи</a></div>
+                              </div>
+                            </div>
+                            <div class="infobox infobox_statistic">
+                              <div class="infobox-in">
+                                <div class="infobox__price">50
+                                  <div class="rub"></div></div>
+                                <div class="infobox__count">
+                                  <div class="num">18 970</div>
+                                  <div class="desc">просмотров</div>
+                                </div>
+                                <div class="infobox__more"><a href="#">Посмотреть все задачи</a></div>
+                              </div>
+                            </div>
+                            <div class="infobox infobox_statistic">
+                              <div class="infobox-in">
+                                <div class="infobox__price">613
+                                  <div class="rub"></div></div>
+                                <div class="infobox__count">
+                                  <div class="num">9 676</div>
+                                  <div class="desc">участников</div>
+                                </div>
+                                <div class="infobox__more"><a href="#">Посмотреть все задачи</a></div>
+                              </div>
+                            </div>
+                            <div class="infobox infobox_statistic">
+                              <div class="infobox-in">
+                                <div class="infobox__price">613
+                                  <div class="rub"></div></div>
+                                <div class="infobox__count">
+                                  <div class="num">988</div>
+                                  <div class="desc">решений</div>
+                                </div>
+                                <div class="infobox__more"><a href="#">Посмотреть все задачи</a></div>
+                              </div>
+                            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-copy">2014 © Все права защищены</div>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="#">О проекте</a></li>
+            <li><a href="#">Партнеры</a></li>
+            <li><a href="#">Политика конфедициальности</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

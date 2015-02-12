@@ -37,9 +37,13 @@ dt(auto = false)
 	else
 		table-layout fixed
 	
-dtc()
+dtc(center = false)
 	display table-cell 
-	vertical-align top
+	if center
+		vertical-align middle
+	else
+		vertical-align top
+	
 	
 .inline
 	display inline

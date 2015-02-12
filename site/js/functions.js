@@ -4,10 +4,14 @@
 
 	ilko.me
 	Ilya Komichev
+
+	Description:
+		auto - function available always
+		plugin - jQuery plugin
+		function - need load function
 */
 
 $(document).ready(function(){
-
 
 	//	#preventDefault
 	//	auto
@@ -16,6 +20,20 @@ $(document).ready(function(){
 		e.preventDefault();
 	});
 
+	//	comment write
+	//	auto
+	$(".js-comment-write").on("click", function(e){
+		var thisis = $(this),
+			commentBox = thisis.find(".files"),
+			textarea = thisis.find("textarea"),
+			metaBox = thisis.find(".textarea-desc__more");
+
+		metaBox.fadeIn();
+		textarea.addClass("is-active").focus();
+		commentBox.slideDown();
+
+
+	});
 
 	//	hide show text
 	//	auto
