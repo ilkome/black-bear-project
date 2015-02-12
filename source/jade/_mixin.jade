@@ -1,5 +1,5 @@
-
 //- #mixin
+
 mixin upper-search
 	.search.js-search
 		.search-btn
@@ -49,15 +49,13 @@ mixin pager
 				a(href="#")
 
 mixin pager-small
-	ul.pager
-		li.prev.is-disable: a(href="#")
-		li.is-active: a(href="#") 
-		li: a(href="#") 
-		li: a(href="#") 
-		li: a(href="#") 
-		li: a(href="#") 
-		li: a(href="#") 
-		li.next: a(href="#")
+	.pager.pager-small
+		ul
+			li.prev.is-disable: a(href="#")
+			li.is-active: a(href="#") 
+			li: a(href="#") 
+			li: a(href="#") 
+			li.next: a(href="#")
 
 mixin comments
 	.comments-name

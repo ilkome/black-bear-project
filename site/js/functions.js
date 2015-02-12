@@ -83,7 +83,7 @@ $(document).ready(function(){
 	});
 
 
-	//	extra ratingbox
+	//	ratingbox
 	//	plugin
 	// ===============================================
 	$('.js-ratingbox').raty({
@@ -93,6 +93,14 @@ $(document).ready(function(){
 		starType   : 'div', 
 		number     : '10', 
 		score      : '1',
+	});
+	$('.js-ratingbox-view').raty({
+		starType   : 'div',
+		number     : '10',
+		readOnly   : true,
+		score: function() {
+			return $(this).attr('data-score');
+		},
 	});
 
 

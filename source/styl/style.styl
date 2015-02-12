@@ -15,7 +15,7 @@
 
 
 small = "(min-height 700px) and (min-width 1300px)"
-fullhd = "(min-height 900px) and (min-width 1800px)"
+fullhd = "(min-height 850px) and (min-width 1700px)"
 
 
 //	#layout
@@ -72,7 +72,7 @@ html
 	display table-cell 
 	position relative
 	width 100%
-	padding 20px 20px 80px 20px
+	padding 20px 20px 130px 20px
 	full()
 	vertical-align top
 	anim()
@@ -97,14 +97,17 @@ html
 .col-70
 	width 70%
 	padding-left 10px
-	
 .row-2
 	> .col
 		width 50%
+		&.col-40
+			width 40%
+		&.col-60
+			width 60%
 	> .col:first-child
-		padding-right 15px
+		padding-right 10px
 	> .col:last-child
-		padding-left 15px
+		padding-left 10px
 .row-3
 	> .col
 		width 33.333%
@@ -112,7 +115,6 @@ html
 		padding-right 10px
 	> .col:last-child
 		padding-left 10px
-
 .pad-b-80
 	padding-bottom 80px
 
@@ -191,7 +193,8 @@ html
 //	#content
 .contentbox
 	padding-top 60px
-	padding-bottom 30px
+	&.has-small-padding
+		padding-top 30px
 .contentbox__name
 	padding-bottom 40px
 	.desc
@@ -199,7 +202,7 @@ html
 		font-size 13px
 		text-transform uppercase
 .contentbox-text
-	padding 90px 0 50px 0
+	padding 90px 0 0px 0
 	font-light()
 	&.has-small-padding
 		padding-top 30px
@@ -220,7 +223,6 @@ html
 	margin 0 auto
 	padding 0 40px
 	full()
-
 
 ol.list-offer
 	lino()
@@ -328,10 +330,38 @@ ol.list-offer
 	a
 		margin 0 10px	
 
+//	#booty
+.booty
+	clearfix()
+	padding-bottom 40px
+	&:last-child
+		padding-bottom 0
+.booty__pic
+	float left
+	width 100px
+	img
+		width auto !important
+	a:hover
+		opacity .7
+.booty__content
+	overflow hidden
+	padding-top 25px
+	padding-left 20px
+	clearfix()
+.booty__name
+	font-16-ttu()
+	anim()
+	a
+		color color-grey-dark
+		&:hover
+			color color-red
+.booty__date
+	font-size 13px
+	text-transform uppercase
+
 //	#infobox
 .infoboxs
 	position relative
-	padding-bottom 50px
 .infoboxs-col-1
 	wrap()
 	gutter(10px)
@@ -352,8 +382,24 @@ ol.list-offer
 		col(3, 1)
 		@media fullhd
 			col(4, 1)
+.infoboxs-col-2-line
+	wrap()
+	gutter(0px)
+	align(left)
+	.infoboxs-col-wrap
+		col(1, 1)
+		@media fullhd
+			col(2, 1)
 .infobox
-	padding 10px	
+	padding 10px
+	font-light()
+.infoboxtext
+	padding 10px
+	text-align left
+	.infobox-in
+		text-align left
+		@media small
+			padding 30px
 .infobox-in
 	text-align center
 	padding 20px
@@ -366,46 +412,71 @@ ol.list-offer
 	@media small
 		padding 50px 40px
 .infobox__head
-	dt("auto")
+	position relative
 	overflow hidden
 	padding 0 30px
 	height 75px
 	margin-bottom 20px
 	background color-white
 	border-radius 3px
-	.col
-		width auto
-	.pic-in
-		padding 10px 20px 10px 0px
+	.name
+		padding 27px 110px 10px 0px
+		font-16-ttu()
+		white-space nowrap
 		img
+			display block
+			float left
+			margin-top -15px
 			border 10px solid #ededed
 			border-radius 32px
 	.name-in
-		padding 27px 10px 10px 0
+		padding-left 20px
 		overflow hidden
-		font-16-ttu()
+		text-overflow ellipsis
 	.slider-nav
+		position absolute 
+		right 20px 
+		top 0px
 		width 120px
-		position relative
-		
 .infobox__meta
+	position relative
 	clearfix()
 	.name
-		float left
+		text-align left
+		padding-right 20px
 		h3
 			margin 0
 			font-size 13px
 			color color-grey
 			text-transform uppercase
+			font-regular()
+			.desc
+				display inline-block
+				margin-left 5px
+				color color-grey-dark
 	.price
-		float right
+		position absolute 
+		right 0px 
+		top 0px
 		color color-red
 		font-size 16px
 		.rub
 			margin-bottom -3px
+	.menu
+		position absolute 
+		right 0px 
+		top 4px
+		a
+			display block
+			width 14px
+			height 10px
+			background url("../img/icons/menu.png") no-repeat
+			&:hover
+				background url("../img/icons/menu-a.png") no-repeat
+			&:after
+				content " "
+				background url("../img/icons/menu-a.png") no-repeat
 .infobox_empty
-	.booty-in
-		position relative
 	.w1
 		width 40%
 	.w2
@@ -428,6 +499,10 @@ ol.list-offer
 .infobox__content
 	padding-top 30px
 	color color-grey
+	h2, h3, h4
+		font-size 16px
+		color color-grey-dark
+		font-regular()
 	.name
 		padding-bottom 10px
 		font-16-ttu()
@@ -455,6 +530,8 @@ ol.list-offer
 	img
 		display block
 		width 100%
+	.infoline:last-child
+		padding-bottom 0
 .infobox__price
 	font-size 20px
 	color color-red
@@ -472,7 +549,43 @@ ol.list-offer
 		color color-grey
 .infobox__more
 	font-size 13px
-	
+	font-regular()
+
+//	#infoline
+.infoline
+	padding-bottom 25px
+.infoline__name
+	padding-bottom 10px
+	font-size 16px
+	font-regular()
+	color color-grey-dark
+.infoline__content
+	font-size 14px
+	p
+		line-height 25px
+	a
+		color color-grey
+		&:hover
+			color color-red
+	.social-links
+		ul
+			lino()
+		li
+			display inline-block
+			padding-right 10px
+		a
+			display block
+			width 18px
+			height 18px
+			&:hover
+				opacity .7
+		li.fb a
+				background url("../img/icons/fb.png") center center no-repeat
+		li.vk a
+				background url("../img/icons/vk.png") center center no-repeat
+		li.tw a
+				background url("../img/icons/tw.png") center center no-repeat
+
 //	#greybox
 .greybox
 	background color-grey-opacity
@@ -480,8 +593,6 @@ ol.list-offer
 	padding 60px 0 40px 0
 
 //	#faq
-.faq
-	padding-bottom 50px
 .faq-item.is-active
 	.faq-item-quest
 		border-color color-red
@@ -547,7 +658,6 @@ ol.list-offer
 		position fixed
 		top 0px 
 		z-index 10
-		
 .faq-ask-in
 	display none
 	margin-top 115px
@@ -811,7 +921,7 @@ ol.list-offer
 		a
 			width 17px !important
 			height 14px !important
-			background url("../img/icons/arrow-right.png") no-repeat
+			background url("../img/icons/arrow-right.png") no-repeat !important
 			transform rotate(-180deg)
 			&:hover
 				opacity .7
@@ -820,7 +930,7 @@ ol.list-offer
 		a
 			width 17px !important
 			height 14px !important
-			background url("../img/icons/arrow-right.png") no-repeat
+			background url("../img/icons/arrow-right.png") no-repeat !important
 			&:hover
 				opacity .7
 	li.is-disable
@@ -856,19 +966,52 @@ ol.list-offer
 		padding-top 3px
 		font-size 0
 		color color-white
+.pager-small
+	li
+		width 25px
+		&:hover
+			a
+				width 8px
+				height 8px
+				background #9a9a9a
+		&.is-active
+			a
+				width 8px
+				height 8px
+				background #9a9a9a
+
+//	#popbox
+.popbox
+	position relative
+.popbox__name
+	padding-bottom 30px
+	h3
+		margin 0
+		font-16-ttu()
+.popbox__content
+	padding-bottom 10px
+.popbox__action
+	text-align center
+	a
+		margin 0 10px
 
 // #ratingbox-select
 .ratingbox
 	padding-top 10px
 	position relative
 	clearfix()
+	&.has-no-padding
+		padding 0
+		margin-right -20px
 .ratingbox__select
 	float left
 	clearfix()
+	width 100%
+	dt()
 	div
+		dtc()
 		position relative
-		display inline-block
-		width 40px
+		width 10%
 		height 20px
 		&:after
 			display block
@@ -885,6 +1028,7 @@ ol.list-offer
 				background color-red
 .ratingbox__count
 	float right
+	margin-top -20px
 	font-size 20px
 	font-regular()
 		
@@ -1156,14 +1300,14 @@ ol.list-offer
 	width 100%
 	font-size 13px
 	clearfix()
-	&.is-big
+	/*&.is-big
 		height 80px
 		box-sizing content-box
 		margin -20px 0px 20px -20px
 		padding 20px
 		border-radius 0
 		.fl-right
-			padding-top 10px
+			padding-top 10px*/
 	&.is-fixed
 		@media small
 			z-index 3
@@ -1250,7 +1394,30 @@ ol.list-offer
 		margin 0 15px
 	.text 
 		float left
-		
+
+//	#user-level
+.user-level
+	display block
+	clearfix()
+	.num
+		float left
+		color color-red
+		font-size 40px
+	.right
+		float left
+		margin-top 10px
+		margin-left 10px
+	.level 
+		color color-red
+		text-transform uppercase
+		margin-bottom -3px
+	.count 
+		position relative
+		color color-grey
+		.black
+			display inline-block
+			color color-grey-dark
+			
 
 //	#plugins
 // ===============================================
@@ -1326,3 +1493,32 @@ ol.list-offer
 	100%
 		opacity 0
 		transform scale(2.5)
+		
+
+//	#remodal-bg
+.remodal-overlay
+	background alpha(#000, .5)
+.remodal
+	position relative
+	width 650px
+	padding 40px
+	text-align left
+	background color-white
+.remodal-close
+	position absolute
+	top 35px
+	right 25px
+	width 28px
+	height 28px
+.remodal-close:after
+	cursor pointer
+	content "×"
+	font-size 28px
+	line-height 28px
+	font-light()
+	text-decoration none
+	color color-grey
+	anim()
+.remodal-close:hover:after
+	color color-red
+	font-size 40px

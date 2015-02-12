@@ -1,65 +1,124 @@
 extends _layout
 
 block append content
+	.hide
+		.popbox.remodal(data-remodal-id="common-info")
+			.popbox__name: h3 Общие сведения
+			.popbox__content
+				.infoline
+					.infoline__name Пол
+					.infoline__content
+						.row.row-2
+							.col.col-40
+								select(data-placeholder="Пол").full.select-grey
+									option(value="") Мужской
+									option(value="") Женский
+							.col.col-60
+				.infoline
+					.infoline__name Место проживания
+					.infoline__content
+						.row.row-2
+							.col
+								input(type="text", placeholder="Страна").full
+							.col
+								input(type="text", placeholder="Город").full
+				.infoline
+					.infoline__name Контакты
+					.infoline__content
+						.row.row-2
+							.col.col-40
+								select(data-placeholder="Телефон").full.select-grey
+									option(value="") Телефон
+									option(value="") Другой телефон
+							.col.col-60
+								input(type="text", placeholder="Телефон").full
+						.row.row-2
+							.col.col-40
+								select(data-placeholder="Эл. Почта").full.select-grey
+									option(value="") Эл. Почта
+									option(value="") Другая Эл. Почта
+							.col.col-60
+								input(type="text", placeholder="Эл. Почта").full
+				.infoline
+					.infoline__name Социальные сети
+					.infoline__content
+						.row.row-2
+							.col.col-40
+								select(data-placeholder="Социальные сети").full.select-grey
+									option(value="") Социальные сети
+									option(value="") Другие Социальные сети
+							.col.col-60
+								input(type="text", placeholder="Ссылка").full
+				.infoline
+					.infoline__name
+						a(href="#").btn-blue-dotted.js-addfield-link Добавить еще
+
+			.popbox__action
+				a(href="#").btn-grey.ripplelink.remodal-confirm Отменить
+				a(href="#").btn-green.ripplelink.remodal-confirm Сохранить
+
 	.upperbar.js-upperbar
 		.upperbar-in
-			.upperbar__num 4
-			.upperbar__pic: img(src="img/content/logo-sm-1.png", alt="")
-			.upperbar__name Придумать название магазина доставки сладкой продукции
+			.upperbar__info
+				.num 4
+				.pic
+					a(href="#")
+						img(src="img/content/logo-sm-1.png", alt="")
+				.name
+					a(href="#") Придумать название магазина доставки сладкой продукции
 	
 	.row.row-2
-		.col-50
+		.col
 			.row.row-2
-				.col-50
-					.infobox
-						.infobox__meta
-							.infobox__name: h3 Контактное лицо
-							.infobox__menu: a(href="#") 
-						.infobox__content
-							.infoline
-								.infoline__name Имя
-								.infoline__content Владимир Горюнов
-							.infoline
-								.infoline__name Локация
-								.infoline__content Россия, Москва
-							.infoline
-								.infoline__name Имя
-								.infoline__content Владимир Горюнов
-							.infoline
-								.infoline__name Website
-								.infoline__content: a(href="#") www.proscom.ru
-							.infoline
-								.infoline__name Ссылки
-								.infoline__content
-									.social-links
-										ul
-											li.fb: a(href="#")
-											li.vk: a(href="#")
-											li.tw: a(href="#")
-				.col-50
-					.infobox
-						.infobox__meta
-							.infobox__name: h3 Общая информация об организации
-							.infobox__menu: a(href="#") 
-						.infobox__content
-							h3 Подзаголовок
-							p Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. 
-							p Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или "невозможных" слов. Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые 
+				.infoboxs-col-2
+					.infobox.infoboxtext
+						.infobox-in
+							.infobox__meta
+								.name: h3 Контактное лицо
+								.menu: a(href="#common-info") 
+							.infobox__content
+								.infoline
+									.infoline__name Имя
+									.infoline__content Владимир Горюнов
+								.infoline
+									.infoline__name Локация
+									.infoline__content Россия, Москва
+								.infoline
+									.infoline__name Имя
+									.infoline__content Владимир Горюнов
+								.infoline
+									.infoline__name Website
+									.infoline__content: a(href="#") www.proscom.ru
+								.infoline.no-padding
+									.infoline__name Ссылки
+									.infoline__content
+										.social-links
+											ul
+												li.fb: a(href="#")
+												li.vk: a(href="#")
+												li.tw: a(href="#")
+					.infobox.infoboxtext
+						.infobox-in
+							.infobox__meta
+								.name: h3 Общая информация об организации
+								.menu: a(href="#common-info") 
+							.infobox__content
+								h3 Подзаголовок
+								p Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. 
+								p Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или "невозможных" слов. Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые.
 
-		.col-50
-			mixin infobox-statistic
-				.infobox.infobox_statistic
-					.infobox__price
-						| 17
-						.rub
-					.infobox__count
-						.num 18 970
-						.desc участников
-					.infobox__more: a(href="#") Посмотреть все задачи
-			.row.row-2
-				.col-50
-					+infobox-statistic
-					+infobox-statistic
-				.col-50
-					+infobox-statistic
-					+infobox-statistic
+		.col
+			.infoboxs-col-2
+				mixin infobox-statistic(price, num, desc)
+					.infobox.infobox_statistic
+						.infobox-in
+							.infobox__price= price
+								.rub
+							.infobox__count
+								.num= num
+								.desc= desc
+							.infobox__more: a(href="#") Посмотреть все задачи
+				+infobox-statistic("5 000 000", "10", "задач")
+				+infobox-statistic("50", "18 970", "просмотров")
+				+infobox-statistic("613", "9 676", "участников")
+				+infobox-statistic("613", "988", "решений")

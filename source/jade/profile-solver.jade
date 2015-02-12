@@ -1,218 +1,214 @@
 extends _layout
 
 block append content
+	.hide
+		.popbox.remodal(data-remodal-id="common-info")
+			.popbox__name: h3 Общие сведения
+			.popbox__content
+				.infoline
+					.infoline__name Пол
+					.infoline__content
+						.row.row-2
+							.col.col-40
+								select(data-placeholder="Пол").full.select-grey
+									option(value="") Мужской
+									option(value="") Женский
+							.col.col-60
+				.infoline
+					.infoline__name Место проживания
+					.infoline__content
+						.row.row-2
+							.col
+								input(type="text", placeholder="Страна").full
+							.col
+								input(type="text", placeholder="Город").full
+				.infoline
+					.infoline__name Контакты
+					.infoline__content
+						.row.row-2
+							.col.col-40
+								select(data-placeholder="Телефон").full.select-grey
+									option(value="") Телефон
+									option(value="") Другой телефон
+							.col.col-60
+								input(type="text", placeholder="Телефон").full
+						.row.row-2
+							.col.col-40
+								select(data-placeholder="Эл. Почта").full.select-grey
+									option(value="") Эл. Почта
+									option(value="") Другая Эл. Почта
+							.col.col-60
+								input(type="text", placeholder="Эл. Почта").full
+				.infoline
+					.infoline__name Социальные сети
+					.infoline__content
+						.row.row-2
+							.col.col-40
+								select(data-placeholder="Социальные сети").full.select-grey
+									option(value="") Социальные сети
+									option(value="") Другие Социальные сети
+							.col.col-60
+								input(type="text", placeholder="Ссылка").full
+				.infoline
+					.infoline__name
+						a(href="#").btn-blue-dotted.js-addfield-link Добавить еще
+
+			.popbox__action
+				a(href="#").btn-grey.ripplelink.remodal-confirm Отменить
+				a(href="#").btn-green.ripplelink.remodal-confirm Сохранить
+
 	.upperbar.js-upperbar
 		.upperbar-in
-			.fl-left
-				.upperbar__num 4
-				.upperbar__pic: img(src="img/user-ava.png", alt="")
-				.upperbar__name Мишин Антон
+			.upperbar__info
+				.num 4
+				.pic
+					a(href="#")
+						img(src="img/ava.png", alt="")
+				.name
+					a(href="#") Мишин Антон
+
 			.fl-right
 				.user-level
 					.num 16
-					.level уровень
-					.count 
-						.black 4 120 
-						| / 5 000
+					.right
+						.level уровень
+						.count 
+							.black 4 120
+							|  / 5 000
 
 	.row.row-2
-		.col-50
+		.col
 			.row.row-2
-				.col-50
-					.infobox
-						.infobox__meta
-							.infobox__name: h3 общие сведения
-							.infobox__menu: a(href="#") 
-						.infobox__content
-							.infoline 
-								.infoline__name Имя
-								.infoline__content Владимир Горюнов
-							.infoline
-								.infoline__name Локация
-								.infoline__content Россия, Москва
-							.infoline
-								.infoline__name Имя
-								.infoline__content Владимир Горюнов
-							.infoline
-								.infoline__name Website
-								.infoline__content: a(href="#") www.proscom.ru
-							.infoline
-								.infoline__name Ссылки
-								.infoline__content
-									.social-links
-										ul
-											li.fb: a(href="#")
-											li.vk: a(href="#")
-											li.tw: a(href="#")
-				.col-50
-					.infobox
-						.infobox__meta
-							.infobox__name: h3 Работа
-							.infobox__menu: a(href="#") 
-						.infobox__content
-							.infoline 
-								.infoline__name Род занятий
-								.infoline__content Art-Director
-							.infoline
-								.infoline__name Навыки
-								.infoline__content Какими навыками вы обладаете?
-							.infoline
-								.infoline__name Место работы
-								.infoline__content Где вы работали?
-							.infoline
-								.infoline__name Website
-								.infoline__content: a(href="#") www.proscom.ru
-					.infobox
-						.infobox__meta
-							.infobox__name: h3 Образование
-							.infobox__menu: a(href="#") 
-						.infobox__content
-							.infoline 
-								.infoline__name Учебное заведение
-								.infoline__content Где вы учились?
+				.infoboxs-col-2-line
+					.infoboxs-col-wrap
+						.infobox.infoboxtext
+							.infobox-in
+								.infobox__meta
+									.name: h3 Контактное лицо
+									.menu: a(href="#common-info") 
+								.infobox__content
+									.infoline
+										.infoline__name Имя
+										.infoline__content Владимир Горюнов
+									.infoline
+										.infoline__name Локация
+										.infoline__content Россия, Москва
+									.infoline
+										.infoline__name Имя
+										.infoline__content Владимир Горюнов
+									.infoline
+										.infoline__name Website
+										.infoline__content: a(href="#") www.proscom.ru
+									.infoline
+										.infoline__name Ссылки
+										.infoline__content
+											.social-links
+												ul
+													li.fb: a(href="#")
+													li.vk: a(href="#")
+													li.tw: a(href="#")
+					.infoboxs-col-wrap
+						.infobox.infoboxtext
+							.infobox-in
+								.infobox__meta
+									.name: h3 Работа
+									.menu: a(href="#common-info") 
+								.infobox__content
+									.infoline 
+										.infoline__name Род занятий
+										.infoline__content Art-Director
+									.infoline
+										.infoline__name Навыки
+										.infoline__content Какими навыками вы обладаете?
+									.infoline
+										.infoline__name Место работы
+										.infoline__content Где вы работали?
+									.infoline
+										.infoline__name Website
+										.infoline__content: a(href="#") www.proscom.ru
+						.infobox.infoboxtext
+							.infobox-in
+								.infobox__meta
+									.name: h3 Образование
+									.menu: a(href="#common-info") 
+								.infobox__content
+									.infoline 
+										.infoline__name Учебное заведение
+										.infoline__content Где вы учились?
 							
-		.col-50
-			.row.row-2
-				.col-50
-					.infobox
+		.col
+			.infoboxs-col-2
+				.infobox.infoboxtext
+					.infobox-in
 						.infobox__meta
-							.infobox__name: h3 Компетенции
+							.name: h3 Компетенции
 						.infobox__content
 							.infoline 
 								.infoline__name Владение пакетом Adobe
 								.infoline__content 
-									.rating
-										.rating__counts 
-											ul
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li
+									.ratingbox.has-no-padding
+										.ratingbox__select.js-ratingbox-view(data-score="4")
+
 							.infoline 
 								.infoline__name Управление командой
 								.infoline__content 
-									.rating
-										.rating__counts 
-											ul
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li
-												li
-												li
-												li
-												li
+									.ratingbox.has-no-padding
+										.ratingbox__select.js-ratingbox-view(data-score="9")
 							.infoline 
 								.infoline__name Владение пакетом Adobe
 								.infoline__content 
-									.rating
-										.rating__counts 
-											ul
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li
+									.ratingbox.has-no-padding
+										.ratingbox__select.js-ratingbox-view(data-score="2")
 							.infoline 
 								.infoline__name Управление командой
 								.infoline__content 
-									.rating
-										.rating__counts 
-											ul
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li
-												li
-												li
-												li
-												li
+									.ratingbox.has-no-padding
+										.ratingbox__select.js-ratingbox-view(data-score="10")
 							.infoline 
 								.infoline__name Владение пакетом Adobe
 								.infoline__content 
-									.rating
-										.rating__counts 
-											ul
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li
+									.ratingbox.has-no-padding
+										.ratingbox__select.js-ratingbox-view(data-score="6")
 							.infoline 
 								.infoline__name Управление командой
 								.infoline__content 
-									.rating
-										.rating__counts 
-											ul
-												li.star
-												li.star
-												li.star
-												li.star
-												li.star
-												li
-												li
-												li
-												li
-												li
-				.col-50
-					.infobox
+									.ratingbox.has-no-padding
+										.ratingbox__select.js-ratingbox-view(data-score="4")
+				.infobox.infoboxtext
+					.infobox-in
 						.infobox__meta
 							.fl-right
 								+pager-small
-							.infobox__name
+							.name
 								h3 Трофеи
-								.desc 8 
+									.desc 8 
 						.infobox__content
-							.bootys_oneline
+							mixin infobox(pic, name, date)
 								.booty
 									.booty__pic
 										a(href="#")
-											img(src="img/icons/.booty-1.png", alt="")
+											img(src="img/#{pic}.png", alt="", width="100")
 									.booty__content
-										a(href="#") 
-											.name Счет в твою пользу
-											.date 24 сентября 2014
-								.booty
-									.booty__pic
-										a(href="#")
-											img(src="img/icons/.booty-2.png", alt="")
-									.booty__content
-										a(href="#") 
-											.name Весомый аргумент
-											.date 24 сентября 2014
-								.booty
-									.booty__pic
-										a(href="#")
-											img(src="img/icons/.booty-1.png", alt="")
-									.booty__content
-										a(href="#") 
-											.name Завершение начатого
-											.date 24 сентября 2014
-								.booty
-									.booty__pic
-										a(href="#")
-											img(src="img/icons/.booty-2.png", alt="")
-									.booty__content
-										a(href="#") 
-											.name Любитель разнообразия
-											.date 24 сентября 2014
+										.booty__name: a(href="#")= name
+										.booty__date= date
+
+							+infobox(
+								"booty-sm-1",
+								"Счет в твою пользу",
+								"24 сентября 2014"
+							)
+							+infobox(
+								"booty-sm-2",
+								"Весомый аргумент",
+								"12 июня 2014"
+							)
+							+infobox(
+								"booty-sm-3",
+								"Завершение начатого",
+								"30 Мая 2013"
+							)
+							+infobox(
+								"booty-sm-4",
+								"Любитель разнообразия",
+								"1 января 2013"
+							)
