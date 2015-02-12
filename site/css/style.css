@@ -293,7 +293,7 @@ textarea {
   margin-bottom: 20px;
   padding: 20px;
   background: #fff;
-  border: 2px solid #d6d6d6;
+  border: 1px solid #d6d6d6;
   border-radius: 4px;
   -webkit-transition: 0.3s ease-out;
           transition: 0.3s ease-out;
@@ -1689,28 +1689,36 @@ ol.list-offer li.name {
   line-height: 30px;
 }
 .faq-ask {
+  display: none;
   position: absolute;
   z-index: 10;
   left: 0px;
   top: 0px;
   width: 100%;
+  height: 100%;
 }
 @media (min-height: 700px) and (min-width: 1300px) {
   .faq-ask {
     position: fixed;
     top: 0px;
-    z-index: 10;
+    z-index: 4;
   }
 }
 .faq-ask-in {
-  display: none;
+  position: relative;
   margin-top: 115px;
   padding: 50px 0;
   background: #eee;
 }
 @media (min-height: 700px) and (min-width: 1300px) {
   .faq-ask-in {
-    margin: 75px 0 0 260px;
+    margin: 115px 0 0 260px;
+  }
+  .faq-ask-in.is-fixed {
+    margin-top: 95px;
+  }
+  .faq-ask-in.is-fixed:after {
+    top: -40px;
   }
 }
 .faq-ask-in .action {
@@ -1718,6 +1726,20 @@ ol.list-offer li.name {
 }
 .faq-ask-in .action a {
   margin: 0 10px;
+}
+.faq-ask-in:after {
+  position: absolute;
+  z-index: 10;
+  top: -40px;
+  right: 105px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  border-bottom-color: #eee;
+  border-width: 26px;
+  margin-left: -26px;
 }
 .files {
   position: relative;
@@ -2274,6 +2296,43 @@ ol.list-offer li.name {
   height: 8px;
   background: #9a9a9a;
 }
+.pager-slider {
+  position: relative;
+}
+.pager-slider a {
+  position: absolute;
+  z-index: 10;
+  top: 0px;
+  display: block;
+  width: 17px;
+  height: 14px;
+}
+.pager-slider a:hover {
+  opacity: 0.7;
+}
+.pager-slider a.prev {
+  left: 0;
+  background: url("../img/icons/arrow-right.png") no-repeat;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+.pager-slider a.next {
+  right: 0;
+  background: url("../img/icons/arrow-right.png") no-repeat;
+}
+.pager-slider a.is-disable {
+  cursor: default;
+  opacity: 0.4 !important;
+}
+.pager-slider .sep {
+  position: absolute;
+  left: 45px;
+  top: -2px;
+  width: 2px;
+  height: 22px;
+  background: #e6e6e6;
+}
 .popbox {
   position: relative;
 }
@@ -2391,7 +2450,6 @@ ol.list-offer li.name {
   vertical-align: middle;
   width: 75px;
   height: 75px;
-  background-color: #f5f5f5;
   -webkit-transition: 0.3s ease-out;
           transition: 0.3s ease-out;
 }
@@ -2684,8 +2742,8 @@ ol.list-offer li.name {
   position: relative;
   box-sizing: content-box;
   width: auto;
-  margin: 2px 2px;
-  margin-top: -47px;
+  margin: 1px 1px;
+  margin-top: -46px;
   height: 20px;
   padding: 15px 20px 10px 20px;
   background: #f5f5f5;
@@ -2801,10 +2859,11 @@ ol.list-offer li.name {
 }
 @media (min-height: 700px) and (min-width: 1300px) and (min-height: 700px) and (min-width: 1300px) {
   .upperbar.is-fixed .upperbar-in {
+    height: 95px;
     overflow: hidden;
     margin-left: 260px;
     margin-right: 0px;
-    padding: 0 20px;
+    padding: 10px 20px;
     border-radius: 0;
     box-shadow: 0 0 8px rgba(0,0,0,0.21);
   }
@@ -3164,6 +3223,32 @@ ol.list-offer li.name {
 .remodal-close:hover:after {
   color: #b64c4c;
   font-size: 40px;
+}
+.bx-pager {
+  display: table;
+  width: 100%;
+  table-layout: "auto";
+  width: auto;
+  position: relative;
+  padding: 0 30px;
+}
+.bx-pager .bx-pager-item {
+  display: table-cell;
+  vertical-align: top;
+  padding: 0 10px;
+  padding-top: 3px;
+  text-indent: -9999px;
+}
+.bx-pager .bx-pager-item a {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0 auto;
+  background: #c2c2c2;
+  border-radius: 15px;
+}
+.bx-pager .bx-pager-item a.active {
+  background: #9a9a9a;
 }
 @-webkit-keyframes ripple {
   100% {

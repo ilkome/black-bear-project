@@ -178,37 +178,84 @@ block append content
 					.infobox-in
 						.infobox__meta
 							.fl-right
-								+pager-small
+								.pager-slider.js-booty-slider-nav
+									a(href="#").prev.is-disable
+									a(href="#").next
+								.js-booty-slider-pager
 							.name
 								h3 Трофеи
 									.desc 8 
 						.infobox__content
-							mixin infobox(pic, name, date)
-								.booty
-									.booty__pic
-										a(href="#")
-											img(src="img/#{pic}.png", alt="", width="100")
-									.booty__content
-										.booty__name: a(href="#")= name
-										.booty__date= date
+							.js-booty-slider
+								mixin infobox(pic, name, date)
+									.booty
+										.booty__pic
+											a(href="#")
+												img(src="img/#{pic}.png", alt="", width="100")
+										.booty__content
+											.booty__name: a(href="#")= name
+											.booty__date= date
 
-							+infobox(
-								"booty-sm-1",
-								"Счет в твою пользу",
-								"24 сентября 2014"
-							)
-							+infobox(
-								"booty-sm-2",
-								"Весомый аргумент",
-								"12 июня 2014"
-							)
-							+infobox(
-								"booty-sm-3",
-								"Завершение начатого",
-								"30 Мая 2013"
-							)
-							+infobox(
-								"booty-sm-4",
-								"Любитель разнообразия",
-								"1 января 2013"
-							)
+								.slide
+									+infobox(
+										"booty-sm-1",
+										"Счет в твою пользу",
+										"24 сентября 2014"
+									)
+									+infobox(
+										"booty-sm-2",
+										"Весомый аргумент",
+										"12 июня 2014"
+									)
+									+infobox(
+										"booty-sm-3",
+										"Завершение начатого",
+										"30 Мая 2013"
+									)
+									+infobox(
+										"booty-sm-4",
+										"Любитель разнообразия",
+										"1 января 2013"
+									)
+								.slide
+									+infobox(
+										"booty-sm-1",
+										"Счет в твою пользу",
+										"24 сентября 2014"
+									)
+									+infobox(
+										"booty-sm-2",
+										"Весомый аргумент",
+										"12 июня 2014"
+									)
+									+infobox(
+										"booty-sm-3",
+										"Завершение начатого",
+										"30 Мая 2013"
+									)
+									+infobox(
+										"booty-sm-4",
+										"Любитель разнообразия",
+										"1 января 2013"
+									)
+								.slide
+									+infobox(
+										"booty-sm-1",
+										"Счет в твою пользу",
+										"24 сентября 2014"
+									)
+									+infobox(
+										"booty-sm-2",
+										"Весомый аргумент",
+										"12 июня 2014"
+									)
+									+infobox(
+										"booty-sm-3",
+										"Завершение начатого",
+										"30 Мая 2013"
+									)
+									+infobox(
+										"booty-sm-4",
+										"Любитель разнообразия",
+										"1 января 2013"
+									)

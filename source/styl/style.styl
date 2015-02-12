@@ -930,26 +930,45 @@ ol.list-offer
 	font-size 16px
 	line-height 30px
 .faq-ask
+	display none
 	position absolute
 	z-index 10
 	left 0px 
 	top 0px
 	width 100%
+	height 100%
 	@media small
 		position fixed
 		top 0px 
-		z-index 10
+		z-index 4
 .faq-ask-in
-	display none
+	position relative
 	margin-top 115px
 	padding 50px 0
 	background #eeeeee
 	@media small
-		margin 75px 0 0 260px
+		margin 115px 0 0 260px
+		&.is-fixed
+			margin-top 95px
+			&:after
+				top -40px
 	.action
 		text-align center
 		a
 			margin 0 10px
+	&:after
+		position absolute
+		z-index 10
+		top -40px
+		right 105px
+		border solid transparent
+		content " "
+		height 0
+		width 0
+		pointer-events none
+		border-bottom-color #eeeeee
+		border-width 26px
+		margin-left -26px
 	
 
 //	#files
@@ -1363,7 +1382,35 @@ ol.list-offer
 				width 8px
 				height 8px
 				background #9a9a9a
-
+.pager-slider
+	position relative
+	a
+		position absolute
+		z-index 10
+		top 0px
+		display block
+		width 17px
+		height 14px
+		&:hover
+			opacity .7		
+	a.prev
+		left 0
+		background url("../img/icons/arrow-right.png") no-repeat
+		transform rotate(-180deg)
+	a.next
+		right 0
+		background url("../img/icons/arrow-right.png") no-repeat
+	a.is-disable
+		cursor default
+		opacity .4 !important
+	.sep
+		position absolute 
+		left 45px 
+		top -2px
+		width 2px
+		height 22px
+		background #e6e6e6
+		
 //	#popbox
 .popbox
 	position relative
@@ -1447,7 +1494,7 @@ ol.list-offer
 	vertical-align middle
 	width 75px
 	height 75px
-	background-color color-grey-opacity
+	//background-color color-grey-opacity
 	anim()
 	&:after
 		content " "
@@ -1670,8 +1717,8 @@ ol.list-offer
 	position relative
 	box-sizing content-box
 	width auto
-	margin 2px 2px
-	margin-top -47px
+	margin 1px 1px
+	margin-top -46px
 	height 20px
 	padding 15px 20px 10px 20px
 	background color-grey-opacity
@@ -1711,8 +1758,7 @@ ol.list-offer
 	margin-bottom 10px
 	font-16-ttu()
 	text-transform none
-	
-	
+
 //	#textline
 .textline
 	display inline-block
@@ -1755,10 +1801,11 @@ ol.list-offer
 			top 0px
 			@media small
 				.upperbar-in
+					height 95px
 					overflow hidden
 					margin-left 260px
 					margin-right 0px
-					padding 0 20px
+					padding 10px 20px
 					border-radius 0
 					box-shadow 0 0 8px rgba(0, 0, 0, 0.21)
 					&.has-bg-grey
@@ -2045,3 +2092,23 @@ ol.list-offer
 .remodal-close:hover:after
 	color color-red
 	font-size 40px
+
+.bx-pager
+	dt("auto")
+	width auto
+	position relative
+	padding 0 30px
+	.bx-pager-item
+		dtc()
+		padding 0 10px
+		padding-top 3px
+		text-indent -9999px
+		a
+			display block
+			width 8px
+			height 8px
+			margin 0 auto
+			background #c2c2c2
+			border-radius 15px
+			&.active
+				background #9a9a9a

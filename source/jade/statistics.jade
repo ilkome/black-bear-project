@@ -8,24 +8,31 @@ block append content
 					img(src="img/icons/cube-red.png", alt="")
 					.name-in Придумать название магазина доставки сладкой продукции
 				.slider-nav
-					ul
-						li.prev: a(href="#")
-						li.sep
-						li.next: a(href="#")
-			.infoboxs.infoboxs-col-1
-				mixin infobox-graph
-					.infobox
-						.infobox-in
-							.infobox__meta
-								.name: h3 Просмотры
-								.price
-									| 17
-									.rub
-							.infobox__content: img(src="img/content/infobox-graph.png", alt="").full
-				
-				+infobox-graph
-				+infobox-graph
-				+infobox-graph
+					.pager-slider.js-statics-slider-nav
+						a(href="#").prev.is-disable
+						span.sep
+						a(href="#").next
+		
+			mixin infobox-graph
+				.infobox
+					.infobox-in
+						.infobox__meta
+							.name: h3 Просмотры
+							.price
+								| 17
+								.rub
+						.infobox__content: img(src="img/content/infobox-graph.png", alt="").full
+			.js-statics-slider
+				.slide
+					.infoboxs.infoboxs-col-1
+						+infobox-graph
+						+infobox-graph
+						+infobox-graph
+				.slide
+					.infoboxs.infoboxs-col-1
+						+infobox-graph
+						+infobox-graph
+						+infobox-graph
 
 
 		.col
