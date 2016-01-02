@@ -1,26 +1,3 @@
-//- #mixin
-mixin sysmenu(fixed)
-
-	.sysmenu(
-		class=typeof 
-		fixed === "undefined" ? undefined : "is-fixed"
-	)
-		ul
-			li: a(href="about.html") about
-			li: a(href="booty.html") booty
-			li: a(href="faq.html") faq
-			li: a(href="offer.html") offer
-			li: a(href="partners.html") partners
-			li: a(href="profile-seeker.html") profile-seeker
-			li: a(href="profile-solver.html") profile-solver
-			li: a(href="rating.html") rating
-			li: a(href="solution.html") solution
-			li: a(href="statistics.html") statistics
-			li: a(href="task-add.html") task-add
-			li: a(href="task-item.html") task-item
-			li: a(href="tasks.html") tasks
-			li: a(href="training.html") training
-
 mixin upper-search
 	.search.js-search
 		.search-btn
@@ -34,40 +11,18 @@ mixin upper-search
 mixin pager
 	.pager
 		ul
-			li.prev.is-disable
-				a(href="#")
-			li.is-active
-				a(href="#")
-					span 1
-			li
-				a(href="#")
-					span 2
-			li
-				a(href="#")
-					span 3
-			li
-				a(href="#")
-					span 4
-			li
-				a(href="#")
-					span 5
-			li
-				a(href="#")
-					span 6
-			li
-				a(href="#")
-					span 7
-			li
-				a(href="#")
-					span 8
-			li
-				a(href="#")
-					span 9
-			li
-				a(href="#") 
-					span 10
-			li.next
-				a(href="#")
+			li.prev.is-disable: a(href="#")
+			li.is-active: a(href="#"): span 1
+			li: a(href="#"): span 2
+			li: a(href="#"): span 3
+			li: a(href="#"): span 4
+			li: a(href="#"): span 5
+			li: a(href="#"): span 6
+			li: a(href="#"): span 7
+			li: a(href="#"): span 8
+			li: a(href="#"): span 9
+			li: a(href="#"): span 10
+			li.next: a(href="#")
 
 mixin pager-small
 	.pager.pager-small

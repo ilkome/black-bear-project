@@ -16,9 +16,10 @@ $(document).ready(function(){
 	//	#preventDefault
 	//	auto
 	// ===============================================
-	$('a[href="#"]').click(function(e){
+	$("a[href="#"]").click(function(e){
 		e.preventDefault();
 	});
+
 
 	//	comment write
 	//	auto
@@ -38,22 +39,22 @@ $(document).ready(function(){
 	//	hide show text
 	//	auto
 	// ===============================================
-	$(".js-hidden-link").on("click", function(e){
+	$(".js-showhide-link").on("click", function(e){
 		e.preventDefault();
 
 		var thisis = $(this),
-			box = $(this).closest(".js-hidden-box"),
-			content = box.find(".js-hidden-content")
-			plusBtn = box.find(".js-hidden-link.plus");
+			box = $(this).closest(".js-showhide-box"),
+			content = box.find(".js-showhide-content"),
+			link = box.find(".js-showhide-link");
 
 		if(content.is(":visible")){
 			box.removeClass("is-active");
 			content.stop().slideUp(400, upperbarFixed);
-			plusBtn.removeClass("open");
+			link.removeClass("open");
 		} else {
 			box.addClass("is-active");
 			content.stop().slideDown(400, upperbarFixed);
-			plusBtn.addClass("open");
+			link.addClass("open");
 		}
 	});
 
