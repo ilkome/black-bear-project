@@ -139,8 +139,7 @@ p {
 a {
   color: #4691c2;
   text-decoration: none;
-  -webkit-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 a:hover {
   text-decoration: none;
@@ -197,8 +196,7 @@ select {
   background: #fff;
   border: 1px solid #d6d6d6;
   border-radius: 4px;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 select:hover {
   border-color: rgba(148,148,148,0.7);
@@ -231,8 +229,7 @@ input[type="phone"] {
   background: #fff;
   border: 1px solid #d6d6d6;
   border-radius: 4px;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 input[type="text"]:hover,
 input[type="password"]:hover,
@@ -280,8 +277,7 @@ input[type="submit"] {
   width: auto;
   padding: 15px 30px;
   border: none;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 input[type="submit"]:active {
   opacity: 0.8;
@@ -295,8 +291,7 @@ textarea {
   background: #fff;
   border: 1px solid #d6d6d6;
   border-radius: 4px;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 textarea:hover {
   border-color: rgba(148,148,148,0.7);
@@ -433,7 +428,7 @@ html {
   position: relative;
   width: 100%;
   min-width: 1270px;
-  height: 100%;
+  min-height: 100%;
 }
 @-moz-document url-prefix() {
   .ilkome {
@@ -768,8 +763,7 @@ ol.list-offer li.name {
 .close-popup {
   float: left;
   border-radius: 4px;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .close-popup:hover {
   background: #f5f5f5;
@@ -782,7 +776,6 @@ ol.list-offer li.name {
 }
 .close-popup a:hover {
   -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 .dateblock {
@@ -910,7 +903,6 @@ ol.list-offer li.name {
   height: 14px;
   background: url("../img/icons/arrow-right.png") no-repeat;
   -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }
 .slider-nav li.prev a:hover {
@@ -977,8 +969,7 @@ ol.list-offer li.name {
   color: #5f5f5f;
   font-weight: 500;
   text-transform: uppercase;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .booty__name a {
   color: #5f5f5f;
@@ -1092,9 +1083,8 @@ ol.list-offer li.name {
   display: block;
   margin: 0 -10px 0 -10px;
   -webkit-justify-content: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   text-align: left;
 }
 .infoboxs-col-1 > * {
@@ -1114,9 +1104,8 @@ ol.list-offer li.name {
   display: block;
   margin: 0 -10px 0 -10px;
   -webkit-justify-content: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   text-align: left;
 }
 .infoboxs-col-2 > * {
@@ -1144,9 +1133,8 @@ ol.list-offer li.name {
   display: block;
   margin: 0 -10px 0 -10px;
   -webkit-justify-content: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   text-align: left;
 }
 .infoboxs-4-col > * {
@@ -1174,9 +1162,8 @@ ol.list-offer li.name {
   display: block;
   margin: 0 0px 0 0px;
   -webkit-justify-content: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   text-align: left;
 }
 .infoboxs-col-2-line > * {
@@ -1220,8 +1207,7 @@ ol.list-offer li.name {
   background: #fff;
   border-radius: 4px;
   border: 1px solid transparent;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .infobox-in:hover {
   border: 1px solid rgba(148,148,148,0.5);
@@ -1339,8 +1325,7 @@ ol.list-offer li.name {
   margin-top: 30px;
 }
 .infobox__pic img {
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .infobox__pic img:hover {
   opacity: 0.7;
@@ -1362,8 +1347,7 @@ ol.list-offer li.name {
   color: #5f5f5f;
   font-weight: 500;
   text-transform: uppercase;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .infobox__content .name:hover {
   color: #b64c4c;
@@ -1628,8 +1612,7 @@ ol.list-offer li.name {
   border-radius: 4px;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .faq-item__num {
   display: table-cell;
@@ -1675,7 +1658,6 @@ ol.list-offer li.name {
 }
 .faq-item__action a.open {
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
   color: #b64c4c;
 }
@@ -1757,8 +1739,7 @@ ol.list-offer li.name {
   text-align: left;
   border-radius: 4px;
   background: #f5f5f5;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .file:before,
 .file:after {
@@ -1928,8 +1909,7 @@ ol.list-offer li.name {
   width: 100%;
   table-layout: fixed;
   font-size: 16px;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .leader-header a {
   display: block;
@@ -2094,7 +2074,6 @@ ol.list-offer li.name {
 }
 .left-user a.settings:hover {
   -webkit-transform: rotate(90deg) scale(1.2);
-      -ms-transform: rotate(90deg) scale(1.2);
           transform: rotate(90deg) scale(1.2);
 }
 .left-user .notify {
@@ -2104,8 +2083,7 @@ ol.list-offer li.name {
   top: -5px;
   width: 18px;
   height: 18px;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .left-user .notify:hover {
   top: -6px;
@@ -2176,8 +2154,7 @@ ol.list-offer li.name {
   height: 24px;
   background: #f00;
   opacity: 0.3;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .left-menu li {
   padding: 20px 0 20px 60px;
@@ -2228,7 +2205,6 @@ ol.list-offer li.name {
   height: 14px !important;
   background: url("../img/icons/arrow-right.png") no-repeat !important;
   -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }
 .pager li.prev a:hover {
@@ -2314,7 +2290,6 @@ ol.list-offer li.name {
   left: 0;
   background: url("../img/icons/arrow-right.png") no-repeat;
   -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }
 .pager-slider a.next {
@@ -2438,8 +2413,7 @@ ol.list-offer li.name {
 .search {
   position: relative;
   float: left;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .search-btn {
   position: absolute;
@@ -2450,8 +2424,7 @@ ol.list-offer li.name {
   vertical-align: middle;
   width: 75px;
   height: 75px;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .search-btn:after {
   content: " ";
@@ -2473,20 +2446,17 @@ ol.list-offer li.name {
   top: 0px;
   width: 75px;
   height: 75px;
-  -webkit-transition: none;
-          transition: none;
+  transition: none;
 }
 .search-btn a.open {
   background: url("../img/icons/search.png") center center no-repeat;
 }
 .search-btn a.close {
-  -webkit-transition: rotate 0.3s ease-out;
-          transition: rotate 0.3s ease-out;
+  transition: rotate 0.3s ease-out;
   background: url("../img/icons/close.png") center center no-repeat;
 }
 .search-btn a.close:hover {
   -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 .search-btn a.close.hide {
@@ -2501,8 +2471,7 @@ ol.list-offer li.name {
   width: 510px;
   height: 75px;
   background: #f5f5f5;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .search-form.show {
   left: 0;
@@ -2648,8 +2617,7 @@ ol.list-offer li.name {
   background: #fff;
   border-radius: 3px;
   background: rgba(255,255,255,0.6);
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .tableview-item:hover {
   background: #fff;
@@ -2938,8 +2906,7 @@ ol.list-offer li.name {
 }
 .upperbar__info .pic img {
   display: block;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .upperbar__info .pic img:hover {
   opacity: 0.7;
@@ -3059,8 +3026,7 @@ ol.list-offer li.name {
   border-radius: 4px;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .user-rview-item:hover {
   background: #fff;
@@ -3092,8 +3058,7 @@ ol.list-offer li.name {
   width: 50px;
 }
 .user-rview-item__pic img {
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .user-rview-item__pic img:hover {
   opacity: 0.7;
@@ -3172,8 +3137,7 @@ ol.list-offer li.name {
 .ripplelink {
   position: relative;
   overflow: hidden;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
   z-index: 0;
 }
 .ripplelink:hover {
@@ -3185,7 +3149,6 @@ ol.list-offer li.name {
   background: rgba(255,255,255,0.3);
   border-radius: 100%;
   -webkit-transform: scale(0);
-      -ms-transform: scale(0);
           transform: scale(0);
 }
 .ripplelink-animate {
@@ -3217,8 +3180,7 @@ ol.list-offer li.name {
   font-weight: 300;
   text-decoration: none;
   color: #949494;
-  -webkit-transition: 0.3s ease-out;
-          transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 .remodal-close:hover:after {
   color: #b64c4c;
