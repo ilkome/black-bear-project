@@ -16,7 +16,7 @@ $(document).ready(function(){
 	//	#preventDefault
 	//	auto
 	// ===============================================
-	$("a[href="#"]").click(function(e){
+	$("a[href='#']").click(function(e){
 		e.preventDefault();
 	});
 
@@ -41,7 +41,7 @@ $(document).ready(function(){
 	// ===============================================
 	$(".js-showhide-link").on("click", function(e){
 		e.preventDefault();
-
+		
 		var thisis = $(this),
 			box = $(this).closest(".js-showhide-box"),
 			content = box.find(".js-showhide-content"),
@@ -76,7 +76,7 @@ $(document).ready(function(){
 				box.stop().fadeIn();
 			} else {
 				box.stop().fadeOut();
-				boxIn.removeClass("is-fixed");	
+				boxIn.removeClass("is-fixed");
 			}
 		});
 	});
@@ -251,11 +251,11 @@ $(document).ready(function(){
 			if (windowHeight < contentHeight && windowHeight >= 700 && windowWidth > 1280) {
 				if(!(upperbar.hasClass("is-fixed"))){
 					upperbar.stop().fadeOut(100, function(){
-						upperbar.addClass("is-fixed");	
+						upperbar.addClass("is-fixed");
 						colRight.css({paddingTop: upperbarHeight});
 						upperbar.stop().fadeIn(400);
 					});
-				}				
+				}
 			} else {
 				if((upperbar.hasClass("is-fixed"))){
 					upperbar.stop().fadeOut(100, function(){
