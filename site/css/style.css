@@ -1,12 +1,12 @@
 /*
-	proscom.ru 
+	proscom.ru
 	Simple Communication
-	
+
 	ilko.me
 	Ilya Komichev
 */
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=cyrillic,latin");
-@import "css/normalize.css";
+@import "normalize.css";
 .clear:before,
 .clear:after {
   content: "";
@@ -429,46 +429,6 @@ html {
   width: 100%;
   min-width: 1270px;
   min-height: 100%;
-}
-@-moz-document url-prefix() {
-  .ilkome {
-    height: 100%;
-  }
-}
-.sysmenu {
-  background: #fff;
-}
-.sysmenu ul {
-  display: inline-block;
-}
-.sysmenu ul li {
-  text-align: left;
-  white-space: nowrap;
-}
-.sysmenu.is-fixed {
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  opacity: 0;
-}
-.sysmenu.is-fixed:hover {
-  opacity: 1;
-}
-.sysmenu.is-fixed ul {
-  margin: 0;
-  list-style: none;
-}
-.sysmenu.is-fixed ul li {
-  margin: 0;
-  list-style: none;
-}
-.sysmenu.is-fixed li {
-  float: left;
-}
-.sysmenu.is-fixed a {
-  display: inline-block;
-  padding: 5px;
 }
 .l-left {
   display: table-cell;
