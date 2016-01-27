@@ -1,7 +1,7 @@
 # Black Bear Project
 > HTML & CSS, JavaScript, jQuery
 
-### Demo
+# Demo
 - http://ilko.me/works/black-bear-project/about.html
 - http://ilko.me/works/black-bear-project/task-item.html 
 - http://ilko.me/works/black-bear-project/faq.html 
